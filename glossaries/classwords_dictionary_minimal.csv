@@ -1,0 +1,21 @@
+Term ID,class_word,category,description,allowed_values
+0000-0001,Constant,Persistent,Data that does not change value from one transaction to another. Considered for reference values that should not or rarely change.,"A numeric, alphabetic, or alphanumeric value that rarely if ever changes."
+0000-0002,Amount,Numeric/Arithmetic,Specifically about currency; a quantity of money – a monetary amount.,Any valid monetary amount value.
+0000-0003,Count,Numeric/Arithmetic,"An arithmetic value or quantity (including fractions and units of measure) of anything except money. Could also be used in or be the result of a mathematical computation like an average, minimum, maximum, etc.",Any valid numeric value or decimal value.
+0000-0004,Percent,Numeric/Arithmetic,An arithmetic numeric expression representing a rate or proportion per hundred (part divided by whole).,Typical stored decimal values range between 0 and +1 at any level of precision. May be negative or exceed +1 in specific cases.
+0000-0005,Ratio,Numeric/Arithmetic,"An arithmetic quotient representing the quantitative relationship between exactly two distinct quantities, calculated as one quantity divided by another without reference to a whole or total.",Stored as a single decimal value ranging from 0 to any positive number. Negative values possible only if one quantity is negative.
+0000-0006,Document,General/Misc. Data,Formatted data which can contain several data elements with defined contents and structure and must be interpreted before use by a system or application.,Not applicable.
+0000-0007,File,General/Misc. Data,"A digital container of data that represents images, sound, video executables, etc., typically identified by a computer file extension.",Not applicable.
+0000-0008,Text,General/Misc. Data,Data having undefined content and/or unstructured format with no definable allowed values; free-form description or comment that does not specifically identify an object.,Not applicable.
+0000-0009,Indicator,Conditional/Boolean,A value limited to four different status types regarding the existence or presence of a situation or condition.,"One of the following literal values: ""Yes"", ""No"", ""Unknown"", ""NotApplicable""."
+0000-0010,Switch,Conditional/Boolean,A boolean using a datatype of bit or byte. Typically stored physically as 0 or 1 (some DBMS may allow NULL).,"One of the following Boolean values: ""0"", ""1"", or NULL (DBMS-dependent)."
+0000-0011,Code,Specific Object/Instance/Category,"A short alphanumeric value that represents a longer, fuller name or description of an object, thing, or classification belonging to a defined set.","Defined allowed values, usually in a set."
+0000-0012,Name,Specific Object/Instance/Category,Meaningful alphabetic data using words which identifies a specific object or may identify a type or category of an object or thing.,Allowed but optional.
+0000-0013,Identifier,Specific Object/Instance/Category,"A meaningless value (often sequentially or randomly generated) that uniquely represents an occurrence of a record about an object, entity, or thing.",Not applicable.
+0000-0014,Number,Specific Object/Instance/Category,"Alphanumeric data not using words which identifies a specific object or thing, but can also identify a type or category of an object or thing.",Not applicable.
+0000-0015,Date,Temporal,Actual calendar date.,Any valid date value.
+0000-0016,Time,Temporal,"Actual clock time, expressed in hours, minutes, and sometimes seconds.",Any valid time value.
+0000-0017,Timestamp,Temporal,Hybrid DATE/TIME classword combination.,Any valid timestamp value.
+0000-0018,Point,Spatial,A spatial geometric reference that defines the intersection of two coordinate lines.,No distinct set of allowed values.
+0000-0019,Line,Spatial,A spatial geometric shape that defines a straight connection between two points or may extend infinitely in both directions.,No distinct set of allowed values.
+0000-0020,Polygon,Spatial,A spatial geometric shape that defines a multi-sided geographic area.,No distinct set of allowed values.

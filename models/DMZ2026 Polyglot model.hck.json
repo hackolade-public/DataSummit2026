@@ -1,0 +1,274 @@
+{
+  "modelName": "New model",
+  "collections": [],
+  "buckets": [],
+  "views": [],
+  "relationships": [],
+  "users": [],
+  "diagramViews": [],
+  "idToNameHashTable": {},
+  "definitions": {
+    "type": "definitions",
+    "properties": [],
+    "GUID": "4d4e7cdf-4dbb-4596-a504-4487e50af6d1"
+  },
+  "polyglotDefinitions": {
+    "type": "polyglotDefinitions",
+    "properties": [],
+    "GUID": "599aa32c-3cd9-48ce-bddf-bbf4c0b28572"
+  },
+  "externalDefinitions": {
+    "type": "externalDefinitions",
+    "properties": [],
+    "GUID": "5eb9819a-0a22-4064-96eb-289ff63ef8ff"
+  },
+  "sources": [],
+  "decorativeSymbols": [],
+  "businessGlossaries": [
+    {
+      "GUID": "d15c3a1f-e12f-4694-9079-7596fe098d80",
+      "name": "classwords_dictionary_minimal.csv",
+      "hasHeaders": true,
+      "format": "custom",
+      "kind": "relativePath",
+      "relativePath": "../glossaries/classwords_dictionary_minimal.csv",
+      "mapping": [
+        {
+          "GUID": "bafa64a6-8468-42a7-94d9-69fa3fd92e34",
+          "columnIdentifier": "Term ID",
+          "displayName": "Identifier",
+          "role": "identifier",
+          "isMultipleValue": false,
+          "position": 0,
+          "displayType": "text",
+          "isMapped": true
+        },
+        {
+          "GUID": "22247e26-04e5-4009-b681-556d3adf62a7",
+          "columnIdentifier": "class_word",
+          "displayName": "Term",
+          "role": "name",
+          "isMultipleValue": false,
+          "position": 1,
+          "displayType": "text",
+          "isMapped": true
+        },
+        {
+          "GUID": "3e0cf859-5acb-4ce4-803f-9ba61901db0b",
+          "columnIdentifier": "description",
+          "displayName": "Description",
+          "role": "description",
+          "isMultipleValue": false,
+          "position": 2,
+          "displayType": "text",
+          "isMapped": true
+        },
+        {
+          "GUID": "2098e9ee-fa86-492f-8955-d325e845b5ec",
+          "columnIdentifier": "category",
+          "displayName": "category",
+          "position": 3,
+          "displayType": "text",
+          "isMapped": false
+        },
+        {
+          "GUID": "d58bdbf5-d77e-461e-9c20-d43e15ca6ca2",
+          "columnIdentifier": "allowed_values",
+          "displayName": "allowed_values",
+          "position": 4,
+          "displayType": "text",
+          "isMapped": false
+        }
+      ]
+    },
+    {
+      "GUID": "8653f162-b22e-46ac-88cc-2a0ea49a261a",
+      "name": "Core-Business-Glossary.csv",
+      "hasHeaders": true,
+      "format": "custom",
+      "kind": "relativePath",
+      "relativePath": "../glossaries/Core-Business-Glossary.csv",
+      "mapping": [
+        {
+          "GUID": "86ec224d-4182-454e-8969-5567ceef6e52",
+          "columnIdentifier": "id",
+          "displayName": "Identifier",
+          "role": "identifier",
+          "isMultipleValue": false,
+          "position": 0,
+          "displayType": "text",
+          "isMapped": true
+        },
+        {
+          "GUID": "30714346-b1d1-4c66-ae7d-0074ad360bfa",
+          "columnIdentifier": "term",
+          "displayName": "Term",
+          "role": "name",
+          "isMultipleValue": false,
+          "position": 1,
+          "displayType": "text",
+          "isMapped": true
+        },
+        {
+          "GUID": "4f94df58-8a5c-4a2c-8c7a-25798fb93e13",
+          "columnIdentifier": "description",
+          "displayName": "Description",
+          "role": "description",
+          "isMultipleValue": false,
+          "position": 2,
+          "displayType": "text",
+          "isMapped": true
+        },
+        {
+          "GUID": "349c179b-dca3-4400-adaa-224bdcb3c686",
+          "columnIdentifier": "domain",
+          "displayName": "domain",
+          "position": 3,
+          "displayType": "text",
+          "isMapped": false
+        },
+        {
+          "GUID": "c0c3ff4b-fd98-4284-9b83-3139140fa9d2",
+          "columnIdentifier": "synonyms",
+          "displayName": "synonyms",
+          "position": 4,
+          "displayType": "text",
+          "isMapped": false
+        },
+        {
+          "GUID": "4aeee6c6-8ff0-4a21-9691-b8c833e48e7c",
+          "columnIdentifier": "status",
+          "displayName": "status",
+          "position": 5,
+          "displayType": "text",
+          "isMapped": false
+        }
+      ]
+    },
+    {
+      "GUID": "a491073b-aa27-49b9-a72e-02d13f8c9bb3",
+      "name": "Order-Management-Glossary.csv",
+      "hasHeaders": true,
+      "format": "custom",
+      "kind": "relativePath",
+      "relativePath": "../glossaries/Order-Management-Glossary.csv",
+      "mapping": [
+        {
+          "GUID": "4f61589c-0700-4205-af30-de7c2abe8013",
+          "columnIdentifier": "id",
+          "displayName": "Identifier",
+          "role": "identifier",
+          "isMultipleValue": false,
+          "position": 0,
+          "displayType": "text",
+          "isMapped": true
+        },
+        {
+          "GUID": "49910e28-9941-461c-b05a-ff13ba02bf03",
+          "columnIdentifier": "term",
+          "displayName": "Term",
+          "role": "name",
+          "isMultipleValue": false,
+          "position": 1,
+          "displayType": "text",
+          "isMapped": true
+        },
+        {
+          "GUID": "f49d1e59-1ca2-4373-aad7-fcb165223ea3",
+          "columnIdentifier": "description",
+          "displayName": "Description",
+          "role": "description",
+          "isMultipleValue": false,
+          "position": 2,
+          "displayType": "text",
+          "isMapped": true
+        },
+        {
+          "GUID": "5a80846b-7cb0-48fa-877d-dadc5e9eee03",
+          "columnIdentifier": "domain",
+          "displayName": "domain",
+          "position": 3,
+          "displayType": "text",
+          "isMapped": false
+        },
+        {
+          "GUID": "227db596-2967-4de9-90e6-e0854fe33615",
+          "columnIdentifier": "synonyms",
+          "displayName": "synonyms",
+          "position": 4,
+          "displayType": "text",
+          "isMapped": false
+        },
+        {
+          "GUID": "0e99fb27-77e8-4231-ab35-0b8b90f6045e",
+          "columnIdentifier": "status",
+          "displayName": "status",
+          "position": 5,
+          "displayType": "text",
+          "isMapped": false
+        }
+      ]
+    }
+  ],
+  "businessGlossaryTerms": [],
+  "dbVendor": "Polyglot",
+  "appTarget": "Polyglot",
+  "creationTS": "2026-03-05T02:21:54.374Z",
+  "GUID": "1110c6c5-5d69-4588-951b-ef96f200301b",
+  "isLineageEnabled": false,
+  "lastModifTS": "2026-04-11T15:04:25.681Z",
+  "persistenceSchemaVersion": "8",
+  "isCreatedByPlugin": true,
+  "pluginInformation": {
+    "pluginName": "Polyglot",
+    "pluginVersion": "0.0.1",
+    "pluginEngineVersion": "1.0.0"
+  },
+  "applicationInformation": {
+    "version": "8.10.2"
+  },
+  "hackoladeMeta": {},
+  "author": "Pascal",
+  "code": "",
+  "settings": {
+    "centralPane": {
+      "dbLevel": {
+        "erd": [],
+        "erdDefinitions": {
+          "erd": [],
+          "rootPath": [],
+          "entities": [],
+          "decorativeSymbols": []
+        },
+        "buckets": [],
+        "collapsedNodes": [],
+        "activeRelationship": "",
+        "activeRelationshipFields": {
+          "childField": [],
+          "parentField": []
+        },
+        "selectedCollections": [],
+        "displayColorPicker": false,
+        "graphView": {
+          "erd": [],
+          "buckets": [],
+          "decorativeSymbols": [],
+          "forceLayout": true,
+          "defaultLinkLength": 150,
+          "options": []
+        },
+        "diagramViews": [],
+        "decorativeSymbols": [],
+        "nestedCollectionsLayout": "horizontal",
+        "options": [],
+        "relationshipUpdateDisabled": false
+      },
+      "collectionLevel": {},
+      "changed": false
+    },
+    "dtDiagram": {
+      "collapsedNodes": [],
+      "shouldDistributeCollections": false
+    }
+  }
+}

@@ -1,0 +1,2983 @@
+{
+  "modelName": "New model",
+  "collections": [
+    {
+      "collectionName": "DOCUMENT",
+      "type": "object",
+      "properties": [
+        {
+          "code": "",
+          "name": "document_identifier",
+          "isActivated": true,
+          "index": true,
+          "exclusiveMinimum": false,
+          "exclusiveMaximum": false,
+          "primaryKey": true,
+          "mode": "bigint",
+          "required": true,
+          "alternateKey": false,
+          "childType": "integer",
+          "type": "numeric",
+          "compositeKey": [
+            "compositePrimaryKey",
+            "compositeUniqueKey"
+          ],
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "GUID": "2cc46954-45af-46df-80ac-8708d4814f1c",
+          "description": "",
+          "unique": false
+        },
+        {
+          "code": "",
+          "name": "document_date",
+          "isActivated": true,
+          "index": true,
+          "required": false,
+          "alternateKey": false,
+          "childType": "date",
+          "type": "string",
+          "compositeKey": [
+            "compositePrimaryKey",
+            "compositeUniqueKey"
+          ],
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "GUID": "bf81a53d-ebf0-4da9-b32e-367d253e82bf",
+          "description": "",
+          "primaryKey": false,
+          "unique": false
+        },
+        {
+          "code": "",
+          "name": "document_title_name",
+          "isActivated": true,
+          "primaryKey": false,
+          "required": false,
+          "alternateKey": false,
+          "childType": "varchar",
+          "type": "string",
+          "compositeKey": [
+            "compositePrimaryKey",
+            "compositeUniqueKey"
+          ],
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "GUID": "41eba759-f144-4c12-83d3-0e8ff9024f93",
+          "description": "",
+          "unique": false
+        },
+        {
+          "code": "",
+          "name": "document_type_name",
+          "isActivated": true,
+          "primaryKey": false,
+          "required": false,
+          "alternateKey": false,
+          "childType": "varchar",
+          "type": "string",
+          "compositeKey": [
+            "compositePrimaryKey",
+            "compositeUniqueKey"
+          ],
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "GUID": "f260aa59-afdd-44a0-bec5-7435c25cecf2",
+          "description": "",
+          "unique": false
+        },
+        {
+          "code": "",
+          "name": "description_text",
+          "isActivated": true,
+          "primaryKey": false,
+          "required": false,
+          "alternateKey": false,
+          "childType": "varchar",
+          "type": "string",
+          "compositeKey": [
+            "compositePrimaryKey",
+            "compositeUniqueKey"
+          ],
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "GUID": "7f04ea9c-4c05-4f77-9b42-da48b069cc68",
+          "description": "",
+          "unique": false
+        },
+        {
+          "code": "",
+          "name": "attached_file",
+          "isActivated": true,
+          "primaryKey": false,
+          "required": false,
+          "alternateKey": false,
+          "childType": "varchar",
+          "type": "string",
+          "compositeKey": [
+            "compositePrimaryKey",
+            "compositeUniqueKey"
+          ],
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "GUID": "aef23305-a096-4985-92e6-fb2fdf324ccb",
+          "description": "",
+          "unique": false
+        },
+        {
+          "code": "",
+          "name": "json_document",
+          "isActivated": true,
+          "subtype": "object",
+          "mode": "json",
+          "enabled": true,
+          "properties": [],
+          "additionalProperties": false,
+          "alternateKey": false,
+          "childType": "json",
+          "type": "jsonObject",
+          "compositeKey": [
+            "compositePrimaryKey",
+            "compositeUniqueKey"
+          ],
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "GUID": "90db2bd1-eca3-456b-a264-30bd59717013",
+          "description": "",
+          "primaryKey": false,
+          "unique": false,
+          "required": false
+        },
+        {
+          "code": "",
+          "name": "document_status_name",
+          "isActivated": true,
+          "primaryKey": false,
+          "required": false,
+          "alternateKey": false,
+          "childType": "varchar",
+          "type": "string",
+          "compositeKey": [
+            "compositePrimaryKey",
+            "compositeUniqueKey"
+          ],
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "GUID": "157fadb8-942b-4820-8f86-9c0598916fd4",
+          "description": "",
+          "unique": false
+        }
+      ],
+      "definitions": {
+        "type": "definitions",
+        "properties": [],
+        "GUID": "8853e2df-083e-454f-87c0-400135650e7c"
+      },
+      "isActivated": true,
+      "additionalProperties": false,
+      "GUID": "2af52739-96d1-403c-b353-62ae6a8418d6"
+    },
+    {
+      "collectionName": "EQUIPMENT",
+      "type": "object",
+      "properties": [
+        {
+          "code": "",
+          "name": "equipment_identifier",
+          "isActivated": true,
+          "index": true,
+          "exclusiveMinimum": false,
+          "exclusiveMaximum": false,
+          "primaryKey": true,
+          "mode": "bigint",
+          "required": true,
+          "alternateKey": false,
+          "childType": "integer",
+          "type": "numeric",
+          "compositeKey": [
+            "compositePrimaryKey",
+            "compositeUniqueKey"
+          ],
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "GUID": "d813ef8d-45fd-48e8-8ce7-7eb14662f21f",
+          "description": "",
+          "unique": false
+        },
+        {
+          "code": "",
+          "name": "parcel_identifier",
+          "isActivated": true,
+          "index": true,
+          "exclusiveMinimum": false,
+          "exclusiveMaximum": false,
+          "primaryKey": false,
+          "mode": "bigint",
+          "required": false,
+          "alternateKey": false,
+          "childType": "integer",
+          "type": "numeric",
+          "compositeKey": [
+            "compositePrimaryKey",
+            "compositeUniqueKey"
+          ],
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "GUID": "554d0f35-a3a1-42aa-9337-15c221b376ee",
+          "description": "",
+          "unique": false,
+          "relationshipType": "Foreign Key",
+          "foreignCollection": "e7283a42-b977-4ac6-9e41-a7e2ef3b7225",
+          "foreignField": [
+            "e7283a42-b977-4ac6-9e41-a7e2ef3b7225",
+            "e80c4081-9ab3-4f43-a683-7962398c3514"
+          ],
+          "parentRelationship": "74fdc69f-2958-4fbb-8d1e-ac9f18b72a76"
+        },
+        {
+          "code": "",
+          "name": "equipment_name",
+          "isActivated": true,
+          "primaryKey": false,
+          "required": false,
+          "alternateKey": false,
+          "childType": "varchar",
+          "type": "string",
+          "compositeKey": [
+            "compositePrimaryKey",
+            "compositeUniqueKey"
+          ],
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "GUID": "e460c324-7bc4-475a-bb4a-61ee9d255800",
+          "description": "",
+          "unique": false
+        },
+        {
+          "code": "",
+          "name": "equipment_type_name",
+          "isActivated": true,
+          "primaryKey": false,
+          "required": false,
+          "alternateKey": false,
+          "childType": "varchar",
+          "type": "string",
+          "compositeKey": [
+            "compositePrimaryKey",
+            "compositeUniqueKey"
+          ],
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "GUID": "a158970b-f729-415a-bb51-a561aed88ea3",
+          "description": "",
+          "unique": false
+        },
+        {
+          "code": "",
+          "name": "equipment_manufacturer_name",
+          "isActivated": true,
+          "primaryKey": false,
+          "required": false,
+          "alternateKey": false,
+          "childType": "varchar",
+          "type": "string",
+          "compositeKey": [
+            "compositePrimaryKey",
+            "compositeUniqueKey"
+          ],
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "GUID": "61ea0a02-24d4-4a0e-b104-5dedb58ca687",
+          "description": "",
+          "unique": false
+        },
+        {
+          "code": "",
+          "name": "equipment_model_number",
+          "isActivated": true,
+          "primaryKey": false,
+          "required": false,
+          "alternateKey": false,
+          "childType": "varchar",
+          "type": "string",
+          "compositeKey": [
+            "compositePrimaryKey",
+            "compositeUniqueKey"
+          ],
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "GUID": "a6ba5a10-0065-4bcc-b408-625afb05460c",
+          "description": "",
+          "unique": false
+        },
+        {
+          "code": "",
+          "name": "equipment_serial_number",
+          "isActivated": true,
+          "primaryKey": false,
+          "required": false,
+          "alternateKey": false,
+          "childType": "varchar",
+          "type": "string",
+          "compositeKey": [
+            "compositePrimaryKey",
+            "compositeUniqueKey"
+          ],
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "GUID": "f5ee3e9e-5bed-49ef-b53a-18ec7c4e82a0",
+          "description": "",
+          "unique": false
+        },
+        {
+          "code": "",
+          "name": "equipment_purchase_date",
+          "isActivated": true,
+          "index": true,
+          "required": false,
+          "alternateKey": false,
+          "childType": "date",
+          "type": "string",
+          "compositeKey": [
+            "compositePrimaryKey",
+            "compositeUniqueKey"
+          ],
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "GUID": "e68a3b62-468c-4eba-a936-4de4b3227c9d",
+          "description": "",
+          "primaryKey": false,
+          "unique": false
+        },
+        {
+          "code": "",
+          "name": "equipment_notes_text",
+          "isActivated": true,
+          "primaryKey": false,
+          "required": false,
+          "alternateKey": false,
+          "childType": "varchar",
+          "type": "string",
+          "compositeKey": [
+            "compositePrimaryKey",
+            "compositeUniqueKey"
+          ],
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "GUID": "a9b0ed71-8c1b-4d61-912e-9fc817656f60",
+          "description": "",
+          "unique": false
+        },
+        {
+          "code": "",
+          "name": "equipment_status_name",
+          "isActivated": true,
+          "primaryKey": false,
+          "required": false,
+          "alternateKey": false,
+          "childType": "varchar",
+          "type": "string",
+          "compositeKey": [
+            "compositePrimaryKey",
+            "compositeUniqueKey"
+          ],
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "GUID": "58c7624d-ee09-4438-932f-9368d15ceb91",
+          "description": "",
+          "unique": false
+        },
+        {
+          "code": "",
+          "name": "equipment_last_maintenance_date",
+          "isActivated": true,
+          "index": true,
+          "required": false,
+          "alternateKey": false,
+          "childType": "date",
+          "type": "string",
+          "compositeKey": [
+            "compositePrimaryKey",
+            "compositeUniqueKey"
+          ],
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "GUID": "20736acc-07f1-4ce5-b673-6f68ec6cb19c",
+          "description": "",
+          "primaryKey": false,
+          "unique": false
+        },
+        {
+          "code": "",
+          "name": "equipment_condition_description_text",
+          "isActivated": true,
+          "primaryKey": false,
+          "required": false,
+          "alternateKey": false,
+          "childType": "varchar",
+          "type": "string",
+          "compositeKey": [
+            "compositePrimaryKey",
+            "compositeUniqueKey"
+          ],
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "GUID": "0d4e8d04-6fc2-4d7b-946a-36dfe9373d7b",
+          "description": "",
+          "unique": false
+        }
+      ],
+      "definitions": {
+        "type": "definitions",
+        "properties": [],
+        "GUID": "4f53e617-060a-4a53-a601-90c02949446b"
+      },
+      "isActivated": true,
+      "additionalProperties": false,
+      "GUID": "da4428d8-f2c4-451f-afca-7109573ef3a9"
+    },
+    {
+      "collectionName": "INTERNET_CONTACT_DETAIL",
+      "type": "object",
+      "properties": [
+        {
+          "code": "",
+          "name": "party_identifier",
+          "isActivated": true,
+          "index": true,
+          "exclusiveMinimum": false,
+          "exclusiveMaximum": false,
+          "primaryKey": false,
+          "mode": "bigint",
+          "required": false,
+          "alternateKey": false,
+          "childType": "integer",
+          "type": "numeric",
+          "compositeKey": [
+            "compositePrimaryKey",
+            "compositeUniqueKey"
+          ],
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "GUID": "b785a487-14ba-41f7-a6ef-5e608678906b",
+          "description": "",
+          "unique": false,
+          "relationshipType": "Foreign Key",
+          "foreignCollection": "852bfcae-f937-41f7-ae2c-e7b60690352b",
+          "foreignField": [
+            "852bfcae-f937-41f7-ae2c-e7b60690352b",
+            "61e75a28-a7a9-4b8d-a062-455de8870854"
+          ],
+          "parentRelationship": "ed83eccd-ed05-472f-9f6f-3b1fff93cee8"
+        },
+        {
+          "code": "",
+          "name": "internet_address_identifier",
+          "isActivated": true,
+          "primaryKey": true,
+          "required": true,
+          "alternateKey": false,
+          "childType": "varchar",
+          "type": "string",
+          "compositeKey": [
+            "compositePrimaryKey",
+            "compositeUniqueKey"
+          ],
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "GUID": "e405e4a2-0629-413a-b8fe-f922fa00c00b",
+          "description": "",
+          "unique": false
+        },
+        {
+          "code": "",
+          "name": "internet_address_type_name",
+          "isActivated": true,
+          "primaryKey": false,
+          "required": false,
+          "alternateKey": false,
+          "childType": "varchar",
+          "type": "string",
+          "compositeKey": [
+            "compositePrimaryKey",
+            "compositeUniqueKey"
+          ],
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "GUID": "bd883205-ab34-48f3-b4bd-91617592970f",
+          "description": "",
+          "unique": false
+        },
+        {
+          "code": "",
+          "name": "internet_display_text",
+          "isActivated": true,
+          "primaryKey": false,
+          "required": false,
+          "alternateKey": false,
+          "childType": "varchar",
+          "type": "string",
+          "compositeKey": [
+            "compositePrimaryKey",
+            "compositeUniqueKey"
+          ],
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "GUID": "357d9c46-b55f-4a7f-9b2b-2fb7fb79da9f",
+          "description": "",
+          "unique": false
+        },
+        {
+          "code": "",
+          "name": "default_display_switch",
+          "isActivated": true,
+          "index": true,
+          "exclusiveMinimum": false,
+          "exclusiveMaximum": false,
+          "primaryKey": false,
+          "mode": "bit",
+          "required": false,
+          "alternateKey": false,
+          "childType": "integer",
+          "type": "numeric",
+          "compositeKey": [
+            "compositePrimaryKey",
+            "compositeUniqueKey"
+          ],
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "GUID": "5571b68f-46ef-4bac-af08-5b6ab0bd3575",
+          "description": "",
+          "unique": false
+        }
+      ],
+      "definitions": {
+        "type": "definitions",
+        "properties": [],
+        "GUID": "6c5b0bb9-a062-4840-9b8d-6dbbde9a04c0"
+      },
+      "isActivated": true,
+      "additionalProperties": false,
+      "GUID": "f61ff8dc-7332-4b70-b328-799cd593cbb9"
+    },
+    {
+      "collectionName": "LOCATION_ADDRESS",
+      "type": "object",
+      "properties": [
+        {
+          "code": "",
+          "name": "party_identifier",
+          "isActivated": true,
+          "index": true,
+          "exclusiveMinimum": false,
+          "exclusiveMaximum": false,
+          "primaryKey": false,
+          "mode": "bigint",
+          "required": false,
+          "alternateKey": false,
+          "childType": "integer",
+          "type": "numeric",
+          "compositeKey": [
+            "compositePrimaryKey",
+            "compositeUniqueKey"
+          ],
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "GUID": "20fe6eea-e3fa-4ff9-b9b6-b16b83455bc0",
+          "description": "",
+          "unique": false,
+          "relationshipType": "Foreign Key",
+          "foreignCollection": "852bfcae-f937-41f7-ae2c-e7b60690352b",
+          "foreignField": [
+            "852bfcae-f937-41f7-ae2c-e7b60690352b",
+            "61e75a28-a7a9-4b8d-a062-455de8870854"
+          ],
+          "parentRelationship": "8a0f083c-16a5-4601-ae97-18b8f3e90e5c"
+        },
+        {
+          "code": "",
+          "name": "address_category_name",
+          "isActivated": true,
+          "primaryKey": true,
+          "required": true,
+          "alternateKey": false,
+          "childType": "varchar",
+          "type": "string",
+          "compositeKey": [
+            "compositePrimaryKey",
+            "compositeUniqueKey"
+          ],
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "GUID": "e26e0ceb-1ba0-44ce-823e-08ec69aaa68b",
+          "description": "",
+          "unique": false
+        },
+        {
+          "code": "",
+          "name": "location_address_text",
+          "isActivated": true,
+          "primaryKey": false,
+          "required": false,
+          "alternateKey": false,
+          "childType": "varchar",
+          "type": "string",
+          "compositeKey": [
+            "compositePrimaryKey",
+            "compositeUniqueKey"
+          ],
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "GUID": "09530432-b397-4e3e-9919-9a77f58da475",
+          "description": "",
+          "unique": false
+        },
+        {
+          "code": "",
+          "name": "mailing_address_indicator",
+          "isActivated": true,
+          "primaryKey": false,
+          "required": false,
+          "alternateKey": false,
+          "childType": "varchar",
+          "type": "string",
+          "compositeKey": [
+            "compositePrimaryKey",
+            "compositeUniqueKey"
+          ],
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "GUID": "18fd8237-db81-4722-a594-42fefb04c83c",
+          "description": "",
+          "unique": false
+        },
+        {
+          "code": "",
+          "name": "default_display_switch",
+          "isActivated": true,
+          "index": true,
+          "exclusiveMinimum": false,
+          "exclusiveMaximum": false,
+          "primaryKey": false,
+          "mode": "bit",
+          "required": false,
+          "alternateKey": false,
+          "childType": "integer",
+          "type": "numeric",
+          "compositeKey": [
+            "compositePrimaryKey",
+            "compositeUniqueKey"
+          ],
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "GUID": "ae842e10-3e4c-4cab-a340-16c5922a07ff",
+          "description": "",
+          "unique": false
+        }
+      ],
+      "definitions": {
+        "type": "definitions",
+        "properties": [],
+        "GUID": "5f18b89e-efca-47af-8c06-df68caa26f4e"
+      },
+      "isActivated": true,
+      "additionalProperties": false,
+      "GUID": "5e4518fd-10c7-4cd3-99dc-e95962526a05"
+    },
+    {
+      "collectionName": "MARKET_VALUE",
+      "type": "object",
+      "properties": [
+        {
+          "code": "",
+          "name": "market_value_identifier",
+          "isActivated": true,
+          "index": true,
+          "exclusiveMinimum": false,
+          "exclusiveMaximum": false,
+          "primaryKey": true,
+          "mode": "bigint",
+          "required": true,
+          "alternateKey": false,
+          "childType": "integer",
+          "type": "numeric",
+          "compositeKey": [
+            "compositePrimaryKey",
+            "compositeUniqueKey"
+          ],
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "GUID": "7030a01e-5748-499f-bb34-490aa335563f",
+          "description": "",
+          "unique": false
+        },
+        {
+          "code": "",
+          "name": "mineral_identifier",
+          "isActivated": true,
+          "index": true,
+          "exclusiveMinimum": false,
+          "exclusiveMaximum": false,
+          "primaryKey": false,
+          "mode": "bigint",
+          "required": false,
+          "alternateKey": false,
+          "childType": "integer",
+          "type": "numeric",
+          "compositeKey": [
+            "compositePrimaryKey",
+            "compositeUniqueKey"
+          ],
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "GUID": "438e1f82-288d-4d44-8f7d-e0d87863b0c6",
+          "description": "",
+          "unique": false,
+          "relationshipType": "Foreign Key",
+          "foreignCollection": "a433d2d6-9722-45ae-9a88-b212583dbb57",
+          "foreignField": [
+            "a433d2d6-9722-45ae-9a88-b212583dbb57",
+            "a3db0a20-6f35-412d-85b7-da5f1ce8796c"
+          ],
+          "parentRelationship": "17a006e4-5620-4ed8-b476-2587f682cee8"
+        },
+        {
+          "code": "",
+          "name": "spot_price_amount",
+          "isActivated": true,
+          "primaryKey": false,
+          "required": false,
+          "alternateKey": false,
+          "childType": "varchar",
+          "type": "string",
+          "compositeKey": [
+            "compositePrimaryKey",
+            "compositeUniqueKey"
+          ],
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "GUID": "31fbda38-950a-4435-992b-04d80d3e46a7",
+          "description": "",
+          "unique": false
+        },
+        {
+          "code": "",
+          "name": "market_timestamp",
+          "isActivated": true,
+          "primaryKey": false,
+          "tPrecision": 9,
+          "required": false,
+          "alternateKey": false,
+          "childType": "timestamp_ntz",
+          "type": "string",
+          "compositeKey": [
+            "compositePrimaryKey",
+            "compositeUniqueKey"
+          ],
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "GUID": "4bdf57eb-8ba8-488e-b8c8-3dd45a118cd8",
+          "description": "",
+          "unique": false,
+          "mode": "datetime"
+        }
+      ],
+      "definitions": {
+        "type": "definitions",
+        "properties": [],
+        "GUID": "6eba5db2-4d6c-4b79-aa0d-1ec0797ff08b"
+      },
+      "isActivated": true,
+      "additionalProperties": false,
+      "GUID": "625168f7-c12e-4d20-ba11-559d34254ad7"
+    },
+    {
+      "collectionName": "MINERAL",
+      "type": "object",
+      "properties": [
+        {
+          "code": "",
+          "name": "mineral_identifier",
+          "isActivated": true,
+          "index": true,
+          "exclusiveMinimum": false,
+          "exclusiveMaximum": false,
+          "primaryKey": true,
+          "mode": "bigint",
+          "required": true,
+          "alternateKey": false,
+          "childType": "integer",
+          "type": "numeric",
+          "compositeKey": [
+            "compositePrimaryKey",
+            "compositeUniqueKey"
+          ],
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "GUID": "a3db0a20-6f35-412d-85b7-da5f1ce8796c",
+          "description": "",
+          "unique": false,
+          "childRelationships": [
+            "17a006e4-5620-4ed8-b476-2587f682cee8"
+          ],
+          "glossaryTerms": [
+            {
+              "GUID": "221122f8-8b77-4693-bb71-5406e94a8b0f",
+              "glossaryTermId": "21af1101-9118-4c6f-aaea-bb054f498047"
+            },
+            {
+              "GUID": "42ff64b0-54d6-497b-9307-ccc63a70c462",
+              "glossaryTermId": "30d28d97-db7d-4cc3-9f70-df4cfdb5755c"
+            }
+          ]
+        },
+        {
+          "code": "",
+          "name": "mineral_name",
+          "isActivated": true,
+          "primaryKey": false,
+          "required": false,
+          "alternateKey": false,
+          "childType": "varchar",
+          "type": "string",
+          "compositeKey": [
+            "compositePrimaryKey",
+            "compositeUniqueKey"
+          ],
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "GUID": "328bb038-2978-4c2a-8b90-803933ff8425",
+          "description": "",
+          "unique": false,
+          "glossaryTerms": [
+            {
+              "GUID": "d5acf455-fbe0-4152-acbc-acc54c19c574",
+              "glossaryTermId": "21af1101-9118-4c6f-aaea-bb054f498047"
+            },
+            {
+              "GUID": "c80b9493-bffd-471d-8ac0-a7b6937f3a40",
+              "glossaryTermId": "ecfe85ec-ce3d-43ff-9917-3f84033a0efc"
+            }
+          ]
+        },
+        {
+          "code": "",
+          "name": "mineral_description_text",
+          "isActivated": true,
+          "primaryKey": false,
+          "required": false,
+          "alternateKey": false,
+          "childType": "varchar",
+          "type": "string",
+          "compositeKey": [
+            "compositePrimaryKey",
+            "compositeUniqueKey"
+          ],
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "GUID": "5b65af50-2dc0-46c1-85eb-5e074f04e1cf",
+          "description": "",
+          "unique": false
+        },
+        {
+          "code": "",
+          "name": "mineral_measurement_name",
+          "isActivated": true,
+          "primaryKey": false,
+          "required": false,
+          "alternateKey": false,
+          "childType": "varchar",
+          "type": "string",
+          "compositeKey": [
+            "compositePrimaryKey",
+            "compositeUniqueKey"
+          ],
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "GUID": "4e8bea41-5764-43b7-839a-1450ef0aeeb3",
+          "description": "",
+          "unique": false
+        },
+        {
+          "code": "",
+          "name": "hazardous_mineral_switch",
+          "isActivated": true,
+          "primaryKey": false,
+          "required": false,
+          "alternateKey": false,
+          "childType": "varchar",
+          "type": "string",
+          "compositeKey": [
+            "compositePrimaryKey",
+            "compositeUniqueKey"
+          ],
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "GUID": "c584268f-c271-4aa5-b653-39bd8d686de6",
+          "description": "",
+          "unique": false
+        },
+        {
+          "code": "",
+          "name": "mineral_specific_gravity_count",
+          "isActivated": true,
+          "primaryKey": false,
+          "required": false,
+          "alternateKey": false,
+          "childType": "varchar",
+          "type": "string",
+          "compositeKey": [
+            "compositePrimaryKey",
+            "compositeUniqueKey"
+          ],
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "GUID": "3238c176-971b-4aea-88eb-fe3cdd0b4b1f",
+          "description": "",
+          "unique": false
+        }
+      ],
+      "definitions": {
+        "type": "definitions",
+        "properties": [],
+        "GUID": "d1b3aea3-4a3f-448d-bb30-15eee3064091"
+      },
+      "isActivated": true,
+      "additionalProperties": false,
+      "GUID": "a433d2d6-9722-45ae-9a88-b212583dbb57"
+    },
+    {
+      "collectionName": "PARTY",
+      "type": "object",
+      "properties": [
+        {
+          "code": "",
+          "name": "party_identifier",
+          "isActivated": true,
+          "index": true,
+          "exclusiveMinimum": false,
+          "exclusiveMaximum": false,
+          "primaryKey": true,
+          "mode": "bigint",
+          "required": true,
+          "alternateKey": false,
+          "childType": "integer",
+          "type": "numeric",
+          "compositeKey": [
+            "compositePrimaryKey",
+            "compositeUniqueKey"
+          ],
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "GUID": "61e75a28-a7a9-4b8d-a062-455de8870854",
+          "description": "",
+          "unique": false,
+          "childRelationships": [
+            "ed83eccd-ed05-472f-9f6f-3b1fff93cee8",
+            "8a0f083c-16a5-4601-ae97-18b8f3e90e5c",
+            "3a5778c2-075b-4fdf-bde9-1dbbb1aa6087"
+          ]
+        },
+        {
+          "code": "",
+          "name": "party_type_name",
+          "isActivated": true,
+          "primaryKey": false,
+          "required": false,
+          "alternateKey": false,
+          "childType": "varchar",
+          "type": "string",
+          "compositeKey": [
+            "compositePrimaryKey",
+            "compositeUniqueKey"
+          ],
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "GUID": "9cc28270-a5c4-4611-acd7-39f240b312e1",
+          "description": "",
+          "unique": false
+        },
+        {
+          "code": "",
+          "name": "prefix_name",
+          "isActivated": true,
+          "primaryKey": false,
+          "required": false,
+          "alternateKey": false,
+          "childType": "varchar",
+          "type": "string",
+          "compositeKey": [
+            "compositePrimaryKey",
+            "compositeUniqueKey"
+          ],
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "GUID": "020c0e06-3e90-43cf-808e-7e197783fee1",
+          "description": "",
+          "unique": false
+        },
+        {
+          "code": "",
+          "name": "first_name",
+          "isActivated": true,
+          "primaryKey": false,
+          "required": false,
+          "alternateKey": false,
+          "childType": "varchar",
+          "type": "string",
+          "compositeKey": [
+            "compositePrimaryKey",
+            "compositeUniqueKey"
+          ],
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "GUID": "71d236e5-58e1-4357-a823-8e2426e67b13",
+          "description": "",
+          "unique": false
+        },
+        {
+          "code": "",
+          "name": "middle_name",
+          "isActivated": true,
+          "primaryKey": false,
+          "required": false,
+          "alternateKey": false,
+          "childType": "varchar",
+          "type": "string",
+          "compositeKey": [
+            "compositePrimaryKey",
+            "compositeUniqueKey"
+          ],
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "GUID": "eb2519b6-1cbf-425a-af86-a8844b96530f",
+          "description": "",
+          "unique": false
+        },
+        {
+          "code": "",
+          "name": "last_name",
+          "isActivated": true,
+          "primaryKey": false,
+          "required": false,
+          "alternateKey": false,
+          "childType": "varchar",
+          "type": "string",
+          "compositeKey": [
+            "compositePrimaryKey",
+            "compositeUniqueKey"
+          ],
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "GUID": "c18d7c1f-8008-49ca-8135-05df9b4e7072",
+          "description": "",
+          "unique": false
+        },
+        {
+          "code": "",
+          "name": "suffix_name",
+          "isActivated": true,
+          "primaryKey": false,
+          "required": false,
+          "alternateKey": false,
+          "childType": "varchar",
+          "type": "string",
+          "compositeKey": [
+            "compositePrimaryKey",
+            "compositeUniqueKey"
+          ],
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "GUID": "87126faa-79b9-4282-86e4-b9e1a101fc98",
+          "description": "",
+          "unique": false
+        },
+        {
+          "code": "",
+          "name": "company_name",
+          "isActivated": true,
+          "primaryKey": false,
+          "required": false,
+          "alternateKey": false,
+          "childType": "varchar",
+          "type": "string",
+          "compositeKey": [
+            "compositePrimaryKey",
+            "compositeUniqueKey"
+          ],
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "GUID": "96e1a5f4-dec8-48bd-8c7c-081f0cb88b2f",
+          "description": "",
+          "unique": false
+        },
+        {
+          "code": "",
+          "name": "job_title_name",
+          "isActivated": true,
+          "primaryKey": false,
+          "required": false,
+          "alternateKey": false,
+          "childType": "varchar",
+          "type": "string",
+          "compositeKey": [
+            "compositePrimaryKey",
+            "compositeUniqueKey"
+          ],
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "GUID": "9946eb1b-810a-4956-ac3c-2a9c69b0469f",
+          "description": "",
+          "unique": false
+        },
+        {
+          "code": "",
+          "name": "stored_file_pattern_name",
+          "isActivated": true,
+          "primaryKey": false,
+          "required": false,
+          "alternateKey": false,
+          "childType": "varchar",
+          "type": "string",
+          "compositeKey": [
+            "compositePrimaryKey",
+            "compositeUniqueKey"
+          ],
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "GUID": "fd7e6ea4-a640-4577-ae72-1e8c5cf48729",
+          "description": "",
+          "unique": false
+        },
+        {
+          "code": "",
+          "name": "photograph_file",
+          "isActivated": true,
+          "primaryKey": false,
+          "required": false,
+          "alternateKey": false,
+          "childType": "varchar",
+          "type": "string",
+          "compositeKey": [
+            "compositePrimaryKey",
+            "compositeUniqueKey"
+          ],
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "GUID": "2bcd2d4e-b880-491f-9410-02813398b386",
+          "description": "",
+          "unique": false
+        },
+        {
+          "code": "",
+          "name": "note_text",
+          "isActivated": true,
+          "primaryKey": false,
+          "required": false,
+          "alternateKey": false,
+          "childType": "varchar",
+          "type": "string",
+          "compositeKey": [
+            "compositePrimaryKey",
+            "compositeUniqueKey"
+          ],
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "GUID": "9d274136-a10a-4862-8cfa-0cf2c866a892",
+          "description": "",
+          "unique": false
+        }
+      ],
+      "definitions": {
+        "type": "definitions",
+        "properties": [],
+        "GUID": "0a926e28-feb3-499b-8b1b-7014dca7f225"
+      },
+      "isActivated": true,
+      "additionalProperties": false,
+      "GUID": "852bfcae-f937-41f7-ae2c-e7b60690352b"
+    },
+    {
+      "collectionName": "PHONE_NUMBER",
+      "type": "object",
+      "properties": [
+        {
+          "code": "",
+          "name": "party_identifier",
+          "isActivated": true,
+          "index": true,
+          "exclusiveMinimum": false,
+          "exclusiveMaximum": false,
+          "primaryKey": false,
+          "mode": "bigint",
+          "required": false,
+          "alternateKey": false,
+          "childType": "integer",
+          "type": "numeric",
+          "compositeKey": [
+            "compositePrimaryKey",
+            "compositeUniqueKey"
+          ],
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "GUID": "fc1148a4-a250-415a-ba65-e45074160a5b",
+          "description": "",
+          "unique": false,
+          "relationshipType": "Foreign Key",
+          "parentRelationship": "3a5778c2-075b-4fdf-bde9-1dbbb1aa6087",
+          "foreignCollection": "852bfcae-f937-41f7-ae2c-e7b60690352b",
+          "foreignField": [
+            "852bfcae-f937-41f7-ae2c-e7b60690352b",
+            "61e75a28-a7a9-4b8d-a062-455de8870854"
+          ]
+        },
+        {
+          "code": "",
+          "name": "phone_number_category_name",
+          "isActivated": true,
+          "primaryKey": true,
+          "required": true,
+          "alternateKey": false,
+          "childType": "varchar",
+          "type": "string",
+          "compositeKey": [
+            "compositePrimaryKey",
+            "compositeUniqueKey"
+          ],
+          "compositePrimaryKey": true,
+          "compositeUniqueKey": false,
+          "GUID": "109c12d8-81bb-4470-8d4f-46957bdfde46",
+          "description": "",
+          "unique": false
+        },
+        {
+          "code": "",
+          "name": "phone_number",
+          "isActivated": true,
+          "primaryKey": true,
+          "required": true,
+          "alternateKey": false,
+          "childType": "varchar",
+          "type": "string",
+          "compositeKey": [
+            "compositePrimaryKey",
+            "compositeUniqueKey"
+          ],
+          "compositePrimaryKey": true,
+          "compositeUniqueKey": false,
+          "GUID": "67c92fc5-a981-4ecd-8e15-fac2457feac9",
+          "description": "",
+          "unique": false
+        },
+        {
+          "code": "",
+          "name": "phone_display_sequence_number",
+          "isActivated": true,
+          "index": true,
+          "exclusiveMinimum": false,
+          "exclusiveMaximum": false,
+          "primaryKey": false,
+          "mode": "smallint",
+          "required": false,
+          "alternateKey": false,
+          "childType": "integer",
+          "type": "numeric",
+          "compositeKey": [
+            "compositePrimaryKey",
+            "compositeUniqueKey"
+          ],
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "GUID": "00274199-801c-418c-8d79-12af12d882bd",
+          "description": "",
+          "unique": false
+        },
+        {
+          "code": "",
+          "name": "preferred_indicator",
+          "isActivated": true,
+          "primaryKey": false,
+          "required": false,
+          "alternateKey": false,
+          "childType": "varchar",
+          "type": "string",
+          "compositeKey": [
+            "compositePrimaryKey",
+            "compositeUniqueKey"
+          ],
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "GUID": "7a3d80c3-c299-401e-9386-478f7f2e2c1e",
+          "description": "",
+          "unique": false
+        }
+      ],
+      "definitions": {
+        "type": "definitions",
+        "properties": [],
+        "GUID": "b1fabbe0-0bff-427b-8aff-3b75b2d1631c"
+      },
+      "isActivated": true,
+      "additionalProperties": false,
+      "GUID": "2e636de1-bcc4-4483-98d1-951dfb40c7f9",
+      "primaryKey": [
+        {
+          "GUID": "1586062d-796c-4f95-81e8-d114d7595a9d",
+          "constraintName": "pk",
+          "compositePrimaryKey": [
+            {
+              "keyId": "109c12d8-81bb-4470-8d4f-46957bdfde46"
+            },
+            {
+              "keyId": "67c92fc5-a981-4ecd-8e15-fac2457feac9"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "collectionName": "RELATED_ASSAY_DOCUMENT",
+      "type": "object",
+      "properties": [
+        {
+          "code": "",
+          "name": "assay_order_identifier",
+          "isActivated": true,
+          "index": true,
+          "exclusiveMinimum": false,
+          "exclusiveMaximum": false,
+          "primaryKey": true,
+          "mode": "bigint",
+          "required": true,
+          "alternateKey": false,
+          "childType": "integer",
+          "type": "numeric",
+          "compositeKey": [
+            "compositePrimaryKey",
+            "compositeUniqueKey"
+          ],
+          "compositePrimaryKey": true,
+          "compositeUniqueKey": false,
+          "GUID": "7ec3c2db-6059-4026-9bea-13f0bcb8f899",
+          "description": "",
+          "unique": false
+        },
+        {
+          "code": "",
+          "name": "document_identifier",
+          "isActivated": true,
+          "index": true,
+          "exclusiveMinimum": false,
+          "exclusiveMaximum": false,
+          "primaryKey": true,
+          "mode": "bigint",
+          "required": true,
+          "alternateKey": false,
+          "childType": "integer",
+          "type": "numeric",
+          "compositeKey": [
+            "compositePrimaryKey",
+            "compositeUniqueKey"
+          ],
+          "compositePrimaryKey": true,
+          "compositeUniqueKey": false,
+          "GUID": "f6a81fdf-6f84-4a72-9d6e-7354a6185d5e",
+          "description": "",
+          "unique": false
+        },
+        {
+          "code": "",
+          "name": "document_relation_comment",
+          "isActivated": true,
+          "primaryKey": false,
+          "required": false,
+          "alternateKey": false,
+          "childType": "varchar",
+          "type": "string",
+          "compositeKey": [
+            "compositePrimaryKey",
+            "compositeUniqueKey"
+          ],
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "GUID": "cbe00c73-ce2a-4902-93bd-ba27c5bc8524",
+          "description": "",
+          "unique": false
+        },
+        {
+          "code": "",
+          "name": "document_relation_create_date",
+          "isActivated": true,
+          "index": true,
+          "required": false,
+          "alternateKey": false,
+          "childType": "date",
+          "type": "string",
+          "compositeKey": [
+            "compositePrimaryKey",
+            "compositeUniqueKey"
+          ],
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "GUID": "744d0829-56cc-42c7-ab03-68fbac9e0e21",
+          "description": "",
+          "primaryKey": false,
+          "unique": false
+        }
+      ],
+      "definitions": {
+        "type": "definitions",
+        "properties": [],
+        "GUID": "e6629a1b-07a3-4508-80ff-6d7d9c284abf"
+      },
+      "isActivated": true,
+      "additionalProperties": false,
+      "GUID": "10b64399-8eb0-4861-8cd3-3b8bc2aefcd6",
+      "primaryKey": [
+        {
+          "GUID": "bf2feb5f-f373-4b58-ada8-a539ee8687de",
+          "constraintName": "pk",
+          "compositePrimaryKey": [
+            {
+              "keyId": "7ec3c2db-6059-4026-9bea-13f0bcb8f899"
+            },
+            {
+              "keyId": "f6a81fdf-6f84-4a72-9d6e-7354a6185d5e"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "collectionName": "RELATED_LAND_PARCEL_DOCUMENT",
+      "type": "object",
+      "properties": [
+        {
+          "code": "",
+          "name": "parcel_identifier",
+          "isActivated": true,
+          "index": true,
+          "exclusiveMinimum": false,
+          "exclusiveMaximum": false,
+          "primaryKey": true,
+          "mode": "bigint",
+          "required": true,
+          "alternateKey": false,
+          "childType": "integer",
+          "type": "numeric",
+          "compositeKey": [
+            "compositePrimaryKey",
+            "compositeUniqueKey"
+          ],
+          "compositePrimaryKey": true,
+          "compositeUniqueKey": false,
+          "GUID": "e64b2a1d-c795-44eb-ad7e-947a5fcd84c3",
+          "description": "",
+          "unique": false
+        },
+        {
+          "code": "",
+          "name": "document_identifier",
+          "isActivated": true,
+          "index": true,
+          "exclusiveMinimum": false,
+          "exclusiveMaximum": false,
+          "primaryKey": true,
+          "mode": "bigint",
+          "required": true,
+          "alternateKey": false,
+          "childType": "integer",
+          "type": "numeric",
+          "compositeKey": [
+            "compositePrimaryKey",
+            "compositeUniqueKey"
+          ],
+          "compositePrimaryKey": true,
+          "compositeUniqueKey": false,
+          "GUID": "8b43f06a-e293-42c8-9974-8129e45ec491",
+          "description": "",
+          "unique": false
+        },
+        {
+          "code": "",
+          "name": "document_relation_comment",
+          "isActivated": true,
+          "primaryKey": false,
+          "required": false,
+          "alternateKey": false,
+          "childType": "varchar",
+          "type": "string",
+          "compositeKey": [
+            "compositePrimaryKey",
+            "compositeUniqueKey"
+          ],
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "GUID": "d2cc9796-9da0-4b49-8793-6ff92e3db3a9",
+          "description": "",
+          "unique": false
+        },
+        {
+          "code": "",
+          "name": "document_relation_create_date",
+          "isActivated": true,
+          "index": true,
+          "required": false,
+          "alternateKey": false,
+          "childType": "date",
+          "type": "string",
+          "compositeKey": [
+            "compositePrimaryKey",
+            "compositeUniqueKey"
+          ],
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "GUID": "083121f0-0d70-4041-a6e8-70ac98483ae3",
+          "description": "",
+          "primaryKey": false,
+          "unique": false
+        }
+      ],
+      "definitions": {
+        "type": "definitions",
+        "properties": [],
+        "GUID": "c055de72-d617-4914-96ad-96a416e20580"
+      },
+      "isActivated": true,
+      "additionalProperties": false,
+      "GUID": "999a4d02-c944-48c8-9107-cb2d9516f7d3",
+      "primaryKey": [
+        {
+          "GUID": "6e14f32d-cf55-4ac2-b806-b80c4583a0cc",
+          "constraintName": "pk",
+          "compositePrimaryKey": [
+            {
+              "keyId": "e64b2a1d-c795-44eb-ad7e-947a5fcd84c3"
+            },
+            {
+              "keyId": "8b43f06a-e293-42c8-9974-8129e45ec491"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "collectionName": "RELATED_MINERAL_CONTRACT_DOCUMENT",
+      "type": "object",
+      "properties": [
+        {
+          "code": "",
+          "name": "party_mineral_contract_term_identifier",
+          "isActivated": true,
+          "index": true,
+          "exclusiveMinimum": false,
+          "exclusiveMaximum": false,
+          "primaryKey": true,
+          "mode": "bigint",
+          "required": true,
+          "alternateKey": false,
+          "childType": "integer",
+          "type": "numeric",
+          "compositeKey": [
+            "compositePrimaryKey",
+            "compositeUniqueKey"
+          ],
+          "compositePrimaryKey": true,
+          "compositeUniqueKey": false,
+          "GUID": "279d2008-553f-4263-b7e7-0ac0184d5ff8",
+          "description": "",
+          "unique": false
+        },
+        {
+          "code": "",
+          "name": "document_identifier",
+          "isActivated": true,
+          "index": true,
+          "exclusiveMinimum": false,
+          "exclusiveMaximum": false,
+          "primaryKey": true,
+          "mode": "bigint",
+          "required": true,
+          "alternateKey": false,
+          "childType": "integer",
+          "type": "numeric",
+          "compositeKey": [
+            "compositePrimaryKey",
+            "compositeUniqueKey"
+          ],
+          "compositePrimaryKey": true,
+          "compositeUniqueKey": false,
+          "GUID": "8ebc121a-8f71-437f-ab5e-782933ee9f22",
+          "description": "",
+          "unique": false
+        },
+        {
+          "code": "",
+          "name": "document_relation_comment",
+          "isActivated": true,
+          "primaryKey": false,
+          "required": false,
+          "alternateKey": false,
+          "childType": "varchar",
+          "type": "string",
+          "compositeKey": [
+            "compositePrimaryKey",
+            "compositeUniqueKey"
+          ],
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "GUID": "f3940177-06f1-4ef7-805c-57e308218f72",
+          "description": "",
+          "unique": false
+        },
+        {
+          "code": "",
+          "name": "document_relation_create_date",
+          "isActivated": true,
+          "index": true,
+          "required": false,
+          "alternateKey": false,
+          "childType": "date",
+          "type": "string",
+          "compositeKey": [
+            "compositePrimaryKey",
+            "compositeUniqueKey"
+          ],
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "GUID": "2f153deb-91ca-49e3-a0c5-a94b96efc7d6",
+          "description": "",
+          "primaryKey": false,
+          "unique": false
+        }
+      ],
+      "definitions": {
+        "type": "definitions",
+        "properties": [],
+        "GUID": "700ee1ee-5e60-4cf8-8e78-1975180cdac7"
+      },
+      "isActivated": true,
+      "additionalProperties": false,
+      "GUID": "7fa14c8d-7eb5-43d7-af7c-d14476cddfa8",
+      "primaryKey": [
+        {
+          "GUID": "fc2e8724-0f94-4de6-b73f-d85f9ef981d0",
+          "constraintName": "pk",
+          "compositePrimaryKey": [
+            {
+              "keyId": "279d2008-553f-4263-b7e7-0ac0184d5ff8"
+            },
+            {
+              "keyId": "8ebc121a-8f71-437f-ab5e-782933ee9f22"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "collectionName": "RELATED_MINERAL_REFINEMENT_DOCUMENT",
+      "type": "object",
+      "properties": [
+        {
+          "code": "",
+          "name": "mineral_refinement_identifier",
+          "isActivated": true,
+          "index": true,
+          "exclusiveMinimum": false,
+          "exclusiveMaximum": false,
+          "primaryKey": true,
+          "mode": "bigint",
+          "required": true,
+          "alternateKey": false,
+          "childType": "integer",
+          "type": "numeric",
+          "compositeKey": [
+            "compositePrimaryKey",
+            "compositeUniqueKey"
+          ],
+          "compositePrimaryKey": true,
+          "compositeUniqueKey": false,
+          "GUID": "1bdfb012-2f6e-411f-9163-3de643215b87",
+          "description": "",
+          "unique": false
+        },
+        {
+          "code": "",
+          "name": "document_identifier",
+          "isActivated": true,
+          "index": true,
+          "exclusiveMinimum": false,
+          "exclusiveMaximum": false,
+          "primaryKey": true,
+          "mode": "bigint",
+          "required": true,
+          "alternateKey": false,
+          "childType": "integer",
+          "type": "numeric",
+          "compositeKey": [
+            "compositePrimaryKey",
+            "compositeUniqueKey"
+          ],
+          "compositePrimaryKey": true,
+          "compositeUniqueKey": false,
+          "GUID": "9c1e4613-d127-4878-af20-4bc915c54228",
+          "description": "",
+          "unique": false
+        },
+        {
+          "code": "",
+          "name": "document_relation_comment",
+          "isActivated": true,
+          "primaryKey": false,
+          "required": false,
+          "alternateKey": false,
+          "childType": "varchar",
+          "type": "string",
+          "compositeKey": [
+            "compositePrimaryKey",
+            "compositeUniqueKey"
+          ],
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "GUID": "b15f15d0-d1fd-4dcb-9d93-db1067de3c6d",
+          "description": "",
+          "unique": false
+        },
+        {
+          "code": "",
+          "name": "document_relation_create_date",
+          "isActivated": true,
+          "index": true,
+          "required": false,
+          "alternateKey": false,
+          "childType": "date",
+          "type": "string",
+          "compositeKey": [
+            "compositePrimaryKey",
+            "compositeUniqueKey"
+          ],
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "GUID": "15da8652-26ea-4930-b555-68e13f0c23f2",
+          "description": "",
+          "primaryKey": false,
+          "unique": false
+        }
+      ],
+      "definitions": {
+        "type": "definitions",
+        "properties": [],
+        "GUID": "0d2b5d93-c99e-469e-96e1-631ad6a58db4"
+      },
+      "isActivated": true,
+      "additionalProperties": false,
+      "GUID": "8630f170-8ab3-4add-a0f3-38731f46b1ce",
+      "primaryKey": [
+        {
+          "GUID": "c6da303c-9d22-4af1-99e5-863215f1d407",
+          "constraintName": "pk",
+          "compositePrimaryKey": [
+            {
+              "keyId": "1bdfb012-2f6e-411f-9163-3de643215b87"
+            },
+            {
+              "keyId": "9c1e4613-d127-4878-af20-4bc915c54228"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "collectionName": "RELATED_PARTY_DOCUMENT",
+      "type": "object",
+      "properties": [
+        {
+          "code": "",
+          "name": "party_identifier",
+          "isActivated": true,
+          "index": true,
+          "exclusiveMinimum": false,
+          "exclusiveMaximum": false,
+          "primaryKey": true,
+          "mode": "bigint",
+          "required": true,
+          "alternateKey": false,
+          "childType": "integer",
+          "type": "numeric",
+          "compositeKey": [
+            "compositePrimaryKey",
+            "compositeUniqueKey"
+          ],
+          "compositePrimaryKey": true,
+          "compositeUniqueKey": false,
+          "GUID": "7ed85aa2-2fb7-46f1-b592-275fc1efca59",
+          "description": "",
+          "unique": false
+        },
+        {
+          "code": "",
+          "name": "document_identifier",
+          "isActivated": true,
+          "index": true,
+          "exclusiveMinimum": false,
+          "exclusiveMaximum": false,
+          "primaryKey": true,
+          "mode": "bigint",
+          "required": true,
+          "alternateKey": false,
+          "childType": "integer",
+          "type": "numeric",
+          "compositeKey": [
+            "compositePrimaryKey",
+            "compositeUniqueKey"
+          ],
+          "compositePrimaryKey": true,
+          "compositeUniqueKey": false,
+          "GUID": "624bcb99-cb2d-4b0f-80da-857cf6745400",
+          "description": "",
+          "unique": false
+        },
+        {
+          "code": "",
+          "name": "document_relation_comment",
+          "isActivated": true,
+          "primaryKey": false,
+          "required": false,
+          "alternateKey": false,
+          "childType": "varchar",
+          "type": "string",
+          "compositeKey": [
+            "compositePrimaryKey",
+            "compositeUniqueKey"
+          ],
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "GUID": "18df1906-ee6a-43ae-8d9a-e7580b00778e",
+          "description": "",
+          "unique": false
+        },
+        {
+          "code": "",
+          "name": "document_relation_create_date",
+          "isActivated": true,
+          "index": true,
+          "required": false,
+          "alternateKey": false,
+          "childType": "date",
+          "type": "string",
+          "compositeKey": [
+            "compositePrimaryKey",
+            "compositeUniqueKey"
+          ],
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "GUID": "d3d119e2-8911-4f9b-8857-04c39fc89d99",
+          "description": "",
+          "primaryKey": false,
+          "unique": false
+        }
+      ],
+      "definitions": {
+        "type": "definitions",
+        "properties": [],
+        "GUID": "48894e40-6507-40e3-bb49-bbe047efb71e"
+      },
+      "isActivated": true,
+      "additionalProperties": false,
+      "GUID": "6afb814e-4bb0-4c45-9e4f-044ad959f852",
+      "primaryKey": [
+        {
+          "GUID": "eb4881a6-35aa-47eb-8879-937501aa4445",
+          "constraintName": "pk",
+          "compositePrimaryKey": [
+            {
+              "keyId": "7ed85aa2-2fb7-46f1-b592-275fc1efca59"
+            },
+            {
+              "keyId": "624bcb99-cb2d-4b0f-80da-857cf6745400"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "collectionName": "LAND_PARCEL",
+      "type": "object",
+      "properties": [
+        {
+          "code": "",
+          "name": "parcel_identifier",
+          "isActivated": true,
+          "index": true,
+          "exclusiveMinimum": false,
+          "exclusiveMaximum": false,
+          "primaryKey": true,
+          "mode": "bigint",
+          "required": true,
+          "alternateKey": false,
+          "childType": "integer",
+          "type": "numeric",
+          "compositeKey": [
+            "compositePrimaryKey",
+            "compositeUniqueKey"
+          ],
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "GUID": "e80c4081-9ab3-4f43-a683-7962398c3514",
+          "description": "",
+          "unique": false,
+          "childRelationships": [
+            "74fdc69f-2958-4fbb-8d1e-ac9f18b72a76"
+          ]
+        }
+      ],
+      "definitions": {
+        "type": "definitions",
+        "properties": [],
+        "GUID": "942391d0-18a5-4dac-b666-49fad1a4edd3"
+      },
+      "isActivated": true,
+      "additionalProperties": false,
+      "GUID": "e7283a42-b977-4ac6-9e41-a7e2ef3b7225",
+      "description": "Placeholders: referenced by FK/PFK in the PDF but not described there"
+    },
+    {
+      "collectionName": "ASSAY_ORDER",
+      "type": "object",
+      "properties": [
+        {
+          "code": "",
+          "name": "assay_order_identifier",
+          "isActivated": true,
+          "index": true,
+          "exclusiveMinimum": false,
+          "exclusiveMaximum": false,
+          "primaryKey": true,
+          "mode": "bigint",
+          "required": true,
+          "alternateKey": false,
+          "childType": "integer",
+          "type": "numeric",
+          "compositeKey": [
+            "compositePrimaryKey",
+            "compositeUniqueKey"
+          ],
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "GUID": "ecbc5b68-9708-45a9-bd68-90d6c8753deb",
+          "description": "",
+          "unique": false
+        }
+      ],
+      "definitions": {
+        "type": "definitions",
+        "properties": [],
+        "GUID": "0cb4f6ff-3857-4f61-b1e5-7d88dbf1ff31"
+      },
+      "isActivated": true,
+      "additionalProperties": false,
+      "GUID": "773e2fbb-712b-44c7-804c-e4a4137a884b"
+    },
+    {
+      "collectionName": "PARTY_MINERAL_CONTRACT_TERM",
+      "type": "object",
+      "properties": [
+        {
+          "code": "",
+          "name": "party_mineral_contract_term_identifier",
+          "isActivated": true,
+          "index": true,
+          "exclusiveMinimum": false,
+          "exclusiveMaximum": false,
+          "primaryKey": true,
+          "mode": "bigint",
+          "required": true,
+          "alternateKey": false,
+          "childType": "integer",
+          "type": "numeric",
+          "compositeKey": [
+            "compositePrimaryKey",
+            "compositeUniqueKey"
+          ],
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "GUID": "a1cb63de-40b5-48f2-90c8-4ff9efb6be34",
+          "description": "",
+          "unique": false
+        }
+      ],
+      "definitions": {
+        "type": "definitions",
+        "properties": [],
+        "GUID": "3022ef74-6382-48e5-8ca6-5003acf8f611"
+      },
+      "isActivated": true,
+      "additionalProperties": false,
+      "GUID": "d5400519-8feb-4e27-860a-064e3aa8f6ca"
+    },
+    {
+      "collectionName": "MINERAL_REFINEMENT",
+      "type": "object",
+      "properties": [
+        {
+          "code": "",
+          "name": "mineral_refinement_identifier",
+          "isActivated": true,
+          "index": true,
+          "exclusiveMinimum": false,
+          "exclusiveMaximum": false,
+          "primaryKey": true,
+          "mode": "bigint",
+          "required": true,
+          "alternateKey": false,
+          "childType": "integer",
+          "type": "numeric",
+          "compositeKey": [
+            "compositePrimaryKey",
+            "compositeUniqueKey"
+          ],
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "GUID": "a4b6d05c-c71d-4c79-9b31-a7be85cba739",
+          "description": "",
+          "unique": false
+        }
+      ],
+      "definitions": {
+        "type": "definitions",
+        "properties": [],
+        "GUID": "8d968c9d-3688-4204-85d2-fa8b23e53a46"
+      },
+      "isActivated": true,
+      "additionalProperties": false,
+      "GUID": "63b592f8-60db-488d-b6ca-489de8e91428"
+    }
+  ],
+  "buckets": [],
+  "views": [],
+  "relationships": [
+    {
+      "name": "DOCUMENT_document_identifier_RELATED_PARTY_DOCUMENT",
+      "relationshipType": "Foreign Key",
+      "parentField": [],
+      "parentCardinality": "1",
+      "childField": [],
+      "isActivated": true,
+      "childCardinality": "0..n",
+      "GUID": "ec9b0917-7f94-41e2-903c-31a1769e9754",
+      "description": "document_identifier",
+      "parentCollection": "2af52739-96d1-403c-b353-62ae6a8418d6",
+      "childCollection": "6afb814e-4bb0-4c45-9e4f-044ad959f852",
+      "level": "field",
+      "lineSize": 2
+    },
+    {
+      "name": "DOCUMENT_document_identifier_RELATED_ASSAY_DOCUMENT",
+      "relationshipType": "Foreign Key",
+      "parentField": [],
+      "parentCardinality": "1",
+      "childField": [],
+      "isActivated": true,
+      "childCardinality": "0..n",
+      "GUID": "a07af3d2-169b-4fe9-aab3-fc8899302e72",
+      "description": "document_identifier",
+      "parentCollection": "2af52739-96d1-403c-b353-62ae6a8418d6",
+      "childCollection": "10b64399-8eb0-4861-8cd3-3b8bc2aefcd6",
+      "level": "field",
+      "lineSize": 2
+    },
+    {
+      "name": "DOCUMENT_document_identifier_RELATED_LAND_PARCEL_DOCUMENT",
+      "relationshipType": "Foreign Key",
+      "parentField": [],
+      "parentCardinality": "1",
+      "childField": [],
+      "isActivated": true,
+      "childCardinality": "0..n",
+      "GUID": "7f4548e2-37dd-4198-8227-05614dc0e484",
+      "description": "document_identifier",
+      "parentCollection": "2af52739-96d1-403c-b353-62ae6a8418d6",
+      "childCollection": "999a4d02-c944-48c8-9107-cb2d9516f7d3",
+      "level": "field",
+      "lineSize": 2
+    },
+    {
+      "name": "DOCUMENT_document_identifier_RELATED_MINERAL_CONTRACT_DOCUMENT",
+      "relationshipType": "Foreign Key",
+      "parentField": [],
+      "parentCardinality": "1",
+      "childField": [],
+      "isActivated": true,
+      "childCardinality": "0..n",
+      "GUID": "b5052573-72af-4540-ba45-75a12f40ca58",
+      "description": "document_identifier",
+      "parentCollection": "2af52739-96d1-403c-b353-62ae6a8418d6",
+      "childCollection": "7fa14c8d-7eb5-43d7-af7c-d14476cddfa8",
+      "level": "field",
+      "lineSize": 2
+    },
+    {
+      "name": "DOCUMENT_document_identifier_RELATED_MINERAL_REFINEMENT_DOCUMENT",
+      "relationshipType": "Foreign Key",
+      "parentField": [],
+      "parentCardinality": "1",
+      "childField": [],
+      "isActivated": true,
+      "childCardinality": "0..n",
+      "GUID": "bad0498d-4766-4ea2-9671-41a9cecb57e7",
+      "description": "document_identifier",
+      "parentCollection": "2af52739-96d1-403c-b353-62ae6a8418d6",
+      "childCollection": "8630f170-8ab3-4add-a0f3-38731f46b1ce",
+      "level": "field",
+      "lineSize": 2
+    },
+    {
+      "name": "MINERAL_mineral_identifier_MARKET_VALUE",
+      "relationshipType": "Foreign Key",
+      "parentField": [
+        [
+          "a433d2d6-9722-45ae-9a88-b212583dbb57",
+          "a3db0a20-6f35-412d-85b7-da5f1ce8796c"
+        ]
+      ],
+      "parentCardinality": "1",
+      "childField": [
+        [
+          "625168f7-c12e-4d20-ba11-559d34254ad7",
+          "438e1f82-288d-4d44-8f7d-e0d87863b0c6"
+        ]
+      ],
+      "isActivated": true,
+      "childCardinality": "0..n",
+      "GUID": "17a006e4-5620-4ed8-b476-2587f682cee8",
+      "description": "mineral_identifier",
+      "parentCollection": "a433d2d6-9722-45ae-9a88-b212583dbb57",
+      "childCollection": "625168f7-c12e-4d20-ba11-559d34254ad7",
+      "level": "field",
+      "lineSize": 2
+    },
+    {
+      "name": "PARTY_party_identifier_INTERNET_CONTACT_DETAIL",
+      "relationshipType": "Foreign Key",
+      "parentField": [
+        [
+          "852bfcae-f937-41f7-ae2c-e7b60690352b",
+          "61e75a28-a7a9-4b8d-a062-455de8870854"
+        ]
+      ],
+      "parentCardinality": "1",
+      "childField": [
+        [
+          "f61ff8dc-7332-4b70-b328-799cd593cbb9",
+          "b785a487-14ba-41f7-a6ef-5e608678906b"
+        ]
+      ],
+      "isActivated": true,
+      "childCardinality": "0..n",
+      "GUID": "ed83eccd-ed05-472f-9f6f-3b1fff93cee8",
+      "description": "party_identifier",
+      "parentCollection": "852bfcae-f937-41f7-ae2c-e7b60690352b",
+      "childCollection": "f61ff8dc-7332-4b70-b328-799cd593cbb9",
+      "level": "field",
+      "lineSize": 2
+    },
+    {
+      "name": "PARTY_party_identifier_LOCATION_ADDRESS",
+      "relationshipType": "Foreign Key",
+      "parentField": [
+        [
+          "852bfcae-f937-41f7-ae2c-e7b60690352b",
+          "61e75a28-a7a9-4b8d-a062-455de8870854"
+        ]
+      ],
+      "parentCardinality": "1",
+      "childField": [
+        [
+          "5e4518fd-10c7-4cd3-99dc-e95962526a05",
+          "20fe6eea-e3fa-4ff9-b9b6-b16b83455bc0"
+        ]
+      ],
+      "isActivated": true,
+      "childCardinality": "0..n",
+      "GUID": "8a0f083c-16a5-4601-ae97-18b8f3e90e5c",
+      "description": "party_identifier",
+      "parentCollection": "852bfcae-f937-41f7-ae2c-e7b60690352b",
+      "childCollection": "5e4518fd-10c7-4cd3-99dc-e95962526a05",
+      "level": "field",
+      "lineSize": 2
+    },
+    {
+      "name": "PARTY_party_identifier_PHONE_NUMBER",
+      "relationshipType": "Foreign Key",
+      "parentField": [
+        [
+          "852bfcae-f937-41f7-ae2c-e7b60690352b",
+          "61e75a28-a7a9-4b8d-a062-455de8870854"
+        ]
+      ],
+      "parentCardinality": "1",
+      "childField": [
+        [
+          "2e636de1-bcc4-4483-98d1-951dfb40c7f9",
+          "fc1148a4-a250-415a-ba65-e45074160a5b"
+        ]
+      ],
+      "isActivated": true,
+      "childCardinality": "0..n",
+      "GUID": "3a5778c2-075b-4fdf-bde9-1dbbb1aa6087",
+      "description": "party_identifier",
+      "parentCollection": "852bfcae-f937-41f7-ae2c-e7b60690352b",
+      "childCollection": "2e636de1-bcc4-4483-98d1-951dfb40c7f9",
+      "level": "field",
+      "lineSize": 2
+    },
+    {
+      "name": "PARTY_party_identifier_RELATED_PARTY_DOCUMENT",
+      "relationshipType": "Foreign Key",
+      "parentField": [],
+      "parentCardinality": "1",
+      "childField": [],
+      "isActivated": true,
+      "childCardinality": "0..n",
+      "GUID": "fbf179c5-469f-4cc7-b14d-785a76f0d7c5",
+      "description": "party_identifier",
+      "parentCollection": "852bfcae-f937-41f7-ae2c-e7b60690352b",
+      "childCollection": "6afb814e-4bb0-4c45-9e4f-044ad959f852",
+      "level": "field",
+      "lineSize": 2
+    },
+    {
+      "name": "LAND_PARCEL_parcel_identifier_EQUIPMENT",
+      "relationshipType": "Foreign Key",
+      "parentField": [
+        [
+          "e7283a42-b977-4ac6-9e41-a7e2ef3b7225",
+          "e80c4081-9ab3-4f43-a683-7962398c3514"
+        ]
+      ],
+      "parentCardinality": "1",
+      "childField": [
+        [
+          "da4428d8-f2c4-451f-afca-7109573ef3a9",
+          "554d0f35-a3a1-42aa-9337-15c221b376ee"
+        ]
+      ],
+      "isActivated": true,
+      "childCardinality": "0..n",
+      "GUID": "74fdc69f-2958-4fbb-8d1e-ac9f18b72a76",
+      "description": "parcel_identifier",
+      "parentCollection": "e7283a42-b977-4ac6-9e41-a7e2ef3b7225",
+      "childCollection": "da4428d8-f2c4-451f-afca-7109573ef3a9",
+      "level": "field",
+      "lineSize": 2
+    },
+    {
+      "name": "LAND_PARCEL_parcel_identifier_RELATED_LAND_PARCEL_DOCUMENT",
+      "relationshipType": "Foreign Key",
+      "parentField": [],
+      "parentCardinality": "1",
+      "childField": [],
+      "isActivated": true,
+      "childCardinality": "0..n",
+      "GUID": "cca6477c-f267-4bfc-a1d9-83ab64899b65",
+      "description": "parcel_identifier",
+      "parentCollection": "e7283a42-b977-4ac6-9e41-a7e2ef3b7225",
+      "childCollection": "999a4d02-c944-48c8-9107-cb2d9516f7d3",
+      "level": "field",
+      "lineSize": 2
+    },
+    {
+      "name": "ASSAY_ORDER_assay_order_identifier_RELATED_ASSAY_DOCUMENT",
+      "relationshipType": "Foreign Key",
+      "parentField": [],
+      "parentCardinality": "1",
+      "childField": [],
+      "isActivated": true,
+      "childCardinality": "0..n",
+      "GUID": "cfce376b-ff11-4089-96eb-1767e592437a",
+      "description": "assay_order_identifier",
+      "parentCollection": "773e2fbb-712b-44c7-804c-e4a4137a884b",
+      "childCollection": "10b64399-8eb0-4861-8cd3-3b8bc2aefcd6",
+      "level": "field",
+      "lineSize": 2
+    },
+    {
+      "name": "PARTY_MINERAL_CONTRACT_TERM_party_mineral_contract_term_identifier_RELATED_MINERAL_CONTRACT_DOCUMENT",
+      "relationshipType": "Foreign Key",
+      "parentField": [],
+      "parentCardinality": "1",
+      "childField": [],
+      "isActivated": true,
+      "childCardinality": "0..n",
+      "GUID": "de429186-726d-4970-b213-2221ab65aa9a",
+      "description": "party_mineral_contract_term_identifier",
+      "parentCollection": "d5400519-8feb-4e27-860a-064e3aa8f6ca",
+      "childCollection": "7fa14c8d-7eb5-43d7-af7c-d14476cddfa8",
+      "level": "field",
+      "lineSize": 2
+    },
+    {
+      "name": "MINERAL_REFINEMENT_mineral_refinement_identifier_RELATED_MINERAL_REFINEMENT_DOCUMENT",
+      "relationshipType": "Foreign Key",
+      "parentField": [],
+      "parentCardinality": "1",
+      "childField": [],
+      "isActivated": true,
+      "childCardinality": "0..n",
+      "GUID": "7a1bb992-3a9d-4e35-b372-8cd25a1df1ef",
+      "description": "mineral_refinement_identifier",
+      "parentCollection": "63b592f8-60db-488d-b6ca-489de8e91428",
+      "childCollection": "8630f170-8ab3-4add-a0f3-38731f46b1ce",
+      "level": "field",
+      "lineSize": 2
+    }
+  ],
+  "users": [],
+  "diagramViews": [],
+  "idToNameHashTable": {
+    "2cc46954-45af-46df-80ac-8708d4814f1c": "document_identifier",
+    "bf81a53d-ebf0-4da9-b32e-367d253e82bf": "document_date",
+    "41eba759-f144-4c12-83d3-0e8ff9024f93": "document_title_name",
+    "f260aa59-afdd-44a0-bec5-7435c25cecf2": "document_type_name",
+    "7f04ea9c-4c05-4f77-9b42-da48b069cc68": "description_text",
+    "aef23305-a096-4985-92e6-fb2fdf324ccb": "attached_file",
+    "90db2bd1-eca3-456b-a264-30bd59717013": "json_document",
+    "157fadb8-942b-4820-8f86-9c0598916fd4": "document_status_name",
+    "2af52739-96d1-403c-b353-62ae6a8418d6": "DOCUMENT",
+    "ec9b0917-7f94-41e2-903c-31a1769e9754": "DOCUMENT_document_identifier_RELATED_PARTY_DOCUMENT",
+    "a07af3d2-169b-4fe9-aab3-fc8899302e72": "DOCUMENT_document_identifier_RELATED_ASSAY_DOCUMENT",
+    "7f4548e2-37dd-4198-8227-05614dc0e484": "DOCUMENT_document_identifier_RELATED_LAND_PARCEL_DOCUMENT",
+    "b5052573-72af-4540-ba45-75a12f40ca58": "DOCUMENT_document_identifier_RELATED_MINERAL_CONTRACT_DOCUMENT",
+    "bad0498d-4766-4ea2-9671-41a9cecb57e7": "DOCUMENT_document_identifier_RELATED_MINERAL_REFINEMENT_DOCUMENT",
+    "d813ef8d-45fd-48e8-8ce7-7eb14662f21f": "equipment_identifier",
+    "554d0f35-a3a1-42aa-9337-15c221b376ee": "parcel_identifier",
+    "e460c324-7bc4-475a-bb4a-61ee9d255800": "equipment_name",
+    "a158970b-f729-415a-bb51-a561aed88ea3": "equipment_type_name",
+    "61ea0a02-24d4-4a0e-b104-5dedb58ca687": "equipment_manufacturer_name",
+    "a6ba5a10-0065-4bcc-b408-625afb05460c": "equipment_model_number",
+    "f5ee3e9e-5bed-49ef-b53a-18ec7c4e82a0": "equipment_serial_number",
+    "e68a3b62-468c-4eba-a936-4de4b3227c9d": "equipment_purchase_date",
+    "a9b0ed71-8c1b-4d61-912e-9fc817656f60": "equipment_notes_text",
+    "58c7624d-ee09-4438-932f-9368d15ceb91": "equipment_status_name",
+    "20736acc-07f1-4ce5-b673-6f68ec6cb19c": "equipment_last_maintenance_date",
+    "0d4e8d04-6fc2-4d7b-946a-36dfe9373d7b": "equipment_condition_description_text",
+    "da4428d8-f2c4-451f-afca-7109573ef3a9": "EQUIPMENT",
+    "b785a487-14ba-41f7-a6ef-5e608678906b": "party_identifier",
+    "e405e4a2-0629-413a-b8fe-f922fa00c00b": "internet_address_identifier",
+    "bd883205-ab34-48f3-b4bd-91617592970f": "internet_address_type_name",
+    "357d9c46-b55f-4a7f-9b2b-2fb7fb79da9f": "internet_display_text",
+    "5571b68f-46ef-4bac-af08-5b6ab0bd3575": "default_display_switch",
+    "f61ff8dc-7332-4b70-b328-799cd593cbb9": "INTERNET_CONTACT_DETAIL",
+    "20fe6eea-e3fa-4ff9-b9b6-b16b83455bc0": "party_identifier",
+    "e26e0ceb-1ba0-44ce-823e-08ec69aaa68b": "address_category_name",
+    "09530432-b397-4e3e-9919-9a77f58da475": "location_address_text",
+    "18fd8237-db81-4722-a594-42fefb04c83c": "mailing_address_indicator",
+    "ae842e10-3e4c-4cab-a340-16c5922a07ff": "default_display_switch",
+    "5e4518fd-10c7-4cd3-99dc-e95962526a05": "LOCATION_ADDRESS",
+    "7030a01e-5748-499f-bb34-490aa335563f": "market_value_identifier",
+    "438e1f82-288d-4d44-8f7d-e0d87863b0c6": "mineral_identifier",
+    "31fbda38-950a-4435-992b-04d80d3e46a7": "spot_price_amount",
+    "4bdf57eb-8ba8-488e-b8c8-3dd45a118cd8": "market_timestamp",
+    "625168f7-c12e-4d20-ba11-559d34254ad7": "MARKET_VALUE",
+    "a3db0a20-6f35-412d-85b7-da5f1ce8796c": "mineral_identifier",
+    "328bb038-2978-4c2a-8b90-803933ff8425": "mineral_name",
+    "5b65af50-2dc0-46c1-85eb-5e074f04e1cf": "mineral_description_text",
+    "4e8bea41-5764-43b7-839a-1450ef0aeeb3": "mineral_measurement_name",
+    "c584268f-c271-4aa5-b653-39bd8d686de6": "hazardous_mineral_switch",
+    "3238c176-971b-4aea-88eb-fe3cdd0b4b1f": "mineral_specific_gravity_count",
+    "a433d2d6-9722-45ae-9a88-b212583dbb57": "MINERAL",
+    "17a006e4-5620-4ed8-b476-2587f682cee8": "MINERAL_mineral_identifier_MARKET_VALUE",
+    "61e75a28-a7a9-4b8d-a062-455de8870854": "party_identifier",
+    "9cc28270-a5c4-4611-acd7-39f240b312e1": "party_type_name",
+    "020c0e06-3e90-43cf-808e-7e197783fee1": "prefix_name",
+    "71d236e5-58e1-4357-a823-8e2426e67b13": "first_name",
+    "eb2519b6-1cbf-425a-af86-a8844b96530f": "middle_name",
+    "c18d7c1f-8008-49ca-8135-05df9b4e7072": "last_name",
+    "87126faa-79b9-4282-86e4-b9e1a101fc98": "suffix_name",
+    "96e1a5f4-dec8-48bd-8c7c-081f0cb88b2f": "company_name",
+    "9946eb1b-810a-4956-ac3c-2a9c69b0469f": "job_title_name",
+    "fd7e6ea4-a640-4577-ae72-1e8c5cf48729": "stored_file_pattern_name",
+    "2bcd2d4e-b880-491f-9410-02813398b386": "photograph_file",
+    "9d274136-a10a-4862-8cfa-0cf2c866a892": "note_text",
+    "852bfcae-f937-41f7-ae2c-e7b60690352b": "PARTY",
+    "ed83eccd-ed05-472f-9f6f-3b1fff93cee8": "PARTY_party_identifier_INTERNET_CONTACT_DETAIL",
+    "8a0f083c-16a5-4601-ae97-18b8f3e90e5c": "PARTY_party_identifier_LOCATION_ADDRESS",
+    "3a5778c2-075b-4fdf-bde9-1dbbb1aa6087": "PARTY_party_identifier_PHONE_NUMBER",
+    "fbf179c5-469f-4cc7-b14d-785a76f0d7c5": "PARTY_party_identifier_RELATED_PARTY_DOCUMENT",
+    "fc1148a4-a250-415a-ba65-e45074160a5b": "party_identifier",
+    "109c12d8-81bb-4470-8d4f-46957bdfde46": "phone_number_category_name",
+    "67c92fc5-a981-4ecd-8e15-fac2457feac9": "phone_number",
+    "00274199-801c-418c-8d79-12af12d882bd": "phone_display_sequence_number",
+    "7a3d80c3-c299-401e-9386-478f7f2e2c1e": "preferred_indicator",
+    "2e636de1-bcc4-4483-98d1-951dfb40c7f9": "PHONE_NUMBER",
+    "7ec3c2db-6059-4026-9bea-13f0bcb8f899": "assay_order_identifier",
+    "f6a81fdf-6f84-4a72-9d6e-7354a6185d5e": "document_identifier",
+    "cbe00c73-ce2a-4902-93bd-ba27c5bc8524": "document_relation_comment",
+    "744d0829-56cc-42c7-ab03-68fbac9e0e21": "document_relation_create_date",
+    "10b64399-8eb0-4861-8cd3-3b8bc2aefcd6": "RELATED_ASSAY_DOCUMENT",
+    "e64b2a1d-c795-44eb-ad7e-947a5fcd84c3": "parcel_identifier",
+    "8b43f06a-e293-42c8-9974-8129e45ec491": "document_identifier",
+    "d2cc9796-9da0-4b49-8793-6ff92e3db3a9": "document_relation_comment",
+    "083121f0-0d70-4041-a6e8-70ac98483ae3": "document_relation_create_date",
+    "999a4d02-c944-48c8-9107-cb2d9516f7d3": "RELATED_LAND_PARCEL_DOCUMENT",
+    "279d2008-553f-4263-b7e7-0ac0184d5ff8": "party_mineral_contract_term_identifier",
+    "8ebc121a-8f71-437f-ab5e-782933ee9f22": "document_identifier",
+    "f3940177-06f1-4ef7-805c-57e308218f72": "document_relation_comment",
+    "2f153deb-91ca-49e3-a0c5-a94b96efc7d6": "document_relation_create_date",
+    "7fa14c8d-7eb5-43d7-af7c-d14476cddfa8": "RELATED_MINERAL_CONTRACT_DOCUMENT",
+    "1bdfb012-2f6e-411f-9163-3de643215b87": "mineral_refinement_identifier",
+    "9c1e4613-d127-4878-af20-4bc915c54228": "document_identifier",
+    "b15f15d0-d1fd-4dcb-9d93-db1067de3c6d": "document_relation_comment",
+    "15da8652-26ea-4930-b555-68e13f0c23f2": "document_relation_create_date",
+    "8630f170-8ab3-4add-a0f3-38731f46b1ce": "RELATED_MINERAL_REFINEMENT_DOCUMENT",
+    "7ed85aa2-2fb7-46f1-b592-275fc1efca59": "party_identifier",
+    "624bcb99-cb2d-4b0f-80da-857cf6745400": "document_identifier",
+    "18df1906-ee6a-43ae-8d9a-e7580b00778e": "document_relation_comment",
+    "d3d119e2-8911-4f9b-8857-04c39fc89d99": "document_relation_create_date",
+    "6afb814e-4bb0-4c45-9e4f-044ad959f852": "RELATED_PARTY_DOCUMENT",
+    "e80c4081-9ab3-4f43-a683-7962398c3514": "parcel_identifier",
+    "e7283a42-b977-4ac6-9e41-a7e2ef3b7225": "LAND_PARCEL",
+    "74fdc69f-2958-4fbb-8d1e-ac9f18b72a76": "LAND_PARCEL_parcel_identifier_EQUIPMENT",
+    "cca6477c-f267-4bfc-a1d9-83ab64899b65": "LAND_PARCEL_parcel_identifier_RELATED_LAND_PARCEL_DOCUMENT",
+    "ecbc5b68-9708-45a9-bd68-90d6c8753deb": "assay_order_identifier",
+    "773e2fbb-712b-44c7-804c-e4a4137a884b": "ASSAY_ORDER",
+    "cfce376b-ff11-4089-96eb-1767e592437a": "ASSAY_ORDER_assay_order_identifier_RELATED_ASSAY_DOCUMENT",
+    "a1cb63de-40b5-48f2-90c8-4ff9efb6be34": "party_mineral_contract_term_identifier",
+    "d5400519-8feb-4e27-860a-064e3aa8f6ca": "PARTY_MINERAL_CONTRACT_TERM",
+    "de429186-726d-4970-b213-2221ab65aa9a": "PARTY_MINERAL_CONTRACT_TERM_party_mineral_contract_term_identifier_RELATED_MINERAL_CONTRACT_DOCUMENT",
+    "a4b6d05c-c71d-4c79-9b31-a7be85cba739": "mineral_refinement_identifier",
+    "63b592f8-60db-488d-b6ca-489de8e91428": "MINERAL_REFINEMENT",
+    "7a1bb992-3a9d-4e35-b372-8cd25a1df1ef": "MINERAL_REFINEMENT_mineral_refinement_identifier_RELATED_MINERAL_REFINEMENT_DOCUMENT"
+  },
+  "definitions": {
+    "type": "definitions",
+    "properties": [],
+    "GUID": "4d4e7cdf-4dbb-4596-a504-4487e50af6d1"
+  },
+  "polyglotDefinitions": {
+    "type": "polyglotDefinitions",
+    "properties": [],
+    "GUID": "599aa32c-3cd9-48ce-bddf-bbf4c0b28572"
+  },
+  "externalDefinitions": {
+    "type": "externalDefinitions",
+    "properties": [],
+    "GUID": "5eb9819a-0a22-4064-96eb-289ff63ef8ff"
+  },
+  "sources": [],
+  "decorativeSymbols": [],
+  "businessGlossaries": [
+    {
+      "GUID": "929858b2-0d00-4377-b498-f4f0ee5a5d41",
+      "name": "classwords_dictionary_minimal.csv",
+      "hasHeaders": true,
+      "format": "custom",
+      "kind": "relativePath",
+      "relativePath": "../glossaries/classwords_dictionary_minimal.csv",
+      "mapping": [
+        {
+          "GUID": "abf06021-19fa-4057-b6a2-b8ff346e8646",
+          "columnIdentifier": "Identifier",
+          "displayName": "Identifier",
+          "role": "identifier",
+          "isMultipleValue": false,
+          "position": 0,
+          "displayType": "text",
+          "isMapped": true
+        },
+        {
+          "GUID": "44653a55-2685-42af-9de3-35a496210500",
+          "columnIdentifier": "class_word",
+          "displayName": "Term",
+          "role": "name",
+          "isMultipleValue": false,
+          "position": 1,
+          "displayType": "text",
+          "isMapped": true
+        },
+        {
+          "GUID": "1404418c-7006-4b16-9cb1-c037ddf6be72",
+          "columnIdentifier": "description",
+          "displayName": "Description",
+          "isMultipleValue": false,
+          "position": 2,
+          "displayType": "text",
+          "isMapped": true
+        },
+        {
+          "GUID": "5c6ef2fa-200d-47a5-8eae-bb43b8ebc788",
+          "columnIdentifier": "category",
+          "displayName": "category",
+          "position": 3,
+          "displayType": "text",
+          "isMapped": false
+        },
+        {
+          "GUID": "25c4fc79-47bf-4aac-bbc7-fb7521b3c8cb",
+          "columnIdentifier": "allowed_values",
+          "displayName": "allowed_values",
+          "position": 4,
+          "displayType": "text",
+          "isMapped": false
+        }
+      ]
+    },
+    {
+      "GUID": "53b2b1f3-4acb-4aea-8b81-77479696d38f",
+      "name": "gold_prospecting_business_glossary.csv",
+      "hasHeaders": true,
+      "format": "custom",
+      "kind": "relativePath",
+      "relativePath": "../glossaries/gold_prospecting_business_glossary.csv",
+      "mapping": [
+        {
+          "GUID": "fc3a8966-3c83-407c-945b-a3d1ab867ad2",
+          "columnIdentifier": "Identifier",
+          "displayName": "Identifier",
+          "role": "identifier",
+          "isMultipleValue": false,
+          "position": 0,
+          "displayType": "text",
+          "isMapped": true
+        },
+        {
+          "GUID": "857f7891-dcaa-4c7d-bc20-06be7a21f249",
+          "columnIdentifier": "Term",
+          "displayName": "Term",
+          "role": "name",
+          "isMultipleValue": false,
+          "position": 1,
+          "displayType": "text",
+          "isMapped": true
+        },
+        {
+          "GUID": "0f4103fb-e729-4980-9df9-f48520827d31",
+          "columnIdentifier": "Definition",
+          "displayName": "Description",
+          "isMultipleValue": false,
+          "position": 2,
+          "displayType": "text",
+          "isMapped": true
+        },
+        {
+          "GUID": "8eb26e7e-20c1-4f16-bf4e-28cae0cad074",
+          "columnIdentifier": "Domain",
+          "displayName": "Domain",
+          "position": 3,
+          "displayType": "text",
+          "isMapped": false
+        },
+        {
+          "GUID": "0b4e7d0d-df9d-43c5-bcb2-87842b5da331",
+          "columnIdentifier": "Synonyms",
+          "displayName": "Synonyms",
+          "position": 4,
+          "displayType": "text",
+          "isMapped": false
+        },
+        {
+          "GUID": "9c3d8e34-2bd0-4ef2-83f5-276e97e448e6",
+          "columnIdentifier": "GovernanceStatus",
+          "displayName": "GovernanceStatus",
+          "position": 5,
+          "displayType": "text",
+          "isMapped": false
+        },
+        {
+          "GUID": "72596f29-2249-4356-8d7d-100f7063407a",
+          "columnIdentifier": "Source",
+          "displayName": "Source",
+          "position": 6,
+          "displayType": "text",
+          "isMapped": false
+        }
+      ]
+    }
+  ],
+  "businessGlossaryTerms": [
+    {
+      "GUID": "21af1101-9118-4c6f-aaea-bb054f498047",
+      "glossaryId": "53b2b1f3-4acb-4aea-8b81-77479696d38f",
+      "name": "Mineral",
+      "properties": {
+        "fc3a8966-3c83-407c-945b-a3d1ab867ad2": "30d9d2a6-f31e-4e6c-9496-0062d637ad53",
+        "857f7891-dcaa-4c7d-bc20-06be7a21f249": "Mineral",
+        "0f4103fb-e729-4980-9df9-f48520827d31": "A naturally occurring substance of value tracked by the company; gold is the primary mineral of interest, with other minerals (e.g., silver, copper, platinum, uranium) possibly present.",
+        "8eb26e7e-20c1-4f16-bf4e-28cae0cad074": "Minerals & Market",
+        "0b4e7d0d-df9d-43c5-bcb2-87842b5da331": "Commodity mineral",
+        "9c3d8e34-2bd0-4ef2-83f5-276e97e448e6": "Needs Validation",
+        "72596f29-2249-4356-8d7d-100f7063407a": "Gold Prospecting Narrative (About the Minerals and Ore Samples section)"
+      },
+      "refIds": [
+        "a3db0a20-6f35-412d-85b7-da5f1ce8796c",
+        "328bb038-2978-4c2a-8b90-803933ff8425"
+      ]
+    },
+    {
+      "GUID": "30d28d97-db7d-4cc3-9f70-df4cfdb5755c",
+      "glossaryId": "929858b2-0d00-4377-b498-f4f0ee5a5d41",
+      "name": "IDENTIFIER",
+      "properties": {
+        "abf06021-19fa-4057-b6a2-b8ff346e8646": "1eb0d5de-8efc-4480-af3b-14525a85f368",
+        "44653a55-2685-42af-9de3-35a496210500": "IDENTIFIER",
+        "1404418c-7006-4b16-9cb1-c037ddf6be72": "A meaningless value (often sequentially or randomly generated) that uniquely represents an occurrence of a record about an object, entity, or thing.",
+        "5c6ef2fa-200d-47a5-8eae-bb43b8ebc788": "Specific Object/Instance/Category",
+        "25c4fc79-47bf-4aac-bbc7-fb7521b3c8cb": "Not applicable."
+      },
+      "refIds": [
+        "a3db0a20-6f35-412d-85b7-da5f1ce8796c"
+      ]
+    },
+    {
+      "GUID": "ecfe85ec-ce3d-43ff-9917-3f84033a0efc",
+      "glossaryId": "929858b2-0d00-4377-b498-f4f0ee5a5d41",
+      "name": "NAME",
+      "properties": {
+        "abf06021-19fa-4057-b6a2-b8ff346e8646": "1015c255-f92a-42ff-9922-444e411e7c47",
+        "44653a55-2685-42af-9de3-35a496210500": "NAME",
+        "1404418c-7006-4b16-9cb1-c037ddf6be72": "Meaningful alphabetic data using words which identifies a specific object or may identify a type or category of an object or thing.",
+        "5c6ef2fa-200d-47a5-8eae-bb43b8ebc788": "Specific Object/Instance/Category",
+        "25c4fc79-47bf-4aac-bbc7-fb7521b3c8cb": "Allowed but optional."
+      },
+      "refIds": [
+        "328bb038-2978-4c2a-8b90-803933ff8425"
+      ]
+    }
+  ],
+  "dbVendor": "Polyglot",
+  "appTarget": "Polyglot",
+  "creationTS": "2026-03-05T02:21:54.374Z",
+  "GUID": "1110c6c5-5d69-4588-951b-ef96f200301b",
+  "isLineageEnabled": false,
+  "code": "",
+  "lastModifTS": "2026-03-05T15:48:57.319Z",
+  "persistenceSchemaVersion": "8",
+  "isCreatedByPlugin": true,
+  "pluginInformation": {
+    "pluginName": "Polyglot",
+    "pluginVersion": "0.0.1",
+    "pluginEngineVersion": "1.0.0"
+  },
+  "applicationInformation": {
+    "version": "8.9.5"
+  },
+  "hackoladeMeta": {},
+  "settings": {
+    "centralPane": {
+      "dbLevel": {
+        "erd": [
+          {
+            "GUID": "2af52739-96d1-403c-b353-62ae6a8418d6",
+            "x": 1514,
+            "y": 1610,
+            "width": 284,
+            "height": 174,
+            "color": {
+              "hex": "#2196F3"
+            }
+          },
+          {
+            "GUID": "da4428d8-f2c4-451f-afca-7109573ef3a9",
+            "x": 2414,
+            "y": 1314,
+            "width": 365,
+            "height": 246,
+            "color": {
+              "hex": "#2196F3"
+            }
+          },
+          {
+            "GUID": "f61ff8dc-7332-4b70-b328-799cd593cbb9",
+            "x": 1964,
+            "y": 2130,
+            "width": 312,
+            "height": 120,
+            "color": {
+              "hex": "#2196F3"
+            }
+          },
+          {
+            "GUID": "5e4518fd-10c7-4cd3-99dc-e95962526a05",
+            "x": 1514,
+            "y": 2130,
+            "width": 296,
+            "height": 120,
+            "color": {
+              "hex": "#2196F3"
+            }
+          },
+          {
+            "GUID": "625168f7-c12e-4d20-ba11-559d34254ad7",
+            "x": 1714,
+            "y": 1064,
+            "width": 315,
+            "height": 102,
+            "color": {
+              "hex": "#2196F3"
+            }
+          },
+          {
+            "GUID": "a433d2d6-9722-45ae-9a88-b212583dbb57",
+            "x": 1264,
+            "y": 1064,
+            "width": 321,
+            "height": 138,
+            "color": {
+              "hex": "#2196F3"
+            }
+          },
+          {
+            "GUID": "852bfcae-f937-41f7-ae2c-e7b60690352b",
+            "x": 2414,
+            "y": 1834,
+            "width": 294,
+            "height": 246,
+            "color": {
+              "hex": "#2196F3"
+            }
+          },
+          {
+            "GUID": "2e636de1-bcc4-4483-98d1-951dfb40c7f9",
+            "x": 2414,
+            "y": 2130,
+            "width": 354,
+            "height": 120,
+            "color": {
+              "hex": "#2196F3"
+            }
+          },
+          {
+            "GUID": "10b64399-8eb0-4861-8cd3-3b8bc2aefcd6",
+            "x": 1514,
+            "y": 1834,
+            "width": 327,
+            "height": 102,
+            "color": {
+              "hex": "#2196F3"
+            }
+          },
+          {
+            "GUID": "999a4d02-c944-48c8-9107-cb2d9516f7d3",
+            "x": 1514,
+            "y": 1314,
+            "width": 349,
+            "height": 102,
+            "color": {
+              "hex": "#2196F3"
+            }
+          },
+          {
+            "GUID": "7fa14c8d-7eb5-43d7-af7c-d14476cddfa8",
+            "x": 1964,
+            "y": 1610,
+            "width": 389,
+            "height": 102,
+            "color": {
+              "hex": "#2196F3"
+            }
+          },
+          {
+            "GUID": "8630f170-8ab3-4add-a0f3-38731f46b1ce",
+            "x": 1064,
+            "y": 1610,
+            "width": 400,
+            "height": 102,
+            "color": {
+              "hex": "#2196F3"
+            }
+          },
+          {
+            "GUID": "6afb814e-4bb0-4c45-9e4f-044ad959f852",
+            "x": 1964,
+            "y": 1834,
+            "width": 327,
+            "height": 102,
+            "color": {
+              "hex": "#2196F3"
+            }
+          },
+          {
+            "GUID": "e7283a42-b977-4ac6-9e41-a7e2ef3b7225",
+            "x": 1964,
+            "y": 1314,
+            "width": 242,
+            "height": 48,
+            "color": {
+              "hex": "#2196F3"
+            }
+          },
+          {
+            "GUID": "773e2fbb-712b-44c7-804c-e4a4137a884b",
+            "x": 1064,
+            "y": 1834,
+            "width": 274,
+            "height": 48,
+            "color": {
+              "hex": "#2196F3"
+            }
+          },
+          {
+            "GUID": "d5400519-8feb-4e27-860a-064e3aa8f6ca",
+            "x": 2414,
+            "y": 1610,
+            "width": 368,
+            "height": 48,
+            "color": {
+              "hex": "#2196F3"
+            }
+          },
+          {
+            "GUID": "63b592f8-60db-488d-b6ca-489de8e91428",
+            "x": 1064,
+            "y": 1314,
+            "width": 317,
+            "height": 48,
+            "color": {
+              "hex": "#2196F3"
+            }
+          }
+        ],
+        "erdDefinitions": {
+          "erd": [],
+          "rootPath": [],
+          "entities": [],
+          "decorativeSymbols": []
+        },
+        "buckets": [],
+        "collapsedNodes": [],
+        "activeRelationship": "",
+        "activeRelationshipFields": {
+          "childField": [],
+          "parentField": []
+        },
+        "selectedCollections": [],
+        "displayColorPicker": false,
+        "graphView": {
+          "erd": [
+            {
+              "GUID": "2af52739-96d1-403c-b353-62ae6a8418d6",
+              "size": 100,
+              "x": 1614,
+              "y": 1564
+            },
+            {
+              "GUID": "da4428d8-f2c4-451f-afca-7109573ef3a9",
+              "size": 100,
+              "x": 1364,
+              "y": 1364
+            },
+            {
+              "GUID": "f61ff8dc-7332-4b70-b328-799cd593cbb9",
+              "size": 100,
+              "x": 1364,
+              "y": 1614
+            },
+            {
+              "GUID": "5e4518fd-10c7-4cd3-99dc-e95962526a05",
+              "size": 100,
+              "x": 1814,
+              "y": 1314
+            },
+            {
+              "GUID": "625168f7-c12e-4d20-ba11-559d34254ad7",
+              "size": 100,
+              "x": 1614,
+              "y": 1814
+            },
+            {
+              "GUID": "a433d2d6-9722-45ae-9a88-b212583dbb57",
+              "size": 100,
+              "x": 1864,
+              "y": 1814
+            },
+            {
+              "GUID": "852bfcae-f937-41f7-ae2c-e7b60690352b",
+              "size": 100,
+              "x": 1864,
+              "y": 1564
+            },
+            {
+              "GUID": "2e636de1-bcc4-4483-98d1-951dfb40c7f9",
+              "size": 100,
+              "x": 1264,
+              "y": 1864
+            },
+            {
+              "GUID": "10b64399-8eb0-4861-8cd3-3b8bc2aefcd6",
+              "size": 100,
+              "x": 1564,
+              "y": 1114
+            },
+            {
+              "GUID": "999a4d02-c944-48c8-9107-cb2d9516f7d3",
+              "size": 100,
+              "x": 1314,
+              "y": 1114
+            },
+            {
+              "GUID": "7fa14c8d-7eb5-43d7-af7c-d14476cddfa8",
+              "size": 100,
+              "x": 1114,
+              "y": 1364
+            },
+            {
+              "GUID": "8630f170-8ab3-4add-a0f3-38731f46b1ce",
+              "size": 100,
+              "x": 1114,
+              "y": 1614
+            },
+            {
+              "GUID": "6afb814e-4bb0-4c45-9e4f-044ad959f852",
+              "size": 100,
+              "x": 2064,
+              "y": 1314
+            },
+            {
+              "GUID": "e7283a42-b977-4ac6-9e41-a7e2ef3b7225",
+              "size": 100,
+              "x": 2064,
+              "y": 1064
+            },
+            {
+              "GUID": "773e2fbb-712b-44c7-804c-e4a4137a884b",
+              "size": 100,
+              "x": 1814,
+              "y": 1064
+            },
+            {
+              "GUID": "d5400519-8feb-4e27-860a-064e3aa8f6ca",
+              "size": 100,
+              "x": 1064,
+              "y": 1064
+            },
+            {
+              "GUID": "63b592f8-60db-488d-b6ca-489de8e91428",
+              "size": 100,
+              "x": 1514,
+              "y": 2064
+            }
+          ],
+          "buckets": [],
+          "decorativeSymbols": [],
+          "forceLayout": true,
+          "defaultLinkLength": 145,
+          "options": []
+        },
+        "diagramViews": [],
+        "decorativeSymbols": [],
+        "nestedCollectionsLayout": "horizontal",
+        "options": [],
+        "relationshipUpdateDisabled": false,
+        "displayOptions": {
+          "dndHandles": false
+        }
+      },
+      "collectionLevel": {},
+      "changed": false
+    },
+    "dtDiagram": {
+      "collapsedNodes": [],
+      "shouldDistributeCollections": false
+    }
+  }
+}

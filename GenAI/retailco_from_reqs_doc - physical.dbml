@@ -1,0 +1,165 @@
+// ============================================================
+// RetailCo Analytics Platform  |  Data Model
+// Version 1.1  |  April 2025
+// Domains: Customer, Order, Product
+// Layers: Conceptual > Logical (3NF) > Physical (Snowflake Star Schema)
+// DBML Specification: https://dbml.dbdiagram.io/home/
+// ============================================================
+
+// ============================================================
+// LAYER 3 - PHYSICAL MODEL (Snowflake Star Schema)
+// Denormalised star schema at order line item grain.
+// Surrogate keys (VARCHAR(36) UUID), Snowflake-native types,
+// SCD Type 2 on dim_customer, flattened category hierarchy,
+// governance annotations on PII and restricted columns.
+// Index blocks on all FK columns and composite access patterns.
+// ============================================================
+
+TableGroup "Layer 3 - Physical (Snowflake Star Schema)" {
+  fact_order_line
+  dim_customer
+  dim_product
+  dim_promotion
+  dim_date
+  dim_channel
+}
+
+Table fact_order_line [note: "Central fact table. Grain: one row per order line item. Additive measures support revenue, discount, and margin analysis across all dimensions."] {
+  fact_order_line_sk   VARCHAR(36)    [pk, not null, note: "Surrogate key for the fact row. Generated at load time."]
+  order_id             VARCHAR(36)    [not null, note: "Degenerate dimension. Natural order identifier retained for traceability and reconciliation to source systems."]
+  line_item_id         VARCHAR(36)    [not null, note: "Degenerate dimension. Natural line item identifier retained for source reconciliation."]
+  customer_sk          VARCHAR(36)    [not null, ref: > dim_customer.customer_sk, note: "FK to dim_customer. References the SCD2 row current at time of order."]
+  product_sk           VARCHAR(36)    [not null, ref: > dim_product.product_sk, note: "FK to dim_product."]
+  promotion_sk         VARCHAR(36)    [ref: > dim_promotion.promotion_sk, note: "FK to dim_promotion. Nullable; references a dedicated no-promotion row when no promotion is applied."]
+  order_date_sk        NUMBER(8,0)    [not null, ref: > dim_date.date_sk, note: "FK to dim_date. Derived from the order creation date in UTC. Format: YYYYMMDD."]
+  channel_sk           VARCHAR(20)    [not null, ref: > dim_channel.channel_sk, note: "FK to dim_channel. Represents the channel through which the parent order was placed."]
+  quantity             NUMBER(10,0)   [not null, note: "Units ordered on this line item. Constrained greater than zero at ingestion."]
+  unit_price           DECIMAL(12,2)  [not null, note: "Actual price per unit charged at time of order. Historical; does not update if list price changes."]
+  line_discount_pct    DECIMAL(5,4)   [not null, default: 0, note: "Line-level discount fraction (0.0000 to 1.0000). Distinct from order-level promotion discount."]
+  extended_price       DECIMAL(12,2)  [not null, note: "Generated: quantity x unit_price x (1 - line_discount_pct). Primary additive revenue measure at line level."]
+  order_gross_value    DECIMAL(12,2)  [not null, note: "Gross order value from the parent order. Repeated at line level to support order-level aggregation without a separate order table join."]
+  order_discount_amt   DECIMAL(12,2)  [not null, default: 0, note: "Order-level discount amount from the parent order. Repeated at line level."]
+  order_net_revenue    DECIMAL(12,2)  [not null, note: "Derived: order_gross_value minus order_discount_amt. Repeated at line level."]
+  cost_amount          DECIMAL(12,2)  [note: "RESTRICTED - Standard cost multiplied by quantity (cost_price x quantity). Nullable when cost price is not available. Finance roles only."]
+  gross_margin         DECIMAL(12,2)  [note: "RESTRICTED - order_net_revenue minus cost_amount at line level. Nullable when cost data is unavailable. Finance roles only."]
+  load_timestamp       TIMESTAMP_NTZ  [not null, note: "UTC timestamp at which this row was loaded into the warehouse. Supports incremental load audit."]
+
+  indexes {
+    customer_sk                                          [name: "idx_fact_ol_customer_sk"]
+    product_sk                                           [name: "idx_fact_ol_product_sk"]
+    promotion_sk                                         [name: "idx_fact_ol_promotion_sk"]
+    order_date_sk                                        [name: "idx_fact_ol_date_sk"]
+    channel_sk                                           [name: "idx_fact_ol_channel_sk"]
+    order_id                                             [name: "idx_fact_ol_order_id"]
+    (order_date_sk, customer_sk)                         [name: "idx_fact_ol_date_customer"]
+    (order_date_sk, product_sk)                          [name: "idx_fact_ol_date_product"]
+    (order_date_sk, channel_sk)                          [name: "idx_fact_ol_date_channel"]
+    (customer_sk, order_date_sk, extended_price)         [name: "idx_fact_ol_customer_revenue"]
+  }
+}
+
+Table dim_customer [note: "Customer dimension. SCD Type 2: each change in tracked attributes generates a new row. is_current flags the active row."] {
+  customer_sk          VARCHAR(36)    [pk, not null, note: "Surrogate key. Generated on each SCD2 version insert."]
+  customer_id          VARCHAR(36)    [not null, note: "Natural key. System-assigned customer UUID from the source system. Stable across SCD2 versions."]
+  email                VARCHAR(255)   [not null, note: "PII - Customer email address. Masked in non-production via Snowflake column masking policy."]
+  first_name           VARCHAR(100)   [not null, note: "PII - Customer given name. Masked in non-production via Snowflake column masking policy."]
+  last_name            VARCHAR(100)   [not null, note: "PII - Customer family name. Masked in non-production via Snowflake column masking policy."]
+  acquisition_channel  VARCHAR(20)    [not null, note: "Channel of first registration. Values: Web, Store, Referral, Partner. Immutable attribute; does not trigger a new SCD2 version."]
+  current_segment      VARCHAR(20)    [not null, note: "Segment at the time of this SCD2 row: Gold, Silver, Bronze, or New. Triggers a new version on change."]
+  lifetime_value       DECIMAL(12,2)  [not null, default: 0, note: "Cumulative net revenue snapshot at the time of this SCD2 row."]
+  is_active            BOOLEAN        [not null, default: true, note: "Source system soft-delete flag. Propagated from the operational customer record."]
+  eff_start_date       DATE           [not null, note: "Effective start date of this SCD2 row (inclusive). Set to the date the row was created or updated."]
+  eff_end_date         DATE           [note: "Effective end date of this SCD2 row (inclusive). Null indicates the currently active row."]
+  is_current           BOOLEAN        [not null, default: true, note: "Current-row indicator. True for the active SCD2 row; false for all historical rows."]
+  load_timestamp       TIMESTAMP_NTZ  [not null, note: "UTC load timestamp for this SCD2 row."]
+
+  indexes {
+    customer_id                                          [name: "idx_dim_customer_natural_key"]
+    (customer_id, is_current)                            [name: "idx_dim_customer_current"]
+    (customer_id, eff_start_date, eff_end_date)          [name: "idx_dim_customer_scd2_lookup"]
+    current_segment                                      [name: "idx_dim_customer_segment"]
+    acquisition_channel                                  [name: "idx_dim_customer_acq_channel"]
+  }
+}
+
+Table dim_product [note: "Product dimension. Denormalised to include supplier attributes and a flattened three-level category hierarchy to avoid recursive joins in BI tools."] {
+  product_sk           VARCHAR(36)    [pk, not null, note: "Surrogate key for the product dimension row."]
+  product_id           VARCHAR(36)    [not null, note: "Natural key. System-assigned product UUID from the source system."]
+  sku                  VARCHAR(100)   [not null, note: "Stock-Keeping Unit code. Retained as a non-key business identifier."]
+  product_name         VARCHAR(255)   [not null, note: "Published product name at time of load."]
+  list_price           DECIMAL(12,2)  [not null, note: "Current standard selling price at time of load. Not historised."]
+  cost_price           DECIMAL(12,2)  [note: "RESTRICTED - Per-unit cost from the primary supplier. Nullable. Column-level masking policy enforced in Snowflake for non-finance roles."]
+  is_active            BOOLEAN        [not null, default: true, note: "Soft-delete flag. Inactive products retained for historical order line integrity."]
+  supplier_id          VARCHAR(36)    [not null, note: "Natural key of the primary supplier. Retained for traceability."]
+  supplier_name        VARCHAR(255)   [not null, note: "Trading name of the primary supplier. Denormalised for direct BI access."]
+  supplier_country     VARCHAR(100)   [not null, note: "Country of operation of the primary supplier. Denormalised for direct BI access."]
+  supplier_lead_days   NUMBER(5,0)    [not null, note: "Standard lead time in calendar days from the primary supplier."]
+  category_l1_id       VARCHAR(36)    [not null, note: "Surrogate key of the Root-level (L1) category. Denormalised from the hierarchy for BI roll-up without recursive joins."]
+  category_l1_name     VARCHAR(255)   [not null, note: "Name of the Root-level category. Denormalised for direct BI filtering."]
+  category_l2_id       VARCHAR(36)    [not null, note: "Surrogate key of the Mid-level (L2) category. Denormalised from the hierarchy."]
+  category_l2_name     VARCHAR(255)   [not null, note: "Name of the Mid-level category. Denormalised for direct BI filtering."]
+  category_l3_id       VARCHAR(36)    [not null, note: "Surrogate key of the Leaf-level (L3) category. The category to which the product is directly assigned."]
+  category_l3_name     VARCHAR(255)   [not null, note: "Name of the Leaf-level category. Denormalised for direct BI filtering."]
+  load_timestamp       TIMESTAMP_NTZ  [not null, note: "UTC load timestamp for this product dimension row."]
+
+  indexes {
+    product_id                                           [name: "idx_dim_product_natural_key"]
+    sku                                                  [name: "idx_dim_product_sku"]
+    category_l1_id                                       [name: "idx_dim_product_cat_l1"]
+    category_l2_id                                       [name: "idx_dim_product_cat_l2"]
+    category_l3_id                                       [name: "idx_dim_product_cat_l3"]
+    supplier_id                                          [name: "idx_dim_product_supplier"]
+    (category_l1_id, category_l2_id, category_l3_id)    [name: "idx_dim_product_cat_hierarchy"]
+  }
+}
+
+Table dim_promotion [note: "Promotion dimension. Includes a dedicated no-promotion sentinel row (promo_none) to allow non-nullable FK joins from the fact table."] {
+  promotion_sk         VARCHAR(36)    [pk, not null, note: "Surrogate key for the promotion dimension row."]
+  promotion_id         VARCHAR(36)    [not null, note: "Natural key. System-assigned promotion UUID. Set to promo_none for the no-promotion sentinel row."]
+  promotion_name       VARCHAR(255)   [not null, note: "Descriptive promotion name. Set to No Promotion for the sentinel row."]
+  discount_type        VARCHAR(20)    [not null, note: "Discount type. Values: Percentage, Fixed, BOGO, None (sentinel row)."]
+  discount_value       DECIMAL(12,2)  [not null, default: 0, note: "Discount magnitude. Zero for BOGO and the sentinel row."]
+  start_date           DATE           [note: "Inclusive start date of the promotion validity period. Null for the sentinel row."]
+  end_date             DATE           [note: "Inclusive end date of the promotion validity period. Null for the sentinel row."]
+  load_timestamp       TIMESTAMP_NTZ  [not null, note: "UTC load timestamp for this promotion dimension row."]
+
+  indexes {
+    promotion_id                                         [name: "idx_dim_promotion_natural_key"]
+    discount_type                                        [name: "idx_dim_promotion_type"]
+    (start_date, end_date)                               [name: "idx_dim_promotion_validity"]
+  }
+}
+
+Table dim_date [note: "Date dimension. Pre-populated calendar spanning the full analytical period. Supports day, week, month, quarter, and year grouping with weekend and holiday indicators."] {
+  date_sk              NUMBER(8,0)    [pk, not null, note: "Surrogate key in YYYYMMDD format. Integer for efficient partitioning and range filtering."]
+  full_date            DATE           [not null, note: "Calendar date value. Unique per row."]
+  day_of_week          NUMBER(1,0)    [not null, note: "ISO day of week: 1 (Monday) to 7 (Sunday)."]
+  day_name             VARCHAR(10)    [not null, note: "Full English name of the day (e.g. Monday)."]
+  is_weekend           BOOLEAN        [not null, note: "True if day_of_week is 6 (Saturday) or 7 (Sunday)."]
+  is_holiday           BOOLEAN        [not null, note: "True if the date is a public holiday in the primary trading country. Maintained by the data engineering team."]
+  week_of_year         NUMBER(2,0)    [not null, note: "ISO week number within the calendar year."]
+  month_number         NUMBER(2,0)    [not null, note: "Calendar month number (1-12)."]
+  month_name           VARCHAR(10)    [not null, note: "Full English name of the month (e.g. January)."]
+  quarter              NUMBER(1,0)    [not null, note: "Calendar quarter (1-4)."]
+  year                 NUMBER(4,0)    [not null, note: "Four-digit calendar year."]
+
+  indexes {
+    full_date                                            [name: "idx_dim_date_full_date"]
+    year                                                 [name: "idx_dim_date_year"]
+    (year, quarter)                                      [name: "idx_dim_date_year_quarter"]
+    (year, month_number)                                 [name: "idx_dim_date_year_month"]
+    (year, week_of_year)                                 [name: "idx_dim_date_year_week"]
+    is_weekend                                           [name: "idx_dim_date_weekend"]
+    is_holiday                                           [name: "idx_dim_date_holiday"]
+  }
+}
+
+Table dim_channel [note: "Channel dimension. Classifies the commercial channel and channel group for order-level analysis. Conformed across the warehouse."] {
+  channel_sk           VARCHAR(20)    [pk, not null, note: "Natural surrogate. Uses the channel code value as the key (e.g. web, mobile, in_store, partner) given the low cardinality."]
+  channel_name         VARCHAR(50)    [not null, note: "Full descriptive name of the channel (e.g. In-Store)."]
+  channel_group        VARCHAR(20)    [not null, note: "Higher-level grouping for channel analysis. Values: Digital (Web, Mobile) or Physical (In-Store, Partner)."]
+
+  indexes {
+    channel_group                                        [name: "idx_dim_channel_group"]
+  }
+}

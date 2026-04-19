@@ -1,0 +1,79 @@
+// ============================================================
+// RetailCo Analytics Platform  |  Data Model
+// Version 1.1  |  April 2025
+// Domains: Customer, Order, Product
+// Layers: Conceptual > Logical (3NF) > Physical (Snowflake Star Schema)
+// DBML Specification: https://dbml.dbdiagram.io/home/
+// ============================================================
+
+
+// ============================================================
+// LAYER 1 - CONCEPTUAL MODEL
+// Entities and relationships only. No attributes beyond the
+// DBML-required placeholder column. Entity and column names
+// use Proper Case with spaces. Relationships use DBML Ref
+// direction operators (< one-to-many, > many-to-one,
+// - one-to-one). Self-referencing tables use two distinct
+// column names to comply with DBML rule preventing error 5002.
+// ============================================================
+
+TableGroup "Layer 1 - Conceptual" {
+  "C Customer"
+  "C Customer Address"
+  "C Customer Segment History"
+  "C Order"
+  "C Order Line Item"
+  "C Promotion"
+  "C Product"
+  "C Category"
+  "C Supplier"
+}
+
+Table "C Customer" [note: "A person or organisation registered with RetailCo. Unified identity across all channels."] {
+  Id int [pk]
+}
+
+Table "C Customer Address" [note: "One or more physical addresses belonging to a customer. Typed as Billing, Shipping, or Both."] {
+  Id int [pk]
+}
+
+Table "C Customer Segment History" [note: "Historical record of segment assignments for a customer, enabling cohort analysis at any past date."] {
+  Id int [pk]
+}
+
+Table "C Order" [note: "A purchase transaction placed by a customer through one of the four commercial channels."] {
+  Id int [pk]
+}
+
+Table "C Order Line Item" [note: "A single product entry within an order. The atomic grain of purchase activity."] {
+  Id int [pk]
+}
+
+Table "C Promotion" [note: "A discount campaign optionally applied to an order. Types: Percentage, Fixed, BOGO."] {
+  Id int [pk]
+}
+
+Table "C Product" [note: "A sellable item in the RetailCo catalogue, assigned to a leaf category and sourced from one primary supplier."] {
+  Id int [pk]
+}
+
+Table "C Category" [note: "Hierarchical product classification with up to three levels: Root, Mid, Leaf."] {
+  Id        int [pk]
+  "Parent Id" int
+}
+
+Table "C Supplier" [note: "A vendor that supplies products to RetailCo."] {
+  Id int [pk]
+}
+
+// Conceptual Relationships
+
+Ref: "C Customer".Id < "C Customer Address".Id
+Ref: "C Customer".Id < "C Customer Segment History".Id
+Ref: "C Customer".Id < "C Order".Id
+Ref: "C Order".Id < "C Order Line Item".Id
+Ref: "C Promotion".Id < "C Order".Id
+Ref: "C Product".Id < "C Order Line Item".Id
+Ref: "C Category".Id < "C Product".Id
+Ref: "C Category"."Parent Id" > "C Category".Id
+Ref: "C Supplier".Id < "C Product".Id
