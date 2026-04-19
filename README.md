@@ -5,7 +5,7 @@ Workshop 3: From Strategy to Structure: Accelerating Business Impact Through Han
 ## 1. License validation
 Hackolade Studio trial license key **BJRK0-N0300-GH144-182BM-2P8QF-1AH4R-4S28D-IBCJ8E53** is valid through May 21, 2026.  Follow the steps below:
 
-1) go to <a href="https://studio-demo1.hackolade.com" target="_blank" rel="noopener noreferrer">https://studio-demo1.hackolade.com</a> (Use Ctrl/Cmd+click to open in a new tab)
+1) go to <a href="https://studio.hackolade.com" target="_blank" rel="noopener noreferrer">https://studio.hackolade.com</a> (Use Ctrl/Cmd+click to open in a new tab)
 2) click the Accept button for the License Agreement, then click the Close button to bypass the Overview slides
 3) go to the menu option Help > License Status (or click the key icon in the bottom left of the browser tab
 4) paste the license key **BJRK0-N0300-GH144-182BM-2P8QF-1AH4R-4S28D-IBCJ8E53**
@@ -37,9 +37,12 @@ In order to access files prepared in our repository, you must create a connectio
 
 ## 5. Generate ERD in Hackolade Studio
 1) copy the output from your GenAI tool, or copy from 
-   1) Conceptual https://github.com/hackolade-public/DataSummit2026/blob/main/GenAI/ChatGPT%20prompt%20result
+   1) Conceptual https://github.com/hackolade-public/DataSummit2026/blob/main/GenAI/retailco_from_reqs_doc%20-%20conceptual.dbml
+   2) Logical https://github.com/hackolade-public/DataSummit2026/blob/main/GenAI/retailco_from_reqs_doc%20-%20logical.dbml
+   3) Physical https://github.com/hackolade-public/DataSummit2026/blob/main/GenAI/retailco_from_reqs_doc%20-%20physical.dbml
 
-2) open the prepared empty model DataSummit2026 Polyglot model.hck.json from the GitHub repository with this link [https://studio.hackolade.com/?g=github&o=hackolade-public&r=DMZ2026&f=models%2FDMZ2026+Polyglot+model.hck.json ](https://studio-demo1.hackolade.com/?g=github&o=hackolade-public&r=DMZ2026&f=models%2FDMZ2026+Polyglot+model.hck.json&b=main) (Use Ctrl/Cmd+click to open in a new tab)
+2) open the prepared empty model DataSummit2026 Polyglot model.hck.json from the GitHub repository with this link **<u>TBA</u>**
+   (Use Ctrl/Cmd+click to open in a new tab)
 3) go to Tools > Reverse-Engineer > Diagram > DBML...
   <img width="678" height="356" alt="image" src="https://github.com/user-attachments/assets/94e62495-8630-4392-b346-260a093ec589" />
 
