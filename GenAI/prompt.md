@@ -14,4 +14,4 @@ For conceptual and logical models, let's have names in Proper Case (including a 
 For the physical model, let's use lower_snake_case for the column names.
 ```
 
-(and add the PDF from <a href="https://technicspub.com/wp-content/uploads/2026/02/4-Gold-Prospecting-Provided-Entities-and-Attributes.pdf" target="_blank" rel="noopener noreferrer">https://technicspub.com/wp-content/uploads/2026/02/4-Gold-Prospecting-Provided-Entities-and-Attributes.pdf</a> (Use Ctrl/Cmd+click to open in a new tab) )
+(and add the PDF from <a href="https://github.com/hackolade-public/DataSummit2026/blob/main/GenAI/RetailCo_Requirements.pdf" target="_blank" rel="noopener noreferrer">https://github.com/hackolade-public/DataSummit2026/blob/main/GenAI/RetailCo_Requirements.pdf</a> (Use Ctrl/Cmd+click to open in a new tab) )
