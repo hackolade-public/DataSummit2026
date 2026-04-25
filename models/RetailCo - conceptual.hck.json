@@ -1376,7 +1376,7 @@
   "GUID": "e6b7dea2-2d09-48e5-8037-e8c243b323b1",
   "isLineageEnabled": false,
   "code": "",
-  "lastModifTS": "2026-04-25T09:31:18.849Z",
+  "lastModifTS": "2026-04-25T09:38:13.211Z",
   "persistenceSchemaVersion": "8",
   "isCreatedByPlugin": true,
   "pluginInformation": {
@@ -1389,9 +1389,10 @@
   },
   "hackoladeMeta": {
     "validationErrors": {
-      "modelName": false
+      "description": false
     }
   },
+  "description": "// ============================================================\n// LAYER 1 - CONCEPTUAL MODEL\n// Entities and relationships only. No attributes beyond the\n// DBML-required placeholder column. Entity and column names\n// use Proper Case with spaces. Relationships use DBML Ref\n// direction operators (< one-to-many, > many-to-one,\n// - one-to-one). Self-referencing tables use two distinct\n// column names to comply with DBML rule preventing error 5002.\n// ============================================================",
   "settings": {
     "centralPane": {
       "dbLevel": {
