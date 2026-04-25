@@ -87,7 +87,13 @@
       "additionalProperties": false,
       "GUID": "95473d8c-ec1d-47cb-b626-c05e2aeaa355",
       "comments": "One or more physical addresses belonging to a customer. Typed as Billing, Shipping, or Both.",
-      "bucketId": "ebd8aaf3-f89a-46fb-a38d-9bb111afb795"
+      "bucketId": "ebd8aaf3-f89a-46fb-a38d-9bb111afb795",
+      "glossaryTerms": [
+        {
+          "GUID": "5d75be39-0b7a-4ccc-8d99-33762ac1a288",
+          "glossaryTermId": "ec306866-8854-41e4-9561-3f694df39928"
+        }
+      ]
     },
     {
       "collectionName": "Customer Segment History",
@@ -975,7 +981,7 @@
     {
       "GUID": "754bdb57-f10b-4844-b368-b3ef47806b8c",
       "name": "classwords_dictionary_minimal.csv",
-      "updatedAt": "2026-04-08T13:02:41.380Z",
+      "updatedAt": "2026-04-20T16:09:34.701Z",
       "hasHeaders": true,
       "format": "custom",
       "columnSeparator": ",",
@@ -1071,6 +1077,72 @@
           "isMapped": true
         }
       ]
+    },
+    {
+      "GUID": "19bb88f7-74fc-4563-8d14-8af79e296655",
+      "name": "Core-Business-Glossary.csv",
+      "updatedAt": "2026-04-20T16:09:34.701Z",
+      "hasHeaders": true,
+      "format": "custom",
+      "columnSeparator": ",",
+      "kind": "relativePath",
+      "relativePath": "..\\glossaries\\Core-Business-Glossary.csv",
+      "mapping": [
+        {
+          "GUID": "e62af3b7-3401-4b53-9151-b5443d06677c",
+          "columnIdentifier": "id",
+          "displayName": "Identifier",
+          "role": "identifier",
+          "isMultipleValue": false,
+          "position": 0,
+          "displayType": "text",
+          "isMapped": true
+        },
+        {
+          "GUID": "5aa7b4f1-f5be-431c-a395-a2312947d34e",
+          "columnIdentifier": "term",
+          "displayName": "Term",
+          "role": "name",
+          "isMultipleValue": false,
+          "position": 1,
+          "displayType": "text",
+          "isMapped": true
+        },
+        {
+          "GUID": "9280c70b-4222-4a32-adfe-21d50c63dba8",
+          "columnIdentifier": "description",
+          "displayName": "Description",
+          "role": "description",
+          "isMultipleValue": false,
+          "position": 2,
+          "displayType": "text",
+          "isMapped": true
+        },
+        {
+          "GUID": "b9685885-edf3-40d6-b08d-ca88c4aa576d",
+          "columnIdentifier": "domain",
+          "displayName": "domain",
+          "position": 3,
+          "displayType": "text",
+          "isMapped": false
+        },
+        {
+          "GUID": "10fcee98-920c-4442-b189-73ec85061c5c",
+          "columnIdentifier": "synonyms",
+          "displayName": "synonyms",
+          "position": 4,
+          "displayType": "text",
+          "isMapped": false
+        },
+        {
+          "GUID": "c2737732-f67d-4f52-90e9-81bbe52bcff0",
+          "columnIdentifier": "status",
+          "displayName": "status",
+          "position": 5,
+          "displayType": "text",
+          "isMapped": false
+        }
+      ]
     }
   ],
   "businessGlossaryTerms": [
@@ -1087,6 +1159,23 @@
         "dde43e89-8a41-4997-91c4-294ef36f2b7a"
       ],
       "updatedAt": "2026-04-20T16:09:34.701Z"
+    },
+    {
+      "GUID": "ec306866-8854-41e4-9561-3f694df39928",
+      "glossaryId": "19bb88f7-74fc-4563-8d14-8af79e296655",
+      "name": "Address",
+      "properties": {
+        "e62af3b7-3401-4b53-9151-b5443d06677c": "a1111111-aaaa-4aaa-8aaa-aaaaaaaa0004",
+        "5aa7b4f1-f5be-431c-a395-a2312947d34e": "Address",
+        "9280c70b-4222-4a32-adfe-21d50c63dba8": "A structured representation of a physical location, composed of distinct elements such as street name, house number, city, postal code, and country, utilized for various business functions including, but not limited to, the delivery of goods and services, the origination of financial transactions for billing and invoicing, and the establishment of contact points for correspondence or official communication.",
+        "b9685885-edf3-40d6-b08d-ca88c4aa576d": "Location",
+        "10fcee98-920c-4442-b189-73ec85061c5c": "Postal Address;Location",
+        "c2737732-f67d-4f52-90e9-81bbe52bcff0": "Validated"
+      },
+      "refIds": [
+        "95473d8c-ec1d-47cb-b626-c05e2aeaa355"
+      ],
+      "updatedAt": "2026-04-20T16:09:34.701Z"
     }
   ],
   "dbVendor": "Polyglot",
@@ -1101,7 +1190,7 @@
       "modelName": false
     }
   },
-  "lastModifTS": "2026-04-25T10:03:34.169Z",
+  "lastModifTS": "2026-04-25T10:18:52.651Z",
   "persistenceSchemaVersion": "8",
   "isCreatedByPlugin": true,
   "pluginInformation": {
@@ -1226,9 +1315,7 @@
           "childField": [],
           "parentField": []
         },
-        "selectedCollections": [
-          "dde43e89-8a41-4997-91c4-294ef36f2b7a"
-        ],
+        "selectedCollections": [],
         "displayColorPicker": false,
         "graphView": {
           "erd": [
