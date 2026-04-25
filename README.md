@@ -54,20 +54,25 @@ In order to access files prepared in our repository, you must create a connectio
 2) open the prepared empty model DataSummit2026 Polyglot model.hck.json from the GitHub repository with this link **<u>TBA</u>**
    (Use Ctrl/Cmd+click to open in a new tab)
 3) go to Tools > Reverse-Engineer > Diagram > DBML...
-    ![image-20260425110459060](C:\Users\Pascal\AppData\Roaming\Typora\typora-user-images\image-20260425110459060.png)
+   <img width="917" height="538" alt="image" src="https://github.com/user-attachments/assets/30f47f36-302b-4f1a-9397-6b35a2126675" />
+
 
 4) choose Clipboard in the left menu
-    ![image-20260425110643755](C:\Users\Pascal\AppData\Roaming\Typora\typora-user-images\image-20260425110643755.png)
+    <img width="526" height="255" alt="image" src="https://github.com/user-attachments/assets/a98ae37b-996a-4f1a-85f1-49271e7dd1e7" />
+
 
 5) the copied code from the GenAI output should appear
-    ![image-20260425110916698](C:\Users\Pascal\AppData\Roaming\Typora\typora-user-images\image-20260425110916698.png)
+   <img width="1167" height="730" alt="image" src="https://github.com/user-attachments/assets/99e7e472-3716-4d9b-a0e1-6d339c22060b" />
+
 
 6) click the Open button at the bottom right of the dialog
 7) after a few seconds, the progress dialog should give you this kind of information:
-    <img width="741" height="592" alt="image" src="https://github.com/user-attachments/assets/39c086bb-8d05-4a3c-8cf2-b91a7d6e388e" />
+   <img width="738" height="425" alt="image" src="https://github.com/user-attachments/assets/44c5683b-1daf-43a3-a37e-2c8ccd42a6e8" />
 
-8) after clicking the OK button, you should see the ERD result
-    <img width="1918" height="891" alt="image" src="https://github.com/user-attachments/assets/d5ea0559-01a6-455a-bc5e-20803ae947ba" />
+
+8) after clicking the OK button, you should see the ERD result, in the Graph Diagram tab for the conceptual model for example
+   <img width="937" height="822" alt="image" src="https://github.com/user-attachments/assets/3ab0974c-fa03-490b-8e87-777059817b5c" />
+
 
 
 
