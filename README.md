@@ -51,8 +51,7 @@ In order to access files prepared in our repository, you must create a connectio
    2) Logical https://github.com/hackolade-public/DataSummit2026/blob/main/GenAI/retailco_from_reqs_doc%20-%20logical.dbml
    3) Physical https://github.com/hackolade-public/DataSummit2026/blob/main/GenAI/retailco_from_reqs_doc%20-%20physical.dbml
 
-2) open the prepared empty model DataSummit2026 Polyglot model.hck.json from the GitHub repository with this link **<u>https://studio.hackolade.com/?g=github&o=hackolade-public&r=DataSummit2026&f=models%2FRetailCo+-+conceptual.hck.json&b=main</u>**
-   (Use Ctrl/Cmd+click to open in a new tab)
+2) go to [Studio](https://studio.hackolade.com) and create a new Polyglot model
 3) go to Tools > Reverse-Engineer > Diagram > DBML...
    <img width="917" height="538" alt="image" src="https://github.com/user-attachments/assets/30f47f36-302b-4f1a-9397-6b35a2126675" />
 
@@ -72,6 +71,11 @@ In order to access files prepared in our repository, you must create a connectio
 
 8) after clicking the OK button, you should see the ERD result, in the Graph Diagram tab for the conceptual model for example
    <img width="937" height="822" alt="image" src="https://github.com/user-attachments/assets/3ab0974c-fa03-490b-8e87-777059817b5c" />
+
+
+
+9. alternatively, open the prepared empty model DataSummit2026 Polyglot model.hck.json from the GitHub repository with this link **<u>https://studio.hackolade.com/?g=github&o=hackolade-public&r=DataSummit2026&f=models%2FRetailCo+-+conceptual.hck.json&b=main</u>**
+   (Use Ctrl/Cmd+click to open in a new tab)
 
 
 
