@@ -2,6 +2,12 @@
 
 Workshop 3: From Strategy to Structure: Accelerating Business Impact Through Hands-on Data Modeling -- instructions
 
+Full instructions in <a href="[DataSummit2026 workshop instructions.docx](https://hackoladestudio-my.sharepoint.com/:w:/g/personal/pascal_desmarets_hackolade_com/IQAOm_bT4B8CRoPWIv9oDiD6AaPDCFGPp1ug4hM11XTyc_0?e=qO1qQW)" target="_blank" rel="noopener noreferrer">this document</a> (Use Ctrl/Cmd+click to open in a new tab)
+
+
+
+# Setup
+
 ## 1. License validation
 Hackolade Studio trial license key **BJRK0-N0300-GH144-182BM-2P8QF-1AH4R-4S28D-IBCJ8E53** is valid through May 21, 2026.  Follow the steps below:
 
@@ -20,22 +26,26 @@ This browser-based data modeling solution is highly secure.  See more informatio
 In order to access files prepared in our repository, you must create a connection to your repo:
 
 1) go to the menu option Repository > Repository Connections (last option in the menu)
-2) paste the access token published in <a href="https://hackoladestudio-my.sharepoint.com/:w:/g/personal/pascal_desmarets_hackolade_com/IQCLU6CwcmGGTbt-0oAJz1lSAVp1pVcWUsqimFD3lxMw4C4?e=wLVdAO" target="_blank" rel="noopener noreferrer">this document</a> (Use Ctrl/Cmd+click to open in a new tab)
+2) paste the access token published in <a href="[DataSummit2026 workshop instructions.docx](https://hackoladestudio-my.sharepoint.com/:w:/g/personal/pascal_desmarets_hackolade_com/IQAOm_bT4B8CRoPWIv9oDiD6AaPDCFGPp1ug4hM11XTyc_0?e=qO1qQW)" target="_blank" rel="noopener noreferrer">this document</a> (Use Ctrl/Cmd+click to open in a new tab)
 3) click the Connect button, then close the dialog.
 
 ## 3. Adjust parameter to facilitate operations with repo
 1) go to Tools > Options
 2) in the General tab, first line, choose GitHub from the dropdown list
-<img width="864" height="221" alt="image" src="https://github.com/user-attachments/assets/d81d4ad9-c38e-4719-83ab-d9002df0c5e8" />
+  <img width="864" height="221" alt="image" src="https://github.com/user-attachments/assets/d81d4ad9-c38e-4719-83ab-d9002df0c5e8" />
 
 3) click the OK button
 
-## 4. Prompt your prefered GenAI tool
+
+
+# Workshop
+
+## 1. Prompt your preferred GenAI tool
 1) go to https://github.com/hackolade-public/DataSummit2026/blob/main/GenAI/prompt.md
 2) copy the proposed prompt
-3) paste in your prefered GenAI tool
+3) paste in your preferred GenAI tool
 
-## 5. Generate ERD in Hackolade Studio
+## 2. Generate ERD in Hackolade Studio
 1) copy the output from your GenAI tool, or copy from 
    1) Conceptual https://github.com/hackolade-public/DataSummit2026/blob/main/GenAI/retailco_from_reqs_doc%20-%20conceptual.dbml
    2) Logical https://github.com/hackolade-public/DataSummit2026/blob/main/GenAI/retailco_from_reqs_doc%20-%20logical.dbml
@@ -44,27 +54,30 @@ In order to access files prepared in our repository, you must create a connectio
 2) open the prepared empty model DataSummit2026 Polyglot model.hck.json from the GitHub repository with this link **<u>TBA</u>**
    (Use Ctrl/Cmd+click to open in a new tab)
 3) go to Tools > Reverse-Engineer > Diagram > DBML...
-  <img width="678" height="356" alt="image" src="https://github.com/user-attachments/assets/94e62495-8630-4392-b346-260a093ec589" />
+    <img width="678" height="356" alt="image" src="https://github.com/user-attachments/assets/94e62495-8630-4392-b346-260a093ec589" />
 
 4) choose Clipboard in the left menu
-  <img width="378" height="238" alt="image" src="https://github.com/user-attachments/assets/b0ee56df-74d7-40cd-b030-aa0b5421edc3" />
+    <img width="378" height="238" alt="image" src="https://github.com/user-attachments/assets/b0ee56df-74d7-40cd-b030-aa0b5421edc3" />
 
 5) the copied code from the GenAI output should appear
-  <img width="1905" height="1168" alt="image" src="https://github.com/user-attachments/assets/e4c24e8f-5122-458e-90bf-f4cd5f386da5" />
+    <img width="1905" height="1168" alt="image" src="https://github.com/user-attachments/assets/e4c24e8f-5122-458e-90bf-f4cd5f386da5" />
 
 6) click the Open button at the bottom right of the dialog
 7) after a few seconds, the progress dialog should give you this kind of information:
-  <img width="741" height="592" alt="image" src="https://github.com/user-attachments/assets/39c086bb-8d05-4a3c-8cf2-b91a7d6e388e" />
+    <img width="741" height="592" alt="image" src="https://github.com/user-attachments/assets/39c086bb-8d05-4a3c-8cf2-b91a7d6e388e" />
 
 8) after clicking the OK button, you should see the ERD result
-  <img width="1918" height="891" alt="image" src="https://github.com/user-attachments/assets/d5ea0559-01a6-455a-bc5e-20803ae947ba" />
+    <img width="1918" height="891" alt="image" src="https://github.com/user-attachments/assets/d5ea0559-01a6-455a-bc5e-20803ae947ba" />
 
-## 6. Save your work in a new branch on the repository
+
+
+## 3. Save your work in a new branch on the repository
+
 1) click the save icon in the toolbar (or go to File > Save...)
 2) enter a commit message (meaningful but not too long), select to create a new branch with a name without spaces (safe set is lowercase alphanumeric characters and hyphens)
 <img width="810" height="373" alt="image" src="https://github.com/user-attachments/assets/c6cdfc87-415b-42d3-929d-f21864f0d772" />
 
-## 7. (optional) share the URL hyperlink to your model
+## 4. (optional) share the URL hyperlink to your model
 1) click the link icon in the toolbar (or go to File > Share Data Model Link...)
 <img width="793" height="287" alt="image" src="https://github.com/user-attachments/assets/d3cc67c4-e48d-4320-aa1e-e8cfa88abd1b" />
 
@@ -72,7 +85,10 @@ In order to access files prepared in our repository, you must create a connectio
 3) you can now send this link in Slack, Teams, email, or put it in a Confluence page, portal, etc...
 **Note:** be aware of the branch in your link.  A branch is typically ephemeral, whereas the main branch is persistent.  While it is useful to share a model link in a branch as you collaborate on a new feature, in a portal, you probably want to store a the lin too the main branch to show always the latest approved version.
 
-## 8. Bind model attributes with glossary terms
+
+
+## 5. Bind model attributes with glossary terms
+
 1) search for the word mineral in the Object Browser Find box
 <img width="359" height="396" alt="image" src="https://github.com/user-attachments/assets/d38eb77d-1d3f-4cec-bd29-00ecbfd6443c" />
 

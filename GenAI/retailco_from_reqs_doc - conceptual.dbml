@@ -18,62 +18,62 @@
 // ============================================================
 
 TableGroup "Layer 1 - Conceptual" {
-  "C Customer"
-  "C Customer Address"
-  "C Customer Segment History"
-  "C Order"
-  "C Order Line Item"
-  "C Promotion"
-  "C Product"
-  "C Category"
-  "C Supplier"
+  RetailCo."C Customer"
+  RetailCo."C Customer Address"
+  RetailCo."C Customer Segment History"
+  RetailCo."C Order"
+  RetailCo."C Order Line Item"
+  RetailCo."C Promotion"
+  RetailCo."C Product"
+  RetailCo."C Category"
+  RetailCo."C Supplier"
 }
 
-Table "C Customer" [note: "A person or organisation registered with RetailCo. Unified identity across all channels."] {
+Table RetailCo."C Customer" [note: "A person or organisation registered with RetailCo. Unified identity across all channels."] {
   Id int [pk]
 }
 
-Table "C Customer Address" [note: "One or more physical addresses belonging to a customer. Typed as Billing, Shipping, or Both."] {
+Table RetailCo."C Customer Address" [note: "One or more physical addresses belonging to a customer. Typed as Billing, Shipping, or Both."] {
   Id int [pk]
 }
 
-Table "C Customer Segment History" [note: "Historical record of segment assignments for a customer, enabling cohort analysis at any past date."] {
+Table RetailCo."C Customer Segment History" [note: "Historical record of segment assignments for a customer, enabling cohort analysis at any past date."] {
   Id int [pk]
 }
 
-Table "C Order" [note: "A purchase transaction placed by a customer through one of the four commercial channels."] {
+Table RetailCo."C Order" [note: "A purchase transaction placed by a customer through one of the four commercial channels."] {
   Id int [pk]
 }
 
-Table "C Order Line Item" [note: "A single product entry within an order. The atomic grain of purchase activity."] {
+Table RetailCo."C Order Line Item" [note: "A single product entry within an order. The atomic grain of purchase activity."] {
   Id int [pk]
 }
 
-Table "C Promotion" [note: "A discount campaign optionally applied to an order. Types: Percentage, Fixed, BOGO."] {
+Table RetailCo."C Promotion" [note: "A discount campaign optionally applied to an order. Types: Percentage, Fixed, BOGO."] {
   Id int [pk]
 }
 
-Table "C Product" [note: "A sellable item in the RetailCo catalogue, assigned to a leaf category and sourced from one primary supplier."] {
+Table RetailCo."C Product" [note: "A sellable item in the RetailCo catalogue, assigned to a leaf category and sourced from one primary supplier."] {
   Id int [pk]
 }
 
-Table "C Category" [note: "Hierarchical product classification with up to three levels: Root, Mid, Leaf."] {
+Table RetailCo."C Category" [note: "Hierarchical product classification with up to three levels: Root, Mid, Leaf."] {
   Id        int [pk]
   "Parent Id" int
 }
 
-Table "C Supplier" [note: "A vendor that supplies products to RetailCo."] {
+Table RetailCo."C Supplier" [note: "A vendor that supplies products to RetailCo."] {
   Id int [pk]
 }
 
 // Conceptual Relationships
 
-Ref: "C Customer".Id < "C Customer Address".Id
-Ref: "C Customer".Id < "C Customer Segment History".Id
-Ref: "C Customer".Id < "C Order".Id
-Ref: "C Order".Id < "C Order Line Item".Id
-Ref: "C Promotion".Id < "C Order".Id
-Ref: "C Product".Id < "C Order Line Item".Id
-Ref: "C Category".Id < "C Product".Id
-Ref: "C Category"."Parent Id" > "C Category".Id
-Ref: "C Supplier".Id < "C Product".Id
+Ref: RetailCo."C Customer".Id < RetailCo."C Customer Address".Id
+Ref: RetailCo."C Customer".Id < RetailCo."C Customer Segment History".Id
+Ref: RetailCo."C Customer".Id < RetailCo."C Order".Id
+Ref: RetailCo."C Order".Id < RetailCo."C Order Line Item".Id
+Ref: RetailCo."C Promotion".Id < RetailCo."C Order".Id
+Ref: RetailCo."C Product".Id < RetailCo."C Order Line Item".Id
+Ref: RetailCo."C Category".Id < RetailCo."C Product".Id
+Ref: RetailCo."C Category"."Parent Id" > RetailCo."C Category".Id
+Ref: RetailCo."C Supplier".Id < RetailCo."C Product".Id
