@@ -1,5 +1,5 @@
 {
-  "modelName": "New model",
+  "modelName": "RetailCo Conceptual Model",
   "collections": [
     {
       "collectionName": "CUSTOMER",
@@ -1121,14 +1121,6 @@
             "y": 1124
           },
           {
-            "x": 1313.2947333134687,
-            "y": 1124
-          },
-          {
-            "x": 1313.2947333134687,
-            "y": 1124
-          },
-          {
             "x": 1373,
             "y": 1124
           }
@@ -1384,7 +1376,7 @@
   "GUID": "e6b7dea2-2d09-48e5-8037-e8c243b323b1",
   "isLineageEnabled": false,
   "code": "",
-  "lastModifTS": "2026-04-18T14:01:58.884Z",
+  "lastModifTS": "2026-04-25T09:31:18.849Z",
   "persistenceSchemaVersion": "8",
   "isCreatedByPlugin": true,
   "pluginInformation": {
@@ -1394,6 +1386,11 @@
   },
   "applicationInformation": {
     "version": "8.10.3"
+  },
+  "hackoladeMeta": {
+    "validationErrors": {
+      "modelName": false
+    }
   },
   "settings": {
     "centralPane": {
@@ -1540,8 +1537,8 @@
             {
               "GUID": "417ec7c7-baac-4056-a392-50a0bb650584",
               "size": 100,
-              "x": 1598,
-              "y": 1070
+              "x": 1601.4490038130348,
+              "y": 1071.1496679376783
             },
             {
               "GUID": "b0d0c385-73d6-42e2-be7b-539d675a4049",
