@@ -32,7 +32,7 @@ In order to access files prepared in our repository, you must create a connectio
 ## 3. Adjust parameter to facilitate operations with repo
 1) go to Tools > Options
 2) in the General tab, first line, choose GitHub from the dropdown list
-  <img width="864" height="221" alt="image" src="https://github.com/user-attachments/assets/d81d4ad9-c38e-4719-83ab-d9002df0c5e8" />
+    <img width="864" height="221" alt="image" src="https://github.com/user-attachments/assets/d81d4ad9-c38e-4719-83ab-d9002df0c5e8" />
 
 3) click the OK button
 
@@ -54,13 +54,13 @@ In order to access files prepared in our repository, you must create a connectio
 2) open the prepared empty model DataSummit2026 Polyglot model.hck.json from the GitHub repository with this link **<u>TBA</u>**
    (Use Ctrl/Cmd+click to open in a new tab)
 3) go to Tools > Reverse-Engineer > Diagram > DBML...
-    <img width="678" height="356" alt="image" src="https://github.com/user-attachments/assets/94e62495-8630-4392-b346-260a093ec589" />
+    ![image-20260425110459060](C:\Users\Pascal\AppData\Roaming\Typora\typora-user-images\image-20260425110459060.png)
 
 4) choose Clipboard in the left menu
-    <img width="378" height="238" alt="image" src="https://github.com/user-attachments/assets/b0ee56df-74d7-40cd-b030-aa0b5421edc3" />
+    ![image-20260425110643755](C:\Users\Pascal\AppData\Roaming\Typora\typora-user-images\image-20260425110643755.png)
 
 5) the copied code from the GenAI output should appear
-    <img width="1905" height="1168" alt="image" src="https://github.com/user-attachments/assets/e4c24e8f-5122-458e-90bf-f4cd5f386da5" />
+    ![image-20260425110916698](C:\Users\Pascal\AppData\Roaming\Typora\typora-user-images\image-20260425110916698.png)
 
 6) click the Open button at the bottom right of the dialog
 7) after a few seconds, the progress dialog should give you this kind of information:
