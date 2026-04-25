@@ -77,29 +77,22 @@ In order to access files prepared in our repository, you must create a connectio
 
 ## **3. Make changes to your model**
 
-1. search for the word mineral in the Object Browser Find box
-   <img width="359" height="396" alt="image" src="https://github.com/user-attachments/assets/d38eb77d-1d3f-4cec-bd29-00ecbfd6443c" />
+1. search for the word Category in the Object Browser Find box
+   <img width="362" height="345" alt="image" src="https://github.com/user-attachments/assets/59c11b7c-3e8a-4031-831c-a9411531a87c" />
 
-2. click on the Mineral Entity to focus the ERD on that entity, and click on the mineral_id attribute
-   <img width="293" height="150" alt="image" src="https://github.com/user-attachments/assets/f4da0213-ebd7-4624-af88-55afefaeaf84" />
+2. click on the Category entity to focus the ERD on that entity
+   <img width="198" height="234" alt="image" src="https://github.com/user-attachments/assets/3a27c512-1cf9-46d4-9594-7b994bbfdaa7" />
 
 3. in the Properties Pane on the Right, click on the + sign next to Glossary terms label
-   <img width="438" height="301" alt="image" src="https://github.com/user-attachments/assets/106b3040-1862-4b31-afd8-1daf7978d197" />
+  <img width="411" height="251" alt="image" src="https://github.com/user-attachments/assets/0bd6aa5b-a24b-4efe-8c7f-e2e5fb6a027f" />
 
-4. the model was previously set up with the 2 glossaries for this workshop.  Filter by typing the word mineral and select the proper term for this attribute, then click the Apply button
-   <img width="1911" height="1101" alt="image" src="https://github.com/user-attachments/assets/9797c6b0-8bf5-4027-a8f9-2ebfba0d1091" />
+4. the model was previously set up with the glossaries for this workshop.  Filter by typing the word Category and select the proper term for this attribute, then click the Apply button
+  <img width="1913" height="444" alt="image" src="https://github.com/user-attachments/assets/b6e81d07-0dca-4cf0-9113-4e6bd4080d47" />
 
 5. the binding is now performed
-   <img width="412" height="309" alt="image" src="https://github.com/user-attachments/assets/070bc8b4-5a8e-4749-b969-15ae0698be26" />
+  <img width="409" height="280" alt="image" src="https://github.com/user-attachments/assets/0e9182fc-87ed-438b-bca5-66dbe3b486c8" />
 
-6. you can repeat steps 3 and 4 to also assign the identifier term
-   <img width="421" height="354" alt="image" src="https://github.com/user-attachments/assets/bc09d465-c0d9-4b36-a4ce-d00d0639b7b6" />
-
-7. you can now repeat these steps for another attribute, for example mineral_name
-   <img width="397" height="344" alt="image" src="https://github.com/user-attachments/assets/7280851a-aea2-4d8f-befc-28a3b9d7a62a" />
-
-   
-
+6. you can repeat steps 3 and 4 to also assign additional terms
 
 
 ## 4. Save your work in a new branch on the repository
@@ -110,7 +103,7 @@ In order to access files prepared in our repository, you must create a connectio
 
 ## 5. (optional) share the URL hyperlink to your model
 1) click the link icon in the toolbar (or go to File > Share Data Model Link...)
-<img width="793" height="287" alt="image" src="https://github.com/user-attachments/assets/d3cc67c4-e48d-4320-aa1e-e8cfa88abd1b" />
+<img width="800" height="283" alt="image" src="https://github.com/user-attachments/assets/d558658a-ecd6-4746-b5b0-2c95b7b1949b" />
 
 2) click the Copy button
 3) you can now send this link in Slack, Teams, email, or put it in a Confluence page, portal, etc...
