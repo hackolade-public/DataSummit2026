@@ -51,7 +51,7 @@ In order to access files prepared in our repository, you must create a connectio
    2) Logical https://github.com/hackolade-public/DataSummit2026/blob/main/GenAI/retailco_from_reqs_doc%20-%20logical.dbml
    3) Physical https://github.com/hackolade-public/DataSummit2026/blob/main/GenAI/retailco_from_reqs_doc%20-%20physical.dbml
 
-2) open the prepared empty model DataSummit2026 Polyglot model.hck.json from the GitHub repository with this link **<u>TBA</u>**
+2) open the prepared empty model DataSummit2026 Polyglot model.hck.json from the GitHub repository with this link **<u>https://studio.hackolade.com/?g=github&o=hackolade-public&r=DataSummit2026&f=models%2FRetailCo+-+conceptual.hck.json&b=main</u>**
    (Use Ctrl/Cmd+click to open in a new tab)
 3) go to Tools > Reverse-Engineer > Diagram > DBML...
    <img width="917" height="538" alt="image" src="https://github.com/user-attachments/assets/30f47f36-302b-4f1a-9397-6b35a2126675" />
