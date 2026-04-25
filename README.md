@@ -75,14 +75,40 @@ In order to access files prepared in our repository, you must create a connectio
 
 
 
+## **3. Make changes to your model**
 
-## 3. Save your work in a new branch on the repository
+1. search for the word mineral in the Object Browser Find box
+   <img width="359" height="396" alt="image" src="https://github.com/user-attachments/assets/d38eb77d-1d3f-4cec-bd29-00ecbfd6443c" />
+
+2. click on the Mineral Entity to focus the ERD on that entity, and click on the mineral_id attribute
+   <img width="293" height="150" alt="image" src="https://github.com/user-attachments/assets/f4da0213-ebd7-4624-af88-55afefaeaf84" />
+
+3. in the Properties Pane on the Right, click on the + sign next to Glossary terms label
+   <img width="438" height="301" alt="image" src="https://github.com/user-attachments/assets/106b3040-1862-4b31-afd8-1daf7978d197" />
+
+4. the model was previously set up with the 2 glossaries for this workshop.  Filter by typing the word mineral and select the proper term for this attribute, then click the Apply button
+   <img width="1911" height="1101" alt="image" src="https://github.com/user-attachments/assets/9797c6b0-8bf5-4027-a8f9-2ebfba0d1091" />
+
+5. the binding is now performed
+   <img width="412" height="309" alt="image" src="https://github.com/user-attachments/assets/070bc8b4-5a8e-4749-b969-15ae0698be26" />
+
+6. you can repeat steps 3 and 4 to also assign the identifier term
+   <img width="421" height="354" alt="image" src="https://github.com/user-attachments/assets/bc09d465-c0d9-4b36-a4ce-d00d0639b7b6" />
+
+7. you can now repeat these steps for another attribute, for example mineral_name
+   <img width="397" height="344" alt="image" src="https://github.com/user-attachments/assets/7280851a-aea2-4d8f-befc-28a3b9d7a62a" />
+
+   
+
+
+
+## 4. Save your work in a new branch on the repository
 
 1) click the save icon in the toolbar (or go to File > Save...)
 2) enter a commit message (meaningful but not too long), select to create a new branch with a name without spaces (safe set is lowercase alphanumeric characters and hyphens)
 <img width="810" height="373" alt="image" src="https://github.com/user-attachments/assets/c6cdfc87-415b-42d3-929d-f21864f0d772" />
 
-## 4. (optional) share the URL hyperlink to your model
+## 5. (optional) share the URL hyperlink to your model
 1) click the link icon in the toolbar (or go to File > Share Data Model Link...)
 <img width="793" height="287" alt="image" src="https://github.com/user-attachments/assets/d3cc67c4-e48d-4320-aa1e-e8cfa88abd1b" />
 
@@ -92,31 +118,7 @@ In order to access files prepared in our repository, you must create a connectio
 
 
 
-## 5. Bind model attributes with glossary terms
 
-1) search for the word mineral in the Object Browser Find box
-<img width="359" height="396" alt="image" src="https://github.com/user-attachments/assets/d38eb77d-1d3f-4cec-bd29-00ecbfd6443c" />
-
-2) click on the Mineral Entity to focus the ERD on that entity, and click on the mineral_id attribute
-<img width="293" height="150" alt="image" src="https://github.com/user-attachments/assets/f4da0213-ebd7-4624-af88-55afefaeaf84" />
-
-3) in the Properties Pane on the Right, click on the + sign next to Glossary terms label
-<img width="438" height="301" alt="image" src="https://github.com/user-attachments/assets/106b3040-1862-4b31-afd8-1daf7978d197" />
-
-4) the model was previously set up with the 2 glossaries for this workshop.  Filter by typing the word mineral and select the proper term for this attribute, then click the Apply button
-<img width="1911" height="1101" alt="image" src="https://github.com/user-attachments/assets/9797c6b0-8bf5-4027-a8f9-2ebfba0d1091" />
-
-5) the binding is now performed
-<img width="412" height="309" alt="image" src="https://github.com/user-attachments/assets/070bc8b4-5a8e-4749-b969-15ae0698be26" />
-
-6) you can repeat steps 3 and 4 to also assign the identifier term
-<img width="421" height="354" alt="image" src="https://github.com/user-attachments/assets/bc09d465-c0d9-4b36-a4ce-d00d0639b7b6" />
-
-7) you can now repeat these steps for another attribute, for example mineral_name
-<img width="397" height="344" alt="image" src="https://github.com/user-attachments/assets/7280851a-aea2-4d8f-befc-28a3b9d7a62a" />
-
-8) you may now save your work using instructions in section 6 above.  While you could do that to a new branch, we suggest that you do it to the same branch as used in section 6
-<img width="805" height="370" alt="image" src="https://github.com/user-attachments/assets/32eecf37-cf47-4c0c-8acd-287be0078d9c" />
 
 
 
