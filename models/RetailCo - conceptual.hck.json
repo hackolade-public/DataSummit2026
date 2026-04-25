@@ -395,7 +395,13 @@
       "additionalProperties": false,
       "GUID": "4fc350e2-b5ac-47fb-b30d-5a572ce29f9c",
       "comments": "Hierarchical product classification with up to three levels: Root, Mid, Leaf.",
-      "bucketId": "ebd8aaf3-f89a-46fb-a38d-9bb111afb795"
+      "bucketId": "ebd8aaf3-f89a-46fb-a38d-9bb111afb795",
+      "glossaryTerms": [
+        {
+          "GUID": "c1f06723-4d90-4cf0-aa4a-7801a06d7e6b",
+          "glossaryTermId": "0beacd3c-fa96-4c7b-854b-418697d75cfc"
+        }
+      ]
     },
     {
       "collectionName": "Supplier",
@@ -981,7 +987,7 @@
     {
       "GUID": "754bdb57-f10b-4844-b368-b3ef47806b8c",
       "name": "classwords_dictionary_minimal.csv",
-      "updatedAt": "2026-04-20T16:09:34.701Z",
+      "updatedAt": "2026-04-19T22:56:58Z",
       "hasHeaders": true,
       "format": "custom",
       "columnSeparator": ",",
@@ -1039,7 +1045,7 @@
     {
       "GUID": "afebaa67-3aaa-4417-817f-1a82da366a3b",
       "name": "RetailCo glossary.csv",
-      "updatedAt": "2026-04-20T16:09:34.701Z",
+      "updatedAt": "2026-04-20T16:16:11Z",
       "hasHeaders": true,
       "format": "custom",
       "columnSeparator": "|",
@@ -1081,7 +1087,7 @@
     {
       "GUID": "19bb88f7-74fc-4563-8d14-8af79e296655",
       "name": "Core-Business-Glossary.csv",
-      "updatedAt": "2026-04-20T16:09:34.701Z",
+      "updatedAt": "2026-04-19T22:56:58Z",
       "hasHeaders": true,
       "format": "custom",
       "columnSeparator": ",",
@@ -1176,6 +1182,20 @@
         "95473d8c-ec1d-47cb-b626-c05e2aeaa355"
       ],
       "updatedAt": "2026-04-20T16:09:34.701Z"
+    },
+    {
+      "GUID": "0beacd3c-fa96-4c7b-854b-418697d75cfc",
+      "glossaryId": "afebaa67-3aaa-4417-817f-1a82da366a3b",
+      "name": "Category",
+      "properties": {
+        "a5ffa59d-7794-4f51-bf0b-760c4b9de402": "0018",
+        "83f94814-e76b-4758-a1cd-a78e802ab218": "Category",
+        "cb6057e9-8a7d-4576-8ab6-ba15dce4c0b4": "A hierarchical classification for products with up to three levels: Root, Mid, and Leaf. Products are assigned only to Leaf categories."
+      },
+      "refIds": [
+        "4fc350e2-b5ac-47fb-b30d-5a572ce29f9c"
+      ],
+      "updatedAt": "2026-04-20T16:16:11Z"
     }
   ],
   "dbVendor": "Polyglot",
@@ -1190,7 +1210,7 @@
       "modelName": false
     }
   },
-  "lastModifTS": "2026-04-25T10:18:52.651Z",
+  "lastModifTS": "2026-04-25T10:45:41.570Z",
   "persistenceSchemaVersion": "8",
   "isCreatedByPlugin": true,
   "pluginInformation": {
@@ -1199,7 +1219,7 @@
     "pluginEngineVersion": "1.0.0"
   },
   "applicationInformation": {
-    "version": "8.10.4"
+    "version": "8.11.0"
   },
   "settings": {
     "centralPane": {
@@ -1315,7 +1335,9 @@
           "childField": [],
           "parentField": []
         },
-        "selectedCollections": [],
+        "selectedCollections": [
+          "4fc350e2-b5ac-47fb-b30d-5a572ce29f9c"
+        ],
         "displayColorPicker": false,
         "graphView": {
           "erd": [
