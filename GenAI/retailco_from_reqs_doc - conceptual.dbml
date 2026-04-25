@@ -18,62 +18,62 @@
 // ============================================================
 
 TableGroup "Layer 1 - Conceptual" {
-  RetailCo."C Customer"
-  RetailCo."C Customer Address"
-  RetailCo."C Customer Segment History"
-  RetailCo."C Order"
-  RetailCo."C Order Line Item"
-  RetailCo."C Promotion"
-  RetailCo."C Product"
-  RetailCo."C Category"
-  RetailCo."C Supplier"
+  RetailCo."Customer"
+  RetailCo."Customer Address"
+  RetailCo."Customer Segment History"
+  RetailCo."Order"
+  RetailCo."Order Line Item"
+  RetailCo."Promotion"
+  RetailCo."Product"
+  RetailCo."Category"
+  RetailCo."Supplier"
 }
 
-Table RetailCo."C Customer" [note: "A person or organisation registered with RetailCo. Unified identity across all channels."] {
+Table RetailCo."Customer" [note: "A person or organisation registered with RetailCo. Unified identity across all channels."] {
   Id int [pk]
 }
 
-Table RetailCo."C Customer Address" [note: "One or more physical addresses belonging to a customer. Typed as Billing, Shipping, or Both."] {
+Table RetailCo."Customer Address" [note: "One or more physical addresses belonging to a customer. Typed as Billing, Shipping, or Both."] {
   Id int [pk]
 }
 
-Table RetailCo."C Customer Segment History" [note: "Historical record of segment assignments for a customer, enabling cohort analysis at any past date."] {
+Table RetailCo."Customer Segment History" [note: "Historical record of segment assignments for a customer, enabling cohort analysis at any past date."] {
   Id int [pk]
 }
 
-Table RetailCo."C Order" [note: "A purchase transaction placed by a customer through one of the four commercial channels."] {
+Table RetailCo."Order" [note: "A purchase transaction placed by a customer through one of the four commercial channels."] {
   Id int [pk]
 }
 
-Table RetailCo."C Order Line Item" [note: "A single product entry within an order. The atomic grain of purchase activity."] {
+Table RetailCo."Order Line Item" [note: "A single product entry within an order. The atomic grain of purchase activity."] {
   Id int [pk]
 }
 
-Table RetailCo."C Promotion" [note: "A discount campaign optionally applied to an order. Types: Percentage, Fixed, BOGO."] {
+Table RetailCo."Promotion" [note: "A discount campaign optionally applied to an order. Types: Percentage, Fixed, BOGO."] {
   Id int [pk]
 }
 
-Table RetailCo."C Product" [note: "A sellable item in the RetailCo catalogue, assigned to a leaf category and sourced from one primary supplier."] {
+Table RetailCo."Product" [note: "A sellable item in the RetailCo catalogue, assigned to a leaf category and sourced from one primary supplier."] {
   Id int [pk]
 }
 
-Table RetailCo."C Category" [note: "Hierarchical product classification with up to three levels: Root, Mid, Leaf."] {
+Table RetailCo."Category" [note: "Hierarchical product classification with up to three levels: Root, Mid, Leaf."] {
   Id        int [pk]
   "Parent Id" int
 }
 
-Table RetailCo."C Supplier" [note: "A vendor that supplies products to RetailCo."] {
+Table RetailCo."Supplier" [note: "A vendor that supplies products to RetailCo."] {
   Id int [pk]
 }
 
 // Conceptual Relationships
 
-Ref: RetailCo."C Customer".Id < RetailCo."C Customer Address".Id
-Ref: RetailCo."C Customer".Id < RetailCo."C Customer Segment History".Id
-Ref: RetailCo."C Customer".Id < RetailCo."C Order".Id
-Ref: RetailCo."C Order".Id < RetailCo."C Order Line Item".Id
-Ref: RetailCo."C Promotion".Id < RetailCo."C Order".Id
-Ref: RetailCo."C Product".Id < RetailCo."C Order Line Item".Id
-Ref: RetailCo."C Category".Id < RetailCo."C Product".Id
-Ref: RetailCo."C Category"."Parent Id" > RetailCo."C Category".Id
-Ref: RetailCo."C Supplier".Id < RetailCo."C Product".Id
+Ref: RetailCo."Customer".Id < RetailCo."Customer Address".Id
+Ref: RetailCo."Customer".Id < RetailCo."Customer Segment History".Id
+Ref: RetailCo."Customer".Id < RetailCo."Order".Id
+Ref: RetailCo."Order".Id < RetailCo."Order Line Item".Id
+Ref: RetailCo."Promotion".Id < RetailCo."Order".Id
+Ref: RetailCo."Product".Id < RetailCo."Order Line Item".Id
+Ref: RetailCo."Category".Id < RetailCo."Product".Id
+Ref: RetailCo."Category"."Parent Id" > RetailCo."Category".Id
+Ref: RetailCo."Supplier".Id < RetailCo."Product".Id
