@@ -2,7 +2,7 @@
 
 Workshop 3: From Strategy to Structure: Accelerating Business Impact Through Hands-on Data Modeling -- instructions
 
-Full instructions in <a href="[DataSummit2026 workshop instructions.docx](https://hackoladestudio-my.sharepoint.com/:w:/g/personal/pascal_desmarets_hackolade_com/IQAOm_bT4B8CRoPWIv9oDiD6AaPDCFGPp1ug4hM11XTyc_0?e=qO1qQW)" target="_blank" rel="noopener noreferrer">this document</a> (Use Ctrl/Cmd+click to open in a new tab)
+Full instructions in <a href="(https://hackoladestudio-my.sharepoint.com/:w:/g/personal/pascal_desmarets_hackolade_com/IQAOm_bT4B8CRoPWIv9oDiD6AaPDCFGPp1ug4hM11XTyc_0?rtime=RSQxB6mi3kg)" target="_blank" rel="noopener noreferrer">this document</a> (Use Ctrl/Cmd+click to open in a new tab)
 
 
 
@@ -26,7 +26,7 @@ This browser-based data modeling solution is highly secure.  See more informatio
 In order to access files prepared in our repository, you must create a connection to your repo:
 
 1) go to the menu option Repository > Repository Connections (last option in the menu)
-2) paste the access token published in <a href="[DataSummit2026 workshop instructions.docx](https://hackoladestudio-my.sharepoint.com/:w:/g/personal/pascal_desmarets_hackolade_com/IQAOm_bT4B8CRoPWIv9oDiD6AaPDCFGPp1ug4hM11XTyc_0?e=qO1qQW)" target="_blank" rel="noopener noreferrer">this document</a> (Use Ctrl/Cmd+click to open in a new tab)
+2) paste the access token published in in <a href="(https://hackoladestudio-my.sharepoint.com/:w:/g/personal/pascal_desmarets_hackolade_com/IQAOm_bT4B8CRoPWIv9oDiD6AaPDCFGPp1ug4hM11XTyc_0?rtime=RSQxB6mi3kg)" target="_blank" rel="noopener noreferrer">this document</a> (Use Ctrl/Cmd+click to open in a new tab)
 3) click the Connect button, then close the dialog.
 
 ## 3. Adjust parameter to facilitate operations with repo
