@@ -84,13 +84,13 @@ In order to access files prepared in our repository, you must create a connectio
    <img width="198" height="234" alt="image" src="https://github.com/user-attachments/assets/3a27c512-1cf9-46d4-9594-7b994bbfdaa7" />
 
 3. in the Properties Pane on the Right, click on the + sign next to Glossary terms label
-  <img width="411" height="251" alt="image" src="https://github.com/user-attachments/assets/0bd6aa5b-a24b-4efe-8c7f-e2e5fb6a027f" />
+    <img width="411" height="251" alt="image" src="https://github.com/user-attachments/assets/0bd6aa5b-a24b-4efe-8c7f-e2e5fb6a027f" />
 
 4. the model was previously set up with the glossaries for this workshop.  Filter by typing the word Category and select the proper term for this attribute, then click the Apply button
-  <img width="1913" height="444" alt="image" src="https://github.com/user-attachments/assets/b6e81d07-0dca-4cf0-9113-4e6bd4080d47" />
+    <img width="1913" height="444" alt="image" src="https://github.com/user-attachments/assets/b6e81d07-0dca-4cf0-9113-4e6bd4080d47" />
 
 5. the binding is now performed
-  <img width="409" height="280" alt="image" src="https://github.com/user-attachments/assets/0e9182fc-87ed-438b-bca5-66dbe3b486c8" />
+    <img width="409" height="280" alt="image" src="https://github.com/user-attachments/assets/0e9182fc-87ed-438b-bca5-66dbe3b486c8" />
 
 6. you can repeat steps 3 and 4 to also assign additional terms
 
@@ -107,7 +107,7 @@ In order to access files prepared in our repository, you must create a connectio
 
 2) click the Copy button
 3) you can now send this link in Slack, Teams, email, or put it in a Confluence page, portal, etc...
-**Note:** be aware of the branch in your link.  A branch is typically ephemeral, whereas the main branch is persistent.  While it is useful to share a model link in a branch as you collaborate on a new feature, in a portal, you probably want to store a the lin too the main branch to show always the latest approved version.
+**Note:** be aware of the branch in your link.  A branch is typically ephemeral, whereas the main branch is persistent.  While it is useful to share a model link in a branch as you collaborate on a new feature, in a portal, you probably want to store the link too the main branch to show always the latest approved version.
 
 
 
