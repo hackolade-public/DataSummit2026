@@ -108,7 +108,7 @@ In order to access files prepared in our repository, you must create a connectio
 
 1) click the save icon in the toolbar (or go to File > Save...)
 2) enter a commit message (meaningful but not too long), select to create a new branch with a name without spaces (safe set is lowercase alphanumeric characters and hyphens)
-<img width="810" height="373" alt="image" src="https://github.com/user-attachments/assets/c6cdfc87-415b-42d3-929d-f21864f0d772" />
+<img width="811" height="399" alt="image" src="https://github.com/user-attachments/assets/072802c8-1704-41c2-850c-0c648fdb0ee8" />
 
 ## 5. (optional) share the URL hyperlink to your model
 1) click the link icon in the toolbar (or go to File > Share Data Model Link...)
