@@ -75,9 +75,12 @@ In order to access files prepared in our repository, you must create a connectio
 
 
 9. Alternatively, you can open the prepared empty models from the GitHub repository
-    \- conceptual [RetailCo - conceptual.hck.json](https://studio.hackolade.com/?g=github&o=hackolade-public&r=DataSummit2026&f=models%2FRetailCo+-+conceptual.hck.json&b=main) (Use Ctrl/Cmd+click to open in a new tab)
-    \- logical [RetailCo - logical.hck.json](https://studio.hackolade.com/?g=github&o=hackolade-public&r=DataSummit2026&f=models%2FRetailCo+-+logical.hck.json&b=main) (Use Ctrl/Cmd+click to open in a new tab)
-    \- physical Snowflake [RetailCo - physical.hck.json](https://studio.hackolade.com/?g=github&o=hackolade-public&r=DataSummit2026&f=models%2FRetailCo+-+physical.hck.json&b=main) (Use Ctrl/Cmd+click to open in a new tab)
+
+\- conceptual [RetailCo - conceptual.hck.json](https://studio.hackolade.com/?g=github&o=hackolade-public&r=DataSummit2026&f=models%2FRetailCo+-+conceptual.hck.json&b=main) (Use Ctrl/Cmd+click to open in a new tab)
+
+\- logical [RetailCo - logical.hck.json](https://studio.hackolade.com/?g=github&o=hackolade-public&r=DataSummit2026&f=models%2FRetailCo+-+logical.hck.json&b=main) (Use Ctrl/Cmd+click to open in a new tab)
+
+\- physical Snowflake [RetailCo - physical.hck.json](https://studio.hackolade.com/?g=github&o=hackolade-public&r=DataSummit2026&f=models%2FRetailCo+-+physical.hck.json&b=main) (Use Ctrl/Cmd+click to open in a new tab)
 
 
 
