@@ -17,18 +17,18 @@
 // ============================================================
 
 TableGroup "Layer 2 - Logical (3NF)" {
-  "Customer"
-  "Customer Address"
-  "Customer Segment History"
-  "Sales Order"
-  "Order Line Item"
-  "Promotion"
-  "Product"
-  "Category"
-  "Supplier"
+  RetailCo."Customer"
+  RetailCo."Customer Address"
+  RetailCo."Customer Segment History"
+  RetailCo."Sales Order"
+  RetailCo."Order Line Item"
+  RetailCo."Promotion"
+  RetailCo."Product"
+  RetailCo."Category"
+  RetailCo."Supplier"
 }
 
-Table "Customer" [note: "Core customer entity. Represents a unique individual or organisation registered with RetailCo across all channels."] {
+Table RetailCo."Customer" [note: "Core customer entity. Represents a unique individual or organisation registered with RetailCo across all channels."] {
   "Customer Id"          varchar(36)   [pk, not null, note: "System-assigned UUID. Persists across all channels and downstream systems."]
   "Email"                varchar(255)  [unique, not null, note: "PII - Primary contact key. Must be unique across all customers. Masked in non-production."]
   "First Name"           varchar(100)  [not null, note: "PII - Customer given name. Masked in non-production."]
@@ -41,9 +41,9 @@ Table "Customer" [note: "Core customer entity. Represents a unique individual or
   "Updated At"           timestamp     [not null, note: "UTC timestamp of most recent profile update. Maintained for audit purposes."]
 }
 
-Table "Customer Address" [note: "One or more physical addresses on file for a customer. Typed and designated as primary where applicable."] {
+Table RetailCo."Customer Address" [note: "One or more physical addresses on file for a customer. Typed and designated as primary where applicable."] {
   "Address Id"    varchar(36)   [pk, not null, note: "System-assigned UUID for the address record."]
-  "Customer Id"   varchar(36)   [not null, ref: > Customer."Customer Id", note: "FK to Customer. Addresses are retained with the customer record."]
+  "Customer Id"   varchar(36)   [not null, ref: > RetailCo."Customer"."Customer Id", note: "FK to Customer. Addresses are retained with the customer record."]
   "Address Type"  varchar(20)   [not null, note: "Classification of address purpose. Values: Billing, Shipping, Both."]
   "Is Primary"    boolean       [not null, default: false, note: "Designates the primary billing address. Exactly one address per customer must be true."]
   "Street"        varchar(255)  [not null, note: "PII - Street line of the address. Masked in non-production."]
@@ -52,18 +52,18 @@ Table "Customer Address" [note: "One or more physical addresses on file for a cu
   "Country"       varchar(100)  [not null, note: "PII - Country of the address. Masked in non-production."]
 }
 
-Table "Customer Segment History" [note: "SCD Type 2 history of segment assignments. Enables point-in-time cohort analysis at any historical date."] {
+Table RetailCo."Customer Segment History" [note: "SCD Type 2 history of segment assignments. Enables point-in-time cohort analysis at any historical date."] {
   "Segment History Id"  varchar(36)  [pk, not null, note: "System-assigned UUID for the history row."]
-  "Customer Id"         varchar(36)  [not null, ref: > Customer."Customer Id", note: "FK to Customer."]
+  "Customer Id"         varchar(36)  [not null, ref: > RetailCo."Customer"."Customer Id", note: "FK to Customer."]
   "Segment"             varchar(20)  [not null, note: "Segment value at this point in time. Values: Gold, Silver, Bronze, New."]
   "Effective From"      date         [not null, note: "Date from which this segment assignment was effective (inclusive)."]
   "Effective To"        date         [note: "Date to which this segment assignment was effective (inclusive). Null indicates the current active row."]
 }
 
-Table "Sales Order" [note: "A purchase transaction initiated by a customer through one of the four commercial channels."] {
+Table RetailCo."Sales Order" [note: "A purchase transaction initiated by a customer through one of the four commercial channels."] {
   "Order Id"          varchar(36)   [pk, not null, note: "System-assigned UUID. The primary key of the order entity."]
-  "Customer Id"       varchar(36)   [not null, ref: > Customer."Customer Id", note: "FK to Customer. An order is linked to exactly one customer."]
-  "Promotion Id"      varchar(36)   [ref: > Promotion."Promotion Id", note: "FK to Promotion. Optional; null when no promotion is applied to the order."]
+  "Customer Id"       varchar(36)   [not null, ref: > RetailCo."Customer"."Customer Id", note: "FK to Customer. An order is linked to exactly one customer."]
+  "Promotion Id"      varchar(36)   [ref: > RetailCo."Promotion"."Promotion Id", note: "FK to Promotion. Optional; null when no promotion is applied to the order."]
   "Channel"           varchar(20)   [not null, note: "Commercial channel through which the order was placed. Values: Web, Mobile, In-Store, Partner. Immutable after order creation."]
   "Order Status"      varchar(20)   [not null, note: "Current lifecycle status. Values: Pending, Confirmed, Shipped, Delivered, Cancelled."]
   "Order Created At"  timestamp     [not null, note: "UTC timestamp of order creation."]
@@ -71,16 +71,16 @@ Table "Sales Order" [note: "A purchase transaction initiated by a customer throu
   "Discount Amount"   decimal(12,2) [not null, default: 0, note: "Order-level discount amount applied from the associated promotion. Zero when no promotion is applied."]
 }
 
-Table "Order Line Item" [note: "A single product entry within an order. The atomic grain of purchase data. Cascade delete from Sales Order."] {
+Table RetailCo."Order Line Item" [note: "A single product entry within an order. The atomic grain of purchase data. Cascade delete from Sales Order."] {
   "Line Item Id"  varchar(36)   [pk, not null, note: "System-assigned UUID for the line item."]
-  "Order Id"      varchar(36)   [not null, ref: > "Sales Order"."Order Id", note: "FK to Sales Order. Cascade delete applies."]
-  "Product Id"    varchar(36)   [not null, ref: > Product."Product Id", note: "FK to Product. References the product at the time of order."]
+  "Order Id"      varchar(36)   [not null, ref: > RetailCo."Sales Order"."Order Id", note: "FK to Sales Order. Cascade delete applies."]
+  "Product Id"    varchar(36)   [not null, ref: > RetailCo."Product"."Product Id", note: "FK to Product. References the product at the time of order."]
   "Quantity"      int           [not null, note: "Units ordered. Must be greater than zero."]
   "Unit Price"    decimal(12,2) [not null, note: "Actual price per unit charged at time of order. May differ from current product list price."]
   "Discount Pct"  decimal(5,4)  [not null, default: 0, note: "Line-level discount fraction between 0.0000 and 1.0000. Distinct from any order-level promotion discount."]
 }
 
-Table "Promotion" [note: "A discount campaign that may be optionally applied to an order. Captures type, value, and validity period."] {
+Table RetailCo."Promotion" [note: "A discount campaign that may be optionally applied to an order. Captures type, value, and validity period."] {
   "Promotion Id"    varchar(36)   [pk, not null, note: "System-assigned UUID for the promotion."]
   "Promotion Name"  varchar(255)  [not null, note: "Descriptive name of the promotion for reporting and analysis."]
   "Discount Type"   varchar(20)   [not null, note: "Type of discount applied. Values: Percentage, Fixed, BOGO."]
@@ -89,25 +89,25 @@ Table "Promotion" [note: "A discount campaign that may be optionally applied to 
   "End Date"        date          [not null, note: "Inclusive end date of the promotion validity period. Must be on or after Start Date."]
 }
 
-Table "Product" [note: "A sellable item in the RetailCo catalogue. Assigned to exactly one leaf-level category and one primary supplier."] {
+Table RetailCo."Product" [note: "A sellable item in the RetailCo catalogue. Assigned to exactly one leaf-level category and one primary supplier."] {
   "Product Id"   varchar(36)   [pk, not null, note: "System-assigned UUID. Primary key used across all downstream systems."]
   "SKU"          varchar(100)  [unique, not null, note: "Stock-Keeping Unit code. Unique alphanumeric identifier across all products."]
   "Product Name" varchar(255)  [not null, note: "Published product name as maintained by the merchandising team."]
   "List Price"   decimal(12,2) [not null, note: "Current standard published selling price. No price history is required."]
   "Cost Price"   decimal(12,2) [note: "RESTRICTED - Per-unit cost from the primary supplier. Optional; accessible to finance roles only."]
-  "Category Id"  varchar(36)   [not null, ref: > Category."Category Id", note: "FK to Category. Must reference a leaf-level (Level 3) category only."]
-  "Supplier Id"  varchar(36)   [not null, ref: > Supplier."Supplier Id", note: "FK to Supplier. One primary supplier at any point in time. Supplier history not tracked."]
+  "Category Id"  varchar(36)   [not null, ref: > RetailCo.Category."Category Id", note: "FK to Category. Must reference a leaf-level (Level 3) category only."]
+  "Supplier Id"  varchar(36)   [not null, ref: > RetailCo.Supplier."Supplier Id", note: "FK to Supplier. One primary supplier at any point in time. Supplier history not tracked."]
   "Is Active"    boolean       [not null, default: true, note: "Soft-delete flag. Inactive products are retained to preserve order history integrity."]
 }
 
-Table "Category" [note: "Hierarchical product classification with up to three levels: Root (L1), Mid (L2), Leaf (L3). Products assigned to L3 only."] {
+Table RetailCo."Category" [note: "Hierarchical product classification with up to three levels: Root (L1), Mid (L2), Leaf (L3). Products assigned to L3 only."] {
   "Category Id"        varchar(36)  [pk, not null, note: "System-assigned UUID for the category."]
-  "Parent Category Id" varchar(36)  [ref: > Category."Category Id", note: "FK to parent Category. Null for root-level (L1) categories."]
+  "Parent Category Id" varchar(36)  [ref: > RetailCo."Category"."Category Id", note: "FK to parent Category. Null for root-level (L1) categories."]
   "Category Name"      varchar(255) [not null, note: "Descriptive name of the category as used by the merchandising team."]
   "Category Level"     int          [not null, note: "Hierarchy level indicator. Values: 1 (Root), 2 (Mid), 3 (Leaf). Products may only be assigned to Level 3."]
 }
 
-Table "Supplier" [note: "A vendor that supplies products to RetailCo. Each product has exactly one primary supplier."] {
+Table RetailCo."Supplier" [note: "A vendor that supplies products to RetailCo. Each product has exactly one primary supplier."] {
   "Supplier Id"    varchar(36)  [pk, not null, note: "System-assigned UUID for the supplier."]
   "Supplier Name"  varchar(255) [not null, note: "Trading name of the supplier organisation."]
   "Country"        varchar(100) [not null, note: "Country of operation for the supplier."]

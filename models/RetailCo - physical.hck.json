@@ -1,0 +1,3114 @@
+{
+  "modelName": "RetailCo Physical",
+  "collections": [
+    {
+      "collectionName": "fact_order_line",
+      "type": "object",
+      "properties": [
+        {
+          "name": "fact_order_line_sk",
+          "hackoladeMeta": {},
+          "isActivated": true,
+          "autoincrement": {
+            "step_num": 1
+          },
+          "tPrecision": 9,
+          "primaryKey": true,
+          "required": true,
+          "alternateKey": false,
+          "childType": "varchar",
+          "type": "string",
+          "compositeKey": [
+            "clusteringKey",
+            "partitioningKey",
+            "compositePrimaryKey",
+            "compositeUniqueKey"
+          ],
+          "clusteringKey": false,
+          "partitioningKey": false,
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "GUID": "1a964894-b9e1-4c0d-a32b-602a086de31e",
+          "unique": false,
+          "length": 36,
+          "comments": "Surrogate key for the fact row. Generated at load time."
+        },
+        {
+          "name": "order_id",
+          "hackoladeMeta": {},
+          "isActivated": true,
+          "autoincrement": {
+            "step_num": 1
+          },
+          "tPrecision": 9,
+          "primaryKey": false,
+          "required": true,
+          "alternateKey": false,
+          "childType": "varchar",
+          "type": "string",
+          "compositeKey": [
+            "clusteringKey",
+            "partitioningKey",
+            "compositePrimaryKey",
+            "compositeUniqueKey"
+          ],
+          "clusteringKey": false,
+          "partitioningKey": false,
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "GUID": "abd2c2b3-2717-4a22-b5e9-0f7471b73204",
+          "unique": false,
+          "length": 36,
+          "comments": "Degenerate dimension. Natural order identifier retained for traceability and reconciliation to source systems."
+        },
+        {
+          "name": "line_item_id",
+          "hackoladeMeta": {},
+          "isActivated": true,
+          "autoincrement": {
+            "step_num": 1
+          },
+          "tPrecision": 9,
+          "primaryKey": false,
+          "required": true,
+          "alternateKey": false,
+          "childType": "varchar",
+          "type": "string",
+          "compositeKey": [
+            "clusteringKey",
+            "partitioningKey",
+            "compositePrimaryKey",
+            "compositeUniqueKey"
+          ],
+          "clusteringKey": false,
+          "partitioningKey": false,
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "GUID": "6f2bc350-ca24-421f-983d-f467dbbb55de",
+          "unique": false,
+          "length": 36,
+          "comments": "Degenerate dimension. Natural line item identifier retained for source reconciliation."
+        },
+        {
+          "name": "customer_sk",
+          "hackoladeMeta": {},
+          "isActivated": true,
+          "autoincrement": {
+            "step_num": 1
+          },
+          "tPrecision": 9,
+          "primaryKey": false,
+          "required": true,
+          "alternateKey": false,
+          "childType": "varchar",
+          "type": "string",
+          "compositeKey": [
+            "clusteringKey",
+            "partitioningKey",
+            "compositePrimaryKey",
+            "compositeUniqueKey"
+          ],
+          "clusteringKey": false,
+          "partitioningKey": false,
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "GUID": "341d0754-2121-4d7b-9b9d-2b5310a532a6",
+          "unique": false,
+          "length": 36,
+          "comments": "FK to dim_customer. References the SCD2 row current at time of order.",
+          "relationshipType": "Foreign Key",
+          "foreignCollection": "0c869334-6e40-4a8c-b3bb-86a27ed56ca4",
+          "foreignField": [
+            "0c869334-6e40-4a8c-b3bb-86a27ed56ca4",
+            "fb299ec1-7a2a-4d92-b3db-d282085cfc81"
+          ],
+          "parentRelationship": "4a190aa3-d613-4977-969e-28c504907515"
+        },
+        {
+          "name": "product_sk",
+          "hackoladeMeta": {},
+          "isActivated": true,
+          "autoincrement": {
+            "step_num": 1
+          },
+          "tPrecision": 9,
+          "primaryKey": false,
+          "required": true,
+          "alternateKey": false,
+          "childType": "varchar",
+          "type": "string",
+          "compositeKey": [
+            "clusteringKey",
+            "partitioningKey",
+            "compositePrimaryKey",
+            "compositeUniqueKey"
+          ],
+          "clusteringKey": false,
+          "partitioningKey": false,
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "GUID": "90d9ef6b-f7df-413f-b3ee-736cd836719e",
+          "unique": false,
+          "length": 36,
+          "comments": "FK to dim_product.",
+          "relationshipType": "Foreign Key",
+          "foreignCollection": "cf927b85-738b-4f1d-82c1-94eea5ee9ceb",
+          "foreignField": [
+            "cf927b85-738b-4f1d-82c1-94eea5ee9ceb",
+            "90e3a92a-f19d-4fdc-a6cc-2d8d1a16c2e0"
+          ],
+          "parentRelationship": "4741df37-ee6b-4ffe-817e-0fda934549a5"
+        },
+        {
+          "name": "promotion_sk",
+          "hackoladeMeta": {},
+          "isActivated": true,
+          "autoincrement": {
+            "step_num": 1
+          },
+          "tPrecision": 9,
+          "primaryKey": false,
+          "required": false,
+          "alternateKey": false,
+          "childType": "varchar",
+          "type": "string",
+          "compositeKey": [
+            "clusteringKey",
+            "partitioningKey",
+            "compositePrimaryKey",
+            "compositeUniqueKey"
+          ],
+          "clusteringKey": false,
+          "partitioningKey": false,
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "GUID": "6ce95d52-c289-4126-80f0-691c98b2a88a",
+          "unique": false,
+          "length": 36,
+          "comments": "FK to dim_promotion. Nullable; references a dedicated no-promotion row when no promotion is applied.",
+          "relationshipType": "Foreign Key",
+          "foreignCollection": "b9b72106-aefe-4455-a1b3-c329c6d297c8",
+          "foreignField": [
+            "b9b72106-aefe-4455-a1b3-c329c6d297c8",
+            "88067083-6e65-40b2-8d2f-1b4659c34e7b"
+          ],
+          "parentRelationship": "9391fa7c-debc-4677-81a6-fab64e461326"
+        },
+        {
+          "name": "order_date_sk",
+          "hackoladeMeta": {},
+          "isActivated": true,
+          "autoincrement": {
+            "step_num": 1,
+            "GUID": "e23f0412-18df-4853-8524-e017a53fe8e7"
+          },
+          "tPrecision": 9,
+          "index": true,
+          "exclusiveMinimum": false,
+          "exclusiveMaximum": false,
+          "precision": 8,
+          "scale": 0,
+          "primaryKey": false,
+          "required": true,
+          "alternateKey": false,
+          "childType": "number",
+          "type": "numeric",
+          "compositeKey": [
+            "clusteringKey",
+            "partitioningKey",
+            "compositePrimaryKey",
+            "compositeUniqueKey"
+          ],
+          "clusteringKey": false,
+          "partitioningKey": false,
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "GUID": "3c992279-727d-4c75-bd30-033999242996",
+          "unique": false,
+          "comments": "FK to dim_date. Derived from the order creation date in UTC. Format: YYYYMMDD.",
+          "relationshipType": "Foreign Key",
+          "foreignCollection": "0865c1f9-52a6-4d32-846d-2a80d1c73fa4",
+          "foreignField": [
+            "0865c1f9-52a6-4d32-846d-2a80d1c73fa4",
+            "06155469-48a5-4ac9-89bf-3127b4159568"
+          ],
+          "parentRelationship": "8d218cf0-0cb8-4b5e-93f5-cd970d418017"
+        },
+        {
+          "name": "channel_sk",
+          "hackoladeMeta": {},
+          "isActivated": true,
+          "autoincrement": {
+            "step_num": 1
+          },
+          "tPrecision": 9,
+          "primaryKey": false,
+          "required": true,
+          "alternateKey": false,
+          "childType": "varchar",
+          "type": "string",
+          "compositeKey": [
+            "clusteringKey",
+            "partitioningKey",
+            "compositePrimaryKey",
+            "compositeUniqueKey"
+          ],
+          "clusteringKey": false,
+          "partitioningKey": false,
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "GUID": "a7f81036-3f20-4e85-beda-610420b5376c",
+          "unique": false,
+          "length": 20,
+          "comments": "FK to dim_channel. Represents the channel through which the parent order was placed.",
+          "relationshipType": "Foreign Key",
+          "foreignCollection": "3ac10fd4-68c6-4504-be92-7e63d395bbe8",
+          "foreignField": [
+            "3ac10fd4-68c6-4504-be92-7e63d395bbe8",
+            "8219aa9d-ec76-4f52-a069-2c5cfefa8375"
+          ],
+          "parentRelationship": "edacf3de-c645-4e2f-9641-3f5d81a541fc"
+        },
+        {
+          "name": "quantity",
+          "hackoladeMeta": {},
+          "isActivated": true,
+          "autoincrement": {
+            "step_num": 1,
+            "GUID": "92e477bc-d9f9-41c1-a774-e77ef220d9ac"
+          },
+          "tPrecision": 9,
+          "index": true,
+          "exclusiveMinimum": false,
+          "exclusiveMaximum": false,
+          "precision": 10,
+          "scale": 0,
+          "primaryKey": false,
+          "required": true,
+          "alternateKey": false,
+          "childType": "number",
+          "type": "numeric",
+          "compositeKey": [
+            "clusteringKey",
+            "partitioningKey",
+            "compositePrimaryKey",
+            "compositeUniqueKey"
+          ],
+          "clusteringKey": false,
+          "partitioningKey": false,
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "GUID": "ddc463ea-1e4f-4180-87d7-54e5f4a5cbee",
+          "unique": false,
+          "comments": "Units ordered on this line item. Constrained greater than zero at ingestion."
+        },
+        {
+          "name": "unit_price",
+          "hackoladeMeta": {},
+          "isActivated": true,
+          "autoincrement": {
+            "step_num": 1,
+            "GUID": "4cee8a52-9198-4649-a201-4e41e45bb0bf"
+          },
+          "tPrecision": 9,
+          "index": true,
+          "exclusiveMinimum": false,
+          "exclusiveMaximum": false,
+          "precision": 12,
+          "scale": 2,
+          "primaryKey": false,
+          "required": true,
+          "alternateKey": false,
+          "childType": "number",
+          "type": "numeric",
+          "compositeKey": [
+            "clusteringKey",
+            "partitioningKey",
+            "compositePrimaryKey",
+            "compositeUniqueKey"
+          ],
+          "clusteringKey": false,
+          "partitioningKey": false,
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "GUID": "ee97e019-354b-4307-a9c7-4808b6b9a402",
+          "unique": false,
+          "comments": "Actual price per unit charged at time of order. Historical; does not update if list price changes.",
+          "mode": "decimal"
+        },
+        {
+          "name": "line_discount_pct",
+          "hackoladeMeta": {},
+          "isActivated": true,
+          "autoincrement": {
+            "step_num": 1,
+            "GUID": "d811d15a-7c69-426f-bff3-cc60d8fac627"
+          },
+          "tPrecision": 9,
+          "index": true,
+          "exclusiveMinimum": false,
+          "exclusiveMaximum": false,
+          "precision": 5,
+          "scale": 4,
+          "primaryKey": false,
+          "required": true,
+          "alternateKey": false,
+          "childType": "number",
+          "type": "numeric",
+          "compositeKey": [
+            "clusteringKey",
+            "partitioningKey",
+            "compositePrimaryKey",
+            "compositeUniqueKey"
+          ],
+          "clusteringKey": false,
+          "partitioningKey": false,
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "GUID": "d1c22b14-c11d-44af-952d-5e38c95d7dbf",
+          "unique": false,
+          "comments": "Line-level discount fraction (0.0000 to 1.0000). Distinct from order-level promotion discount.",
+          "default": 0,
+          "defaultOption": "Default",
+          "mode": "decimal"
+        },
+        {
+          "name": "extended_price",
+          "hackoladeMeta": {},
+          "isActivated": true,
+          "autoincrement": {
+            "step_num": 1,
+            "GUID": "16fbe4e2-fbd9-46b1-b8b1-2814198bff69"
+          },
+          "tPrecision": 9,
+          "index": true,
+          "exclusiveMinimum": false,
+          "exclusiveMaximum": false,
+          "precision": 12,
+          "scale": 2,
+          "primaryKey": false,
+          "required": true,
+          "alternateKey": false,
+          "childType": "number",
+          "type": "numeric",
+          "compositeKey": [
+            "clusteringKey",
+            "partitioningKey",
+            "compositePrimaryKey",
+            "compositeUniqueKey"
+          ],
+          "clusteringKey": false,
+          "partitioningKey": false,
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "GUID": "58825c84-1389-4239-9c64-2320ed3b26bf",
+          "unique": false,
+          "comments": "Generated: quantity x unit_price x (1 - line_discount_pct). Primary additive revenue measure at line level.",
+          "mode": "decimal"
+        },
+        {
+          "name": "order_gross_value",
+          "hackoladeMeta": {},
+          "isActivated": true,
+          "autoincrement": {
+            "step_num": 1,
+            "GUID": "5dac3317-aeec-41a9-a0ee-e229190324d2"
+          },
+          "tPrecision": 9,
+          "index": true,
+          "exclusiveMinimum": false,
+          "exclusiveMaximum": false,
+          "precision": 12,
+          "scale": 2,
+          "primaryKey": false,
+          "required": true,
+          "alternateKey": false,
+          "childType": "number",
+          "type": "numeric",
+          "compositeKey": [
+            "clusteringKey",
+            "partitioningKey",
+            "compositePrimaryKey",
+            "compositeUniqueKey"
+          ],
+          "clusteringKey": false,
+          "partitioningKey": false,
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "GUID": "8beab46f-39d2-4b17-89b2-7f6bdd6b35dd",
+          "unique": false,
+          "comments": "Gross order value from the parent order. Repeated at line level to support order-level aggregation without a separate order table join.",
+          "mode": "decimal"
+        },
+        {
+          "name": "order_discount_amt",
+          "hackoladeMeta": {},
+          "isActivated": true,
+          "autoincrement": {
+            "step_num": 1,
+            "GUID": "d964618f-a373-4e55-aa39-1a7fafa89860"
+          },
+          "tPrecision": 9,
+          "index": true,
+          "exclusiveMinimum": false,
+          "exclusiveMaximum": false,
+          "precision": 12,
+          "scale": 2,
+          "primaryKey": false,
+          "required": true,
+          "alternateKey": false,
+          "childType": "number",
+          "type": "numeric",
+          "compositeKey": [
+            "clusteringKey",
+            "partitioningKey",
+            "compositePrimaryKey",
+            "compositeUniqueKey"
+          ],
+          "clusteringKey": false,
+          "partitioningKey": false,
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "GUID": "2557c07c-65b6-4f78-a9d2-71178e7d254d",
+          "unique": false,
+          "comments": "Order-level discount amount from the parent order. Repeated at line level.",
+          "default": 0,
+          "defaultOption": "Default",
+          "mode": "decimal"
+        },
+        {
+          "name": "order_net_revenue",
+          "hackoladeMeta": {},
+          "isActivated": true,
+          "autoincrement": {
+            "step_num": 1,
+            "GUID": "cbe15347-2d70-43dd-9d52-481cf4c0a12c"
+          },
+          "tPrecision": 9,
+          "index": true,
+          "exclusiveMinimum": false,
+          "exclusiveMaximum": false,
+          "precision": 12,
+          "scale": 2,
+          "primaryKey": false,
+          "required": true,
+          "alternateKey": false,
+          "childType": "number",
+          "type": "numeric",
+          "compositeKey": [
+            "clusteringKey",
+            "partitioningKey",
+            "compositePrimaryKey",
+            "compositeUniqueKey"
+          ],
+          "clusteringKey": false,
+          "partitioningKey": false,
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "GUID": "1e2b9354-4fde-497d-8846-62366dcd3ee4",
+          "unique": false,
+          "comments": "Derived: order_gross_value minus order_discount_amt. Repeated at line level.",
+          "mode": "decimal"
+        },
+        {
+          "name": "cost_amount",
+          "hackoladeMeta": {},
+          "isActivated": true,
+          "autoincrement": {
+            "step_num": 1,
+            "GUID": "0bd8bbf7-809f-41a5-9ee1-ec83d9bf3a5e"
+          },
+          "tPrecision": 9,
+          "index": true,
+          "exclusiveMinimum": false,
+          "exclusiveMaximum": false,
+          "precision": 12,
+          "scale": 2,
+          "primaryKey": false,
+          "required": false,
+          "alternateKey": false,
+          "childType": "number",
+          "type": "numeric",
+          "compositeKey": [
+            "clusteringKey",
+            "partitioningKey",
+            "compositePrimaryKey",
+            "compositeUniqueKey"
+          ],
+          "clusteringKey": false,
+          "partitioningKey": false,
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "GUID": "b95026b7-f8bb-4518-8392-7dbe9d7803c9",
+          "unique": false,
+          "comments": "RESTRICTED - Standard cost multiplied by quantity (cost_price x quantity). Nullable when cost price is not available. Finance roles only.",
+          "mode": "decimal"
+        },
+        {
+          "name": "gross_margin",
+          "hackoladeMeta": {},
+          "isActivated": true,
+          "autoincrement": {
+            "step_num": 1,
+            "GUID": "32117994-1a2d-4f66-91fe-31679ee2503f"
+          },
+          "tPrecision": 9,
+          "index": true,
+          "exclusiveMinimum": false,
+          "exclusiveMaximum": false,
+          "precision": 12,
+          "scale": 2,
+          "primaryKey": false,
+          "required": false,
+          "alternateKey": false,
+          "childType": "number",
+          "type": "numeric",
+          "compositeKey": [
+            "clusteringKey",
+            "partitioningKey",
+            "compositePrimaryKey",
+            "compositeUniqueKey"
+          ],
+          "clusteringKey": false,
+          "partitioningKey": false,
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "GUID": "e0b7f8fd-cafa-4fdb-8dec-2d695848a761",
+          "unique": false,
+          "comments": "RESTRICTED - order_net_revenue minus cost_amount at line level. Nullable when cost data is unavailable. Finance roles only.",
+          "mode": "decimal"
+        },
+        {
+          "name": "load_timestamp",
+          "hackoladeMeta": {},
+          "isActivated": true,
+          "autoincrement": {
+            "step_num": 1
+          },
+          "tPrecision": 9,
+          "primaryKey": false,
+          "required": true,
+          "alternateKey": false,
+          "childType": "timestamp_ntz",
+          "type": "string",
+          "compositeKey": [
+            "clusteringKey",
+            "partitioningKey",
+            "compositePrimaryKey",
+            "compositeUniqueKey"
+          ],
+          "clusteringKey": false,
+          "partitioningKey": false,
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "GUID": "05fdc836-c182-464d-a585-7eee8ccb87be",
+          "unique": false,
+          "comments": "UTC timestamp at which this row was loaded into the warehouse. Supports incremental load audit."
+        }
+      ],
+      "definitions": {
+        "type": "definitions",
+        "properties": [],
+        "GUID": "933d8fa6-0c0a-4177-a691-4749f8bbbbef"
+      },
+      "isActivated": true,
+      "additionalProperties": false,
+      "external": false,
+      "storageSerializationPolicy": "optimized",
+      "GUID": "94cbd164-cdc1-428b-8de6-82874c1d7692",
+      "comments": "Central fact table. Grain: one row per order line item. Additive measures support revenue, discount, and margin analysis across all dimensions.",
+      "Indxs": [
+        {
+          "GUID": "f4eefdc8-5d23-47b9-905d-11d800e50236",
+          "indxName": "idx_fact_ol_customer_sk",
+          "columns": [
+            {
+              "keyId": "341d0754-2121-4d7b-9b9d-2b5310a532a6"
+            }
+          ]
+        },
+        {
+          "GUID": "c8a3352f-4777-407d-ab60-9e153c8dfd26",
+          "indxName": "idx_fact_ol_product_sk",
+          "columns": [
+            {
+              "keyId": "90d9ef6b-f7df-413f-b3ee-736cd836719e"
+            }
+          ]
+        },
+        {
+          "GUID": "8a06712a-3049-45a6-ac99-337a2b8b4914",
+          "indxName": "idx_fact_ol_promotion_sk",
+          "columns": [
+            {
+              "keyId": "6ce95d52-c289-4126-80f0-691c98b2a88a"
+            }
+          ]
+        },
+        {
+          "GUID": "c1930c7d-53cf-49cb-9e43-51e0dc1abcf3",
+          "indxName": "idx_fact_ol_date_sk",
+          "columns": [
+            {
+              "keyId": "3c992279-727d-4c75-bd30-033999242996"
+            }
+          ]
+        },
+        {
+          "GUID": "f33d0ff5-b94c-4324-bd47-7ef0fe273c61",
+          "indxName": "idx_fact_ol_channel_sk",
+          "columns": [
+            {
+              "keyId": "a7f81036-3f20-4e85-beda-610420b5376c"
+            }
+          ]
+        },
+        {
+          "GUID": "587a04a0-d044-4d75-bbd4-43262f27f871",
+          "indxName": "idx_fact_ol_order_id",
+          "columns": [
+            {
+              "keyId": "abd2c2b3-2717-4a22-b5e9-0f7471b73204"
+            }
+          ]
+        },
+        {
+          "GUID": "f9c16698-a6e9-44b4-98f3-e2c8ae04a15f",
+          "indxName": "idx_fact_ol_date_customer",
+          "columns": [
+            {
+              "keyId": "3c992279-727d-4c75-bd30-033999242996"
+            },
+            {
+              "keyId": "341d0754-2121-4d7b-9b9d-2b5310a532a6"
+            }
+          ]
+        },
+        {
+          "GUID": "84d8fb1e-876c-4bf3-9acc-a787b337db41",
+          "indxName": "idx_fact_ol_date_product",
+          "columns": [
+            {
+              "keyId": "3c992279-727d-4c75-bd30-033999242996"
+            },
+            {
+              "keyId": "90d9ef6b-f7df-413f-b3ee-736cd836719e"
+            }
+          ]
+        },
+        {
+          "GUID": "4b823935-03da-4273-9f45-58ec88b8aef2",
+          "indxName": "idx_fact_ol_date_channel",
+          "columns": [
+            {
+              "keyId": "3c992279-727d-4c75-bd30-033999242996"
+            },
+            {
+              "keyId": "a7f81036-3f20-4e85-beda-610420b5376c"
+            }
+          ]
+        },
+        {
+          "GUID": "38dd64dd-2120-4192-a1a2-1e1f640707a0",
+          "indxName": "idx_fact_ol_customer_revenue",
+          "columns": [
+            {
+              "keyId": "341d0754-2121-4d7b-9b9d-2b5310a532a6"
+            },
+            {
+              "keyId": "3c992279-727d-4c75-bd30-033999242996"
+            },
+            {
+              "keyId": "58825c84-1389-4239-9c64-2320ed3b26bf"
+            }
+          ]
+        }
+      ],
+      "bucketId": "76cde489-7a1f-4f6a-b52f-5fe4f403bb54"
+    },
+    {
+      "collectionName": "dim_customer",
+      "type": "object",
+      "properties": [
+        {
+          "name": "customer_sk",
+          "hackoladeMeta": {},
+          "isActivated": true,
+          "autoincrement": {
+            "step_num": 1
+          },
+          "tPrecision": 9,
+          "primaryKey": true,
+          "required": true,
+          "alternateKey": false,
+          "childType": "varchar",
+          "type": "string",
+          "compositeKey": [
+            "clusteringKey",
+            "partitioningKey",
+            "compositePrimaryKey",
+            "compositeUniqueKey"
+          ],
+          "clusteringKey": false,
+          "partitioningKey": false,
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "GUID": "fb299ec1-7a2a-4d92-b3db-d282085cfc81",
+          "unique": false,
+          "length": 36,
+          "comments": "Surrogate key. Generated on each SCD2 version insert.",
+          "childRelationships": [
+            "4a190aa3-d613-4977-969e-28c504907515"
+          ]
+        },
+        {
+          "name": "customer_id",
+          "hackoladeMeta": {},
+          "isActivated": true,
+          "autoincrement": {
+            "step_num": 1
+          },
+          "tPrecision": 9,
+          "primaryKey": false,
+          "required": true,
+          "alternateKey": false,
+          "childType": "varchar",
+          "type": "string",
+          "compositeKey": [
+            "clusteringKey",
+            "partitioningKey",
+            "compositePrimaryKey",
+            "compositeUniqueKey"
+          ],
+          "clusteringKey": false,
+          "partitioningKey": false,
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "GUID": "d44a4682-bde3-47b7-8a96-70fca9b54b92",
+          "unique": false,
+          "length": 36,
+          "comments": "Natural key. System-assigned customer UUID from the source system. Stable across SCD2 versions."
+        },
+        {
+          "name": "email",
+          "hackoladeMeta": {},
+          "isActivated": true,
+          "autoincrement": {
+            "step_num": 1
+          },
+          "tPrecision": 9,
+          "primaryKey": false,
+          "required": true,
+          "alternateKey": false,
+          "childType": "varchar",
+          "type": "string",
+          "compositeKey": [
+            "clusteringKey",
+            "partitioningKey",
+            "compositePrimaryKey",
+            "compositeUniqueKey"
+          ],
+          "clusteringKey": false,
+          "partitioningKey": false,
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "GUID": "f32bca96-96fa-48f7-ad33-743993e827bf",
+          "unique": false,
+          "length": 255,
+          "comments": "PII - Customer email address. Masked in non-production via Snowflake column masking policy."
+        },
+        {
+          "name": "first_name",
+          "hackoladeMeta": {},
+          "isActivated": true,
+          "autoincrement": {
+            "step_num": 1
+          },
+          "tPrecision": 9,
+          "primaryKey": false,
+          "required": true,
+          "alternateKey": false,
+          "childType": "varchar",
+          "type": "string",
+          "compositeKey": [
+            "clusteringKey",
+            "partitioningKey",
+            "compositePrimaryKey",
+            "compositeUniqueKey"
+          ],
+          "clusteringKey": false,
+          "partitioningKey": false,
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "GUID": "d653f0b2-b90b-452d-b38f-02a1a6e787b1",
+          "unique": false,
+          "length": 100,
+          "comments": "PII - Customer given name. Masked in non-production via Snowflake column masking policy."
+        },
+        {
+          "name": "last_name",
+          "hackoladeMeta": {},
+          "isActivated": true,
+          "autoincrement": {
+            "step_num": 1
+          },
+          "tPrecision": 9,
+          "primaryKey": false,
+          "required": true,
+          "alternateKey": false,
+          "childType": "varchar",
+          "type": "string",
+          "compositeKey": [
+            "clusteringKey",
+            "partitioningKey",
+            "compositePrimaryKey",
+            "compositeUniqueKey"
+          ],
+          "clusteringKey": false,
+          "partitioningKey": false,
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "GUID": "c208bead-ba7b-4b4b-b5eb-162210a70476",
+          "unique": false,
+          "length": 100,
+          "comments": "PII - Customer family name. Masked in non-production via Snowflake column masking policy."
+        },
+        {
+          "name": "acquisition_channel",
+          "hackoladeMeta": {},
+          "isActivated": true,
+          "autoincrement": {
+            "step_num": 1
+          },
+          "tPrecision": 9,
+          "primaryKey": false,
+          "required": true,
+          "alternateKey": false,
+          "childType": "varchar",
+          "type": "string",
+          "compositeKey": [
+            "clusteringKey",
+            "partitioningKey",
+            "compositePrimaryKey",
+            "compositeUniqueKey"
+          ],
+          "clusteringKey": false,
+          "partitioningKey": false,
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "GUID": "8bff0bdf-95b3-44d1-a2ff-7db6baeb34a4",
+          "unique": false,
+          "length": 20,
+          "comments": "Channel of first registration. Values: Web, Store, Referral, Partner. Immutable attribute; does not trigger a new SCD2 version."
+        },
+        {
+          "name": "current_segment",
+          "hackoladeMeta": {},
+          "isActivated": true,
+          "autoincrement": {
+            "step_num": 1
+          },
+          "tPrecision": 9,
+          "primaryKey": false,
+          "required": true,
+          "alternateKey": false,
+          "childType": "varchar",
+          "type": "string",
+          "compositeKey": [
+            "clusteringKey",
+            "partitioningKey",
+            "compositePrimaryKey",
+            "compositeUniqueKey"
+          ],
+          "clusteringKey": false,
+          "partitioningKey": false,
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "GUID": "40aff1d7-a495-4a54-beb9-15a4c3ad80e0",
+          "unique": false,
+          "length": 20,
+          "comments": "Segment at the time of this SCD2 row: Gold, Silver, Bronze, or New. Triggers a new version on change."
+        },
+        {
+          "name": "lifetime_value",
+          "hackoladeMeta": {},
+          "isActivated": true,
+          "autoincrement": {
+            "step_num": 1,
+            "GUID": "26a62dcc-8f34-41ac-9bfd-ef686a29f553"
+          },
+          "tPrecision": 9,
+          "index": true,
+          "exclusiveMinimum": false,
+          "exclusiveMaximum": false,
+          "precision": 12,
+          "scale": 2,
+          "primaryKey": false,
+          "required": true,
+          "alternateKey": false,
+          "childType": "number",
+          "type": "numeric",
+          "compositeKey": [
+            "clusteringKey",
+            "partitioningKey",
+            "compositePrimaryKey",
+            "compositeUniqueKey"
+          ],
+          "clusteringKey": false,
+          "partitioningKey": false,
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "GUID": "806760ec-f59d-4e1c-87ae-00b68df0c22d",
+          "unique": false,
+          "comments": "Cumulative net revenue snapshot at the time of this SCD2 row.",
+          "default": 0,
+          "defaultOption": "Default",
+          "mode": "decimal"
+        },
+        {
+          "name": "is_active",
+          "hackoladeMeta": {},
+          "isActivated": true,
+          "autoincrement": {
+            "step_num": 1
+          },
+          "tPrecision": 9,
+          "index": true,
+          "required": true,
+          "alternateKey": false,
+          "childType": "boolean",
+          "type": "boolean",
+          "compositeKey": [
+            "clusteringKey",
+            "partitioningKey",
+            "compositePrimaryKey",
+            "compositeUniqueKey"
+          ],
+          "clusteringKey": false,
+          "partitioningKey": false,
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "GUID": "c80f80d4-aac1-4d0e-9728-6a68b2829c8a",
+          "primaryKey": false,
+          "unique": false,
+          "comments": "Source system soft-delete flag. Propagated from the operational customer record.",
+          "default": "true",
+          "defaultOption": "Default"
+        },
+        {
+          "name": "eff_start_date",
+          "hackoladeMeta": {},
+          "isActivated": true,
+          "autoincrement": {
+            "step_num": 1
+          },
+          "tPrecision": 9,
+          "index": true,
+          "required": true,
+          "alternateKey": false,
+          "childType": "date",
+          "type": "string",
+          "compositeKey": [
+            "clusteringKey",
+            "partitioningKey",
+            "compositePrimaryKey",
+            "compositeUniqueKey"
+          ],
+          "clusteringKey": false,
+          "partitioningKey": false,
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "GUID": "9777a1f6-0a32-4807-b276-c0b268aef265",
+          "primaryKey": false,
+          "unique": false,
+          "comments": "Effective start date of this SCD2 row (inclusive). Set to the date the row was created or updated."
+        },
+        {
+          "name": "eff_end_date",
+          "hackoladeMeta": {},
+          "isActivated": true,
+          "autoincrement": {
+            "step_num": 1
+          },
+          "tPrecision": 9,
+          "index": true,
+          "required": false,
+          "alternateKey": false,
+          "childType": "date",
+          "type": "string",
+          "compositeKey": [
+            "clusteringKey",
+            "partitioningKey",
+            "compositePrimaryKey",
+            "compositeUniqueKey"
+          ],
+          "clusteringKey": false,
+          "partitioningKey": false,
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "GUID": "979d4e89-6c4f-4d02-a12e-68a0cf0b1c01",
+          "primaryKey": false,
+          "unique": false,
+          "comments": "Effective end date of this SCD2 row (inclusive). Null indicates the currently active row."
+        },
+        {
+          "name": "is_current",
+          "hackoladeMeta": {},
+          "isActivated": true,
+          "autoincrement": {
+            "step_num": 1
+          },
+          "tPrecision": 9,
+          "index": true,
+          "required": true,
+          "alternateKey": false,
+          "childType": "boolean",
+          "type": "boolean",
+          "compositeKey": [
+            "clusteringKey",
+            "partitioningKey",
+            "compositePrimaryKey",
+            "compositeUniqueKey"
+          ],
+          "clusteringKey": false,
+          "partitioningKey": false,
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "GUID": "e344a909-9622-4458-8889-4e945b4ef4bc",
+          "primaryKey": false,
+          "unique": false,
+          "comments": "Current-row indicator. True for the active SCD2 row; false for all historical rows.",
+          "default": "true",
+          "defaultOption": "Default"
+        },
+        {
+          "name": "load_timestamp",
+          "hackoladeMeta": {},
+          "isActivated": true,
+          "autoincrement": {
+            "step_num": 1
+          },
+          "tPrecision": 9,
+          "primaryKey": false,
+          "required": true,
+          "alternateKey": false,
+          "childType": "timestamp_ntz",
+          "type": "string",
+          "compositeKey": [
+            "clusteringKey",
+            "partitioningKey",
+            "compositePrimaryKey",
+            "compositeUniqueKey"
+          ],
+          "clusteringKey": false,
+          "partitioningKey": false,
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "GUID": "2aa84a67-906f-4c92-9c39-9625e6f2ef0f",
+          "unique": false,
+          "comments": "UTC load timestamp for this SCD2 row."
+        }
+      ],
+      "definitions": {
+        "type": "definitions",
+        "properties": [],
+        "GUID": "75397de7-dc47-45b5-9720-f9a94d34183a"
+      },
+      "isActivated": true,
+      "additionalProperties": false,
+      "external": false,
+      "storageSerializationPolicy": "optimized",
+      "GUID": "0c869334-6e40-4a8c-b3bb-86a27ed56ca4",
+      "comments": "Customer dimension. SCD Type 2: each change in tracked attributes generates a new row. is_current flags the active row.",
+      "Indxs": [
+        {
+          "GUID": "2a7041e7-f178-4b3c-bed6-c0495574e1f9",
+          "indxName": "idx_dim_customer_natural_key",
+          "columns": [
+            {
+              "keyId": "d44a4682-bde3-47b7-8a96-70fca9b54b92"
+            }
+          ]
+        },
+        {
+          "GUID": "42069d1f-26d3-4ef5-a6de-84bd94827e97",
+          "indxName": "idx_dim_customer_current",
+          "columns": [
+            {
+              "keyId": "d44a4682-bde3-47b7-8a96-70fca9b54b92"
+            },
+            {
+              "keyId": "e344a909-9622-4458-8889-4e945b4ef4bc"
+            }
+          ]
+        },
+        {
+          "GUID": "d3d69e0b-2da9-4881-a6e1-f9ea65438877",
+          "indxName": "idx_dim_customer_scd2_lookup",
+          "columns": [
+            {
+              "keyId": "d44a4682-bde3-47b7-8a96-70fca9b54b92"
+            },
+            {
+              "keyId": "9777a1f6-0a32-4807-b276-c0b268aef265"
+            },
+            {
+              "keyId": "979d4e89-6c4f-4d02-a12e-68a0cf0b1c01"
+            }
+          ]
+        },
+        {
+          "GUID": "09485eeb-a6f2-42bf-94be-f6f1522d4115",
+          "indxName": "idx_dim_customer_segment",
+          "columns": [
+            {
+              "keyId": "40aff1d7-a495-4a54-beb9-15a4c3ad80e0"
+            }
+          ]
+        },
+        {
+          "GUID": "bbb905fe-0e11-4fdf-a4b6-8c48e7d0f305",
+          "indxName": "idx_dim_customer_acq_channel",
+          "columns": [
+            {
+              "keyId": "8bff0bdf-95b3-44d1-a2ff-7db6baeb34a4"
+            }
+          ]
+        }
+      ],
+      "bucketId": "76cde489-7a1f-4f6a-b52f-5fe4f403bb54"
+    },
+    {
+      "collectionName": "dim_product",
+      "type": "object",
+      "properties": [
+        {
+          "name": "product_sk",
+          "hackoladeMeta": {},
+          "isActivated": true,
+          "autoincrement": {
+            "step_num": 1
+          },
+          "tPrecision": 9,
+          "primaryKey": true,
+          "required": true,
+          "alternateKey": false,
+          "childType": "varchar",
+          "type": "string",
+          "compositeKey": [
+            "clusteringKey",
+            "partitioningKey",
+            "compositePrimaryKey",
+            "compositeUniqueKey"
+          ],
+          "clusteringKey": false,
+          "partitioningKey": false,
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "GUID": "90e3a92a-f19d-4fdc-a6cc-2d8d1a16c2e0",
+          "unique": false,
+          "length": 36,
+          "comments": "Surrogate key for the product dimension row.",
+          "childRelationships": [
+            "4741df37-ee6b-4ffe-817e-0fda934549a5"
+          ]
+        },
+        {
+          "name": "product_id",
+          "hackoladeMeta": {},
+          "isActivated": true,
+          "autoincrement": {
+            "step_num": 1
+          },
+          "tPrecision": 9,
+          "primaryKey": false,
+          "required": true,
+          "alternateKey": false,
+          "childType": "varchar",
+          "type": "string",
+          "compositeKey": [
+            "clusteringKey",
+            "partitioningKey",
+            "compositePrimaryKey",
+            "compositeUniqueKey"
+          ],
+          "clusteringKey": false,
+          "partitioningKey": false,
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "GUID": "7dd531ea-572f-4579-bc7b-069b6d2c04a6",
+          "unique": false,
+          "length": 36,
+          "comments": "Natural key. System-assigned product UUID from the source system."
+        },
+        {
+          "name": "sku",
+          "hackoladeMeta": {},
+          "isActivated": true,
+          "autoincrement": {
+            "step_num": 1
+          },
+          "tPrecision": 9,
+          "primaryKey": false,
+          "required": true,
+          "alternateKey": false,
+          "childType": "varchar",
+          "type": "string",
+          "compositeKey": [
+            "clusteringKey",
+            "partitioningKey",
+            "compositePrimaryKey",
+            "compositeUniqueKey"
+          ],
+          "clusteringKey": false,
+          "partitioningKey": false,
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "GUID": "37a8eb68-4c48-474b-9744-f6b29bad8e62",
+          "unique": false,
+          "length": 100,
+          "comments": "Stock-Keeping Unit code. Retained as a non-key business identifier."
+        },
+        {
+          "name": "product_name",
+          "hackoladeMeta": {},
+          "isActivated": true,
+          "autoincrement": {
+            "step_num": 1
+          },
+          "tPrecision": 9,
+          "primaryKey": false,
+          "required": true,
+          "alternateKey": false,
+          "childType": "varchar",
+          "type": "string",
+          "compositeKey": [
+            "clusteringKey",
+            "partitioningKey",
+            "compositePrimaryKey",
+            "compositeUniqueKey"
+          ],
+          "clusteringKey": false,
+          "partitioningKey": false,
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "GUID": "04ee3e32-4d33-44ec-92d4-15ccb4176906",
+          "unique": false,
+          "length": 255,
+          "comments": "Published product name at time of load."
+        },
+        {
+          "name": "list_price",
+          "hackoladeMeta": {},
+          "isActivated": true,
+          "autoincrement": {
+            "step_num": 1,
+            "GUID": "e2893261-2091-4d6d-b199-0cb6a9a64095"
+          },
+          "tPrecision": 9,
+          "index": true,
+          "exclusiveMinimum": false,
+          "exclusiveMaximum": false,
+          "precision": 12,
+          "scale": 2,
+          "primaryKey": false,
+          "required": true,
+          "alternateKey": false,
+          "childType": "number",
+          "type": "numeric",
+          "compositeKey": [
+            "clusteringKey",
+            "partitioningKey",
+            "compositePrimaryKey",
+            "compositeUniqueKey"
+          ],
+          "clusteringKey": false,
+          "partitioningKey": false,
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "GUID": "7a688f36-cf9a-4530-b9df-c76d742bb578",
+          "unique": false,
+          "comments": "Current standard selling price at time of load. Not historised.",
+          "mode": "decimal"
+        },
+        {
+          "name": "cost_price",
+          "hackoladeMeta": {},
+          "isActivated": true,
+          "autoincrement": {
+            "step_num": 1,
+            "GUID": "f113fa9e-9bab-408f-aad0-2316d7dcf811"
+          },
+          "tPrecision": 9,
+          "index": true,
+          "exclusiveMinimum": false,
+          "exclusiveMaximum": false,
+          "precision": 12,
+          "scale": 2,
+          "primaryKey": false,
+          "required": false,
+          "alternateKey": false,
+          "childType": "number",
+          "type": "numeric",
+          "compositeKey": [
+            "clusteringKey",
+            "partitioningKey",
+            "compositePrimaryKey",
+            "compositeUniqueKey"
+          ],
+          "clusteringKey": false,
+          "partitioningKey": false,
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "GUID": "972be7f5-3ee3-411b-9dc0-ba6168238125",
+          "unique": false,
+          "comments": "RESTRICTED - Per-unit cost from the primary supplier. Nullable. Column-level masking policy enforced in Snowflake for non-finance roles.",
+          "mode": "decimal"
+        },
+        {
+          "name": "is_active",
+          "hackoladeMeta": {},
+          "isActivated": true,
+          "autoincrement": {
+            "step_num": 1
+          },
+          "tPrecision": 9,
+          "index": true,
+          "required": true,
+          "alternateKey": false,
+          "childType": "boolean",
+          "type": "boolean",
+          "compositeKey": [
+            "clusteringKey",
+            "partitioningKey",
+            "compositePrimaryKey",
+            "compositeUniqueKey"
+          ],
+          "clusteringKey": false,
+          "partitioningKey": false,
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "GUID": "e866ab1e-c42b-4b7b-8025-93fb9008f988",
+          "primaryKey": false,
+          "unique": false,
+          "comments": "Soft-delete flag. Inactive products retained for historical order line integrity.",
+          "default": "true",
+          "defaultOption": "Default"
+        },
+        {
+          "name": "supplier_id",
+          "hackoladeMeta": {},
+          "isActivated": true,
+          "autoincrement": {
+            "step_num": 1
+          },
+          "tPrecision": 9,
+          "primaryKey": false,
+          "required": true,
+          "alternateKey": false,
+          "childType": "varchar",
+          "type": "string",
+          "compositeKey": [
+            "clusteringKey",
+            "partitioningKey",
+            "compositePrimaryKey",
+            "compositeUniqueKey"
+          ],
+          "clusteringKey": false,
+          "partitioningKey": false,
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "GUID": "dda22fc5-d431-42d6-ba7a-056622528f0c",
+          "unique": false,
+          "length": 36,
+          "comments": "Natural key of the primary supplier. Retained for traceability."
+        },
+        {
+          "name": "supplier_name",
+          "hackoladeMeta": {},
+          "isActivated": true,
+          "autoincrement": {
+            "step_num": 1
+          },
+          "tPrecision": 9,
+          "primaryKey": false,
+          "required": true,
+          "alternateKey": false,
+          "childType": "varchar",
+          "type": "string",
+          "compositeKey": [
+            "clusteringKey",
+            "partitioningKey",
+            "compositePrimaryKey",
+            "compositeUniqueKey"
+          ],
+          "clusteringKey": false,
+          "partitioningKey": false,
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "GUID": "2e265931-cf33-47b7-9045-81bd30730e3e",
+          "unique": false,
+          "length": 255,
+          "comments": "Trading name of the primary supplier. Denormalised for direct BI access."
+        },
+        {
+          "name": "supplier_country",
+          "hackoladeMeta": {},
+          "isActivated": true,
+          "autoincrement": {
+            "step_num": 1
+          },
+          "tPrecision": 9,
+          "primaryKey": false,
+          "required": true,
+          "alternateKey": false,
+          "childType": "varchar",
+          "type": "string",
+          "compositeKey": [
+            "clusteringKey",
+            "partitioningKey",
+            "compositePrimaryKey",
+            "compositeUniqueKey"
+          ],
+          "clusteringKey": false,
+          "partitioningKey": false,
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "GUID": "f440a5ce-92bb-43c4-93b2-42d7304d4446",
+          "unique": false,
+          "length": 100,
+          "comments": "Country of operation of the primary supplier. Denormalised for direct BI access."
+        },
+        {
+          "name": "supplier_lead_days",
+          "hackoladeMeta": {},
+          "isActivated": true,
+          "autoincrement": {
+            "step_num": 1,
+            "GUID": "aacc1bfa-8d68-406b-a300-8694d7c3fa27"
+          },
+          "tPrecision": 9,
+          "index": true,
+          "exclusiveMinimum": false,
+          "exclusiveMaximum": false,
+          "precision": 5,
+          "scale": 0,
+          "primaryKey": false,
+          "required": true,
+          "alternateKey": false,
+          "childType": "number",
+          "type": "numeric",
+          "compositeKey": [
+            "clusteringKey",
+            "partitioningKey",
+            "compositePrimaryKey",
+            "compositeUniqueKey"
+          ],
+          "clusteringKey": false,
+          "partitioningKey": false,
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "GUID": "da483aed-cbe1-4596-87a3-62ec7890605e",
+          "unique": false,
+          "comments": "Standard lead time in calendar days from the primary supplier."
+        },
+        {
+          "name": "category_l1_id",
+          "hackoladeMeta": {},
+          "isActivated": true,
+          "autoincrement": {
+            "step_num": 1
+          },
+          "tPrecision": 9,
+          "primaryKey": false,
+          "required": true,
+          "alternateKey": false,
+          "childType": "varchar",
+          "type": "string",
+          "compositeKey": [
+            "clusteringKey",
+            "partitioningKey",
+            "compositePrimaryKey",
+            "compositeUniqueKey"
+          ],
+          "clusteringKey": false,
+          "partitioningKey": false,
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "GUID": "216d1b39-a90b-4913-9da7-0a06629df07f",
+          "unique": false,
+          "length": 36,
+          "comments": "Surrogate key of the Root-level (L1) category. Denormalised from the hierarchy for BI roll-up without recursive joins."
+        },
+        {
+          "name": "category_l1_name",
+          "hackoladeMeta": {},
+          "isActivated": true,
+          "autoincrement": {
+            "step_num": 1
+          },
+          "tPrecision": 9,
+          "primaryKey": false,
+          "required": true,
+          "alternateKey": false,
+          "childType": "varchar",
+          "type": "string",
+          "compositeKey": [
+            "clusteringKey",
+            "partitioningKey",
+            "compositePrimaryKey",
+            "compositeUniqueKey"
+          ],
+          "clusteringKey": false,
+          "partitioningKey": false,
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "GUID": "85b1afd2-e910-4034-b290-643688623451",
+          "unique": false,
+          "length": 255,
+          "comments": "Name of the Root-level category. Denormalised for direct BI filtering."
+        },
+        {
+          "name": "category_l2_id",
+          "hackoladeMeta": {},
+          "isActivated": true,
+          "autoincrement": {
+            "step_num": 1
+          },
+          "tPrecision": 9,
+          "primaryKey": false,
+          "required": true,
+          "alternateKey": false,
+          "childType": "varchar",
+          "type": "string",
+          "compositeKey": [
+            "clusteringKey",
+            "partitioningKey",
+            "compositePrimaryKey",
+            "compositeUniqueKey"
+          ],
+          "clusteringKey": false,
+          "partitioningKey": false,
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "GUID": "5ff822c2-f1ca-49cb-a75b-0e96dfb0236c",
+          "unique": false,
+          "length": 36,
+          "comments": "Surrogate key of the Mid-level (L2) category. Denormalised from the hierarchy."
+        },
+        {
+          "name": "category_l2_name",
+          "hackoladeMeta": {},
+          "isActivated": true,
+          "autoincrement": {
+            "step_num": 1
+          },
+          "tPrecision": 9,
+          "primaryKey": false,
+          "required": true,
+          "alternateKey": false,
+          "childType": "varchar",
+          "type": "string",
+          "compositeKey": [
+            "clusteringKey",
+            "partitioningKey",
+            "compositePrimaryKey",
+            "compositeUniqueKey"
+          ],
+          "clusteringKey": false,
+          "partitioningKey": false,
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "GUID": "2969b2b2-d33f-4a85-8ea7-6a81ff372ad4",
+          "unique": false,
+          "length": 255,
+          "comments": "Name of the Mid-level category. Denormalised for direct BI filtering."
+        },
+        {
+          "name": "category_l3_id",
+          "hackoladeMeta": {},
+          "isActivated": true,
+          "autoincrement": {
+            "step_num": 1
+          },
+          "tPrecision": 9,
+          "primaryKey": false,
+          "required": true,
+          "alternateKey": false,
+          "childType": "varchar",
+          "type": "string",
+          "compositeKey": [
+            "clusteringKey",
+            "partitioningKey",
+            "compositePrimaryKey",
+            "compositeUniqueKey"
+          ],
+          "clusteringKey": false,
+          "partitioningKey": false,
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "GUID": "7cc87614-f72f-4658-8136-400cbbe0df02",
+          "unique": false,
+          "length": 36,
+          "comments": "Surrogate key of the Leaf-level (L3) category. The category to which the product is directly assigned."
+        },
+        {
+          "name": "category_l3_name",
+          "hackoladeMeta": {},
+          "isActivated": true,
+          "autoincrement": {
+            "step_num": 1
+          },
+          "tPrecision": 9,
+          "primaryKey": false,
+          "required": true,
+          "alternateKey": false,
+          "childType": "varchar",
+          "type": "string",
+          "compositeKey": [
+            "clusteringKey",
+            "partitioningKey",
+            "compositePrimaryKey",
+            "compositeUniqueKey"
+          ],
+          "clusteringKey": false,
+          "partitioningKey": false,
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "GUID": "c6cb57f8-7254-4ac6-a0d6-379c02d43a4b",
+          "unique": false,
+          "length": 255,
+          "comments": "Name of the Leaf-level category. Denormalised for direct BI filtering."
+        },
+        {
+          "name": "load_timestamp",
+          "hackoladeMeta": {},
+          "isActivated": true,
+          "autoincrement": {
+            "step_num": 1
+          },
+          "tPrecision": 9,
+          "primaryKey": false,
+          "required": true,
+          "alternateKey": false,
+          "childType": "timestamp_ntz",
+          "type": "string",
+          "compositeKey": [
+            "clusteringKey",
+            "partitioningKey",
+            "compositePrimaryKey",
+            "compositeUniqueKey"
+          ],
+          "clusteringKey": false,
+          "partitioningKey": false,
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "GUID": "1d239b18-c914-4723-bb64-acda8a8a4103",
+          "unique": false,
+          "comments": "UTC load timestamp for this product dimension row."
+        }
+      ],
+      "definitions": {
+        "type": "definitions",
+        "properties": [],
+        "GUID": "eb5c8d34-0ec4-4b90-b8f8-26bdf273f84b"
+      },
+      "isActivated": true,
+      "additionalProperties": false,
+      "external": false,
+      "storageSerializationPolicy": "optimized",
+      "GUID": "cf927b85-738b-4f1d-82c1-94eea5ee9ceb",
+      "comments": "Product dimension. Denormalised to include supplier attributes and a flattened three-level category hierarchy to avoid recursive joins in BI tools.",
+      "Indxs": [
+        {
+          "GUID": "e0fc2678-a169-4b31-82a9-23119a19c22f",
+          "indxName": "idx_dim_product_natural_key",
+          "columns": [
+            {
+              "keyId": "7dd531ea-572f-4579-bc7b-069b6d2c04a6"
+            }
+          ]
+        },
+        {
+          "GUID": "fea8f054-e72d-4eff-bc88-1f6733e0ac87",
+          "indxName": "idx_dim_product_sku",
+          "columns": [
+            {
+              "keyId": "37a8eb68-4c48-474b-9744-f6b29bad8e62"
+            }
+          ]
+        },
+        {
+          "GUID": "4bd86a85-13f7-484d-9f4b-9e1855eee89b",
+          "indxName": "idx_dim_product_cat_l1",
+          "columns": [
+            {
+              "keyId": "216d1b39-a90b-4913-9da7-0a06629df07f"
+            }
+          ]
+        },
+        {
+          "GUID": "3d8578ff-dc8f-447d-aa29-655a036b01a0",
+          "indxName": "idx_dim_product_cat_l2",
+          "columns": [
+            {
+              "keyId": "5ff822c2-f1ca-49cb-a75b-0e96dfb0236c"
+            }
+          ]
+        },
+        {
+          "GUID": "c4438227-c8f1-4b90-84ea-9c04126b2745",
+          "indxName": "idx_dim_product_cat_l3",
+          "columns": [
+            {
+              "keyId": "7cc87614-f72f-4658-8136-400cbbe0df02"
+            }
+          ]
+        },
+        {
+          "GUID": "7ade0680-3d52-411f-b90c-a6a421eca8f8",
+          "indxName": "idx_dim_product_supplier",
+          "columns": [
+            {
+              "keyId": "dda22fc5-d431-42d6-ba7a-056622528f0c"
+            }
+          ]
+        },
+        {
+          "GUID": "3b1db62f-355e-4222-b3e8-438c03a4f45c",
+          "indxName": "idx_dim_product_cat_hierarchy",
+          "columns": [
+            {
+              "keyId": "216d1b39-a90b-4913-9da7-0a06629df07f"
+            },
+            {
+              "keyId": "5ff822c2-f1ca-49cb-a75b-0e96dfb0236c"
+            },
+            {
+              "keyId": "7cc87614-f72f-4658-8136-400cbbe0df02"
+            }
+          ]
+        }
+      ],
+      "bucketId": "76cde489-7a1f-4f6a-b52f-5fe4f403bb54"
+    },
+    {
+      "collectionName": "dim_promotion",
+      "type": "object",
+      "properties": [
+        {
+          "name": "promotion_sk",
+          "hackoladeMeta": {},
+          "isActivated": true,
+          "autoincrement": {
+            "step_num": 1
+          },
+          "tPrecision": 9,
+          "primaryKey": true,
+          "required": true,
+          "alternateKey": false,
+          "childType": "varchar",
+          "type": "string",
+          "compositeKey": [
+            "clusteringKey",
+            "partitioningKey",
+            "compositePrimaryKey",
+            "compositeUniqueKey"
+          ],
+          "clusteringKey": false,
+          "partitioningKey": false,
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "GUID": "88067083-6e65-40b2-8d2f-1b4659c34e7b",
+          "unique": false,
+          "length": 36,
+          "comments": "Surrogate key for the promotion dimension row.",
+          "childRelationships": [
+            "9391fa7c-debc-4677-81a6-fab64e461326"
+          ]
+        },
+        {
+          "name": "promotion_id",
+          "hackoladeMeta": {},
+          "isActivated": true,
+          "autoincrement": {
+            "step_num": 1
+          },
+          "tPrecision": 9,
+          "primaryKey": false,
+          "required": true,
+          "alternateKey": false,
+          "childType": "varchar",
+          "type": "string",
+          "compositeKey": [
+            "clusteringKey",
+            "partitioningKey",
+            "compositePrimaryKey",
+            "compositeUniqueKey"
+          ],
+          "clusteringKey": false,
+          "partitioningKey": false,
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "GUID": "d5f21d4f-ccdf-4716-ad68-f2b180bee570",
+          "unique": false,
+          "length": 36,
+          "comments": "Natural key. System-assigned promotion UUID. Set to promo_none for the no-promotion sentinel row."
+        },
+        {
+          "name": "promotion_name",
+          "hackoladeMeta": {},
+          "isActivated": true,
+          "autoincrement": {
+            "step_num": 1
+          },
+          "tPrecision": 9,
+          "primaryKey": false,
+          "required": true,
+          "alternateKey": false,
+          "childType": "varchar",
+          "type": "string",
+          "compositeKey": [
+            "clusteringKey",
+            "partitioningKey",
+            "compositePrimaryKey",
+            "compositeUniqueKey"
+          ],
+          "clusteringKey": false,
+          "partitioningKey": false,
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "GUID": "c8dacffc-ed09-41e5-8b45-e883e2d694b9",
+          "unique": false,
+          "length": 255,
+          "comments": "Descriptive promotion name. Set to No Promotion for the sentinel row."
+        },
+        {
+          "name": "discount_type",
+          "hackoladeMeta": {},
+          "isActivated": true,
+          "autoincrement": {
+            "step_num": 1
+          },
+          "tPrecision": 9,
+          "primaryKey": false,
+          "required": true,
+          "alternateKey": false,
+          "childType": "varchar",
+          "type": "string",
+          "compositeKey": [
+            "clusteringKey",
+            "partitioningKey",
+            "compositePrimaryKey",
+            "compositeUniqueKey"
+          ],
+          "clusteringKey": false,
+          "partitioningKey": false,
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "GUID": "956bbdd5-cb35-48f2-a9d8-98e4667ee32e",
+          "unique": false,
+          "length": 20,
+          "comments": "Discount type. Values: Percentage, Fixed, BOGO, None (sentinel row)."
+        },
+        {
+          "name": "discount_value",
+          "hackoladeMeta": {},
+          "isActivated": true,
+          "autoincrement": {
+            "step_num": 1,
+            "GUID": "e2447ce5-0bcf-47ef-a736-0474332c0147"
+          },
+          "tPrecision": 9,
+          "index": true,
+          "exclusiveMinimum": false,
+          "exclusiveMaximum": false,
+          "precision": 12,
+          "scale": 2,
+          "primaryKey": false,
+          "required": true,
+          "alternateKey": false,
+          "childType": "number",
+          "type": "numeric",
+          "compositeKey": [
+            "clusteringKey",
+            "partitioningKey",
+            "compositePrimaryKey",
+            "compositeUniqueKey"
+          ],
+          "clusteringKey": false,
+          "partitioningKey": false,
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "GUID": "ffa6498c-eba2-4c4e-a44b-83f704f218f0",
+          "unique": false,
+          "comments": "Discount magnitude. Zero for BOGO and the sentinel row.",
+          "default": 0,
+          "defaultOption": "Default",
+          "mode": "decimal"
+        },
+        {
+          "name": "start_date",
+          "hackoladeMeta": {},
+          "isActivated": true,
+          "autoincrement": {
+            "step_num": 1
+          },
+          "tPrecision": 9,
+          "index": true,
+          "required": false,
+          "alternateKey": false,
+          "childType": "date",
+          "type": "string",
+          "compositeKey": [
+            "clusteringKey",
+            "partitioningKey",
+            "compositePrimaryKey",
+            "compositeUniqueKey"
+          ],
+          "clusteringKey": false,
+          "partitioningKey": false,
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "GUID": "853bb782-69fa-4dcf-92ad-cda67cc0690a",
+          "primaryKey": false,
+          "unique": false,
+          "comments": "Inclusive start date of the promotion validity period. Null for the sentinel row."
+        },
+        {
+          "name": "end_date",
+          "hackoladeMeta": {},
+          "isActivated": true,
+          "autoincrement": {
+            "step_num": 1
+          },
+          "tPrecision": 9,
+          "index": true,
+          "required": false,
+          "alternateKey": false,
+          "childType": "date",
+          "type": "string",
+          "compositeKey": [
+            "clusteringKey",
+            "partitioningKey",
+            "compositePrimaryKey",
+            "compositeUniqueKey"
+          ],
+          "clusteringKey": false,
+          "partitioningKey": false,
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "GUID": "a1265108-411e-40bf-a3a0-b1288fc98cf5",
+          "primaryKey": false,
+          "unique": false,
+          "comments": "Inclusive end date of the promotion validity period. Null for the sentinel row."
+        },
+        {
+          "name": "load_timestamp",
+          "hackoladeMeta": {},
+          "isActivated": true,
+          "autoincrement": {
+            "step_num": 1
+          },
+          "tPrecision": 9,
+          "primaryKey": false,
+          "required": true,
+          "alternateKey": false,
+          "childType": "timestamp_ntz",
+          "type": "string",
+          "compositeKey": [
+            "clusteringKey",
+            "partitioningKey",
+            "compositePrimaryKey",
+            "compositeUniqueKey"
+          ],
+          "clusteringKey": false,
+          "partitioningKey": false,
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "GUID": "680e4674-23d0-4a1e-8032-48ae94729042",
+          "unique": false,
+          "comments": "UTC load timestamp for this promotion dimension row."
+        }
+      ],
+      "definitions": {
+        "type": "definitions",
+        "properties": [],
+        "GUID": "236216d1-b361-49ac-b660-39aa1bd75cf7"
+      },
+      "isActivated": true,
+      "additionalProperties": false,
+      "external": false,
+      "storageSerializationPolicy": "optimized",
+      "GUID": "b9b72106-aefe-4455-a1b3-c329c6d297c8",
+      "comments": "Promotion dimension. Includes a dedicated no-promotion sentinel row (promo_none) to allow non-nullable FK joins from the fact table.",
+      "Indxs": [
+        {
+          "GUID": "4f87b1cb-1936-4ee5-9ad7-69d432ebb3bd",
+          "indxName": "idx_dim_promotion_natural_key",
+          "columns": [
+            {
+              "keyId": "d5f21d4f-ccdf-4716-ad68-f2b180bee570"
+            }
+          ]
+        },
+        {
+          "GUID": "f47dca2d-ed30-4f20-8486-069ece8cf72f",
+          "indxName": "idx_dim_promotion_type",
+          "columns": [
+            {
+              "keyId": "956bbdd5-cb35-48f2-a9d8-98e4667ee32e"
+            }
+          ]
+        },
+        {
+          "GUID": "6121d1ad-c65f-4ca0-bc4f-77eed1d870b3",
+          "indxName": "idx_dim_promotion_validity",
+          "columns": [
+            {
+              "keyId": "853bb782-69fa-4dcf-92ad-cda67cc0690a"
+            },
+            {
+              "keyId": "a1265108-411e-40bf-a3a0-b1288fc98cf5"
+            }
+          ]
+        }
+      ],
+      "bucketId": "76cde489-7a1f-4f6a-b52f-5fe4f403bb54"
+    },
+    {
+      "collectionName": "dim_date",
+      "type": "object",
+      "properties": [
+        {
+          "name": "date_sk",
+          "hackoladeMeta": {},
+          "isActivated": true,
+          "autoincrement": {
+            "step_num": 1,
+            "GUID": "e939f1ae-4f47-4e8e-9dbb-598ad574dfb9"
+          },
+          "tPrecision": 9,
+          "index": true,
+          "exclusiveMinimum": false,
+          "exclusiveMaximum": false,
+          "precision": 8,
+          "scale": 0,
+          "primaryKey": true,
+          "required": true,
+          "alternateKey": false,
+          "childType": "number",
+          "type": "numeric",
+          "compositeKey": [
+            "clusteringKey",
+            "partitioningKey",
+            "compositePrimaryKey",
+            "compositeUniqueKey"
+          ],
+          "clusteringKey": false,
+          "partitioningKey": false,
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "GUID": "06155469-48a5-4ac9-89bf-3127b4159568",
+          "unique": false,
+          "comments": "Surrogate key in YYYYMMDD format. Integer for efficient partitioning and range filtering.",
+          "childRelationships": [
+            "8d218cf0-0cb8-4b5e-93f5-cd970d418017"
+          ]
+        },
+        {
+          "name": "full_date",
+          "hackoladeMeta": {},
+          "isActivated": true,
+          "autoincrement": {
+            "step_num": 1
+          },
+          "tPrecision": 9,
+          "index": true,
+          "required": true,
+          "alternateKey": false,
+          "childType": "date",
+          "type": "string",
+          "compositeKey": [
+            "clusteringKey",
+            "partitioningKey",
+            "compositePrimaryKey",
+            "compositeUniqueKey"
+          ],
+          "clusteringKey": false,
+          "partitioningKey": false,
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "GUID": "bbf2447e-400d-4327-adaa-e85019181229",
+          "primaryKey": false,
+          "unique": false,
+          "comments": "Calendar date value. Unique per row."
+        },
+        {
+          "name": "day_of_week",
+          "hackoladeMeta": {},
+          "isActivated": true,
+          "autoincrement": {
+            "step_num": 1,
+            "GUID": "b89cd20a-525c-47fc-af22-07fbae9a4857"
+          },
+          "tPrecision": 9,
+          "index": true,
+          "exclusiveMinimum": false,
+          "exclusiveMaximum": false,
+          "precision": 1,
+          "scale": 0,
+          "primaryKey": false,
+          "required": true,
+          "alternateKey": false,
+          "childType": "number",
+          "type": "numeric",
+          "compositeKey": [
+            "clusteringKey",
+            "partitioningKey",
+            "compositePrimaryKey",
+            "compositeUniqueKey"
+          ],
+          "clusteringKey": false,
+          "partitioningKey": false,
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "GUID": "3b0617c5-02e1-4c7a-b8ab-be653713ac17",
+          "unique": false,
+          "comments": "ISO day of week: 1 (Monday) to 7 (Sunday)."
+        },
+        {
+          "name": "day_name",
+          "hackoladeMeta": {},
+          "isActivated": true,
+          "autoincrement": {
+            "step_num": 1
+          },
+          "tPrecision": 9,
+          "primaryKey": false,
+          "required": true,
+          "alternateKey": false,
+          "childType": "varchar",
+          "type": "string",
+          "compositeKey": [
+            "clusteringKey",
+            "partitioningKey",
+            "compositePrimaryKey",
+            "compositeUniqueKey"
+          ],
+          "clusteringKey": false,
+          "partitioningKey": false,
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "GUID": "dc35f134-81f3-45d8-a48e-45d55dea7832",
+          "unique": false,
+          "length": 10,
+          "comments": "Full English name of the day (e.g. Monday)."
+        },
+        {
+          "name": "is_weekend",
+          "hackoladeMeta": {},
+          "isActivated": true,
+          "autoincrement": {
+            "step_num": 1
+          },
+          "tPrecision": 9,
+          "index": true,
+          "required": true,
+          "alternateKey": false,
+          "childType": "boolean",
+          "type": "boolean",
+          "compositeKey": [
+            "clusteringKey",
+            "partitioningKey",
+            "compositePrimaryKey",
+            "compositeUniqueKey"
+          ],
+          "clusteringKey": false,
+          "partitioningKey": false,
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "GUID": "2f49bc86-ca17-41eb-838c-b9f055b779b9",
+          "primaryKey": false,
+          "unique": false,
+          "comments": "True if day_of_week is 6 (Saturday) or 7 (Sunday)."
+        },
+        {
+          "name": "is_holiday",
+          "hackoladeMeta": {},
+          "isActivated": true,
+          "autoincrement": {
+            "step_num": 1
+          },
+          "tPrecision": 9,
+          "index": true,
+          "required": true,
+          "alternateKey": false,
+          "childType": "boolean",
+          "type": "boolean",
+          "compositeKey": [
+            "clusteringKey",
+            "partitioningKey",
+            "compositePrimaryKey",
+            "compositeUniqueKey"
+          ],
+          "clusteringKey": false,
+          "partitioningKey": false,
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "GUID": "ec4d5f88-b0eb-4d89-a69b-126a9a454436",
+          "primaryKey": false,
+          "unique": false,
+          "comments": "True if the date is a public holiday in the primary trading country. Maintained by the data engineering team."
+        },
+        {
+          "name": "week_of_year",
+          "hackoladeMeta": {},
+          "isActivated": true,
+          "autoincrement": {
+            "step_num": 1,
+            "GUID": "075f0945-1904-490f-818d-c3a4a81eb5b1"
+          },
+          "tPrecision": 9,
+          "index": true,
+          "exclusiveMinimum": false,
+          "exclusiveMaximum": false,
+          "precision": 2,
+          "scale": 0,
+          "primaryKey": false,
+          "required": true,
+          "alternateKey": false,
+          "childType": "number",
+          "type": "numeric",
+          "compositeKey": [
+            "clusteringKey",
+            "partitioningKey",
+            "compositePrimaryKey",
+            "compositeUniqueKey"
+          ],
+          "clusteringKey": false,
+          "partitioningKey": false,
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "GUID": "707699f8-0c38-43a9-9f9e-18f8406bde04",
+          "unique": false,
+          "comments": "ISO week number within the calendar year."
+        },
+        {
+          "name": "month_number",
+          "hackoladeMeta": {},
+          "isActivated": true,
+          "autoincrement": {
+            "step_num": 1,
+            "GUID": "26ec38f5-13d9-44d4-8e6c-42c24aec70bd"
+          },
+          "tPrecision": 9,
+          "index": true,
+          "exclusiveMinimum": false,
+          "exclusiveMaximum": false,
+          "precision": 2,
+          "scale": 0,
+          "primaryKey": false,
+          "required": true,
+          "alternateKey": false,
+          "childType": "number",
+          "type": "numeric",
+          "compositeKey": [
+            "clusteringKey",
+            "partitioningKey",
+            "compositePrimaryKey",
+            "compositeUniqueKey"
+          ],
+          "clusteringKey": false,
+          "partitioningKey": false,
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "GUID": "55eaf7e5-e355-4c28-9839-4d066d6e70c6",
+          "unique": false,
+          "comments": "Calendar month number (1-12)."
+        },
+        {
+          "name": "month_name",
+          "hackoladeMeta": {},
+          "isActivated": true,
+          "autoincrement": {
+            "step_num": 1
+          },
+          "tPrecision": 9,
+          "primaryKey": false,
+          "required": true,
+          "alternateKey": false,
+          "childType": "varchar",
+          "type": "string",
+          "compositeKey": [
+            "clusteringKey",
+            "partitioningKey",
+            "compositePrimaryKey",
+            "compositeUniqueKey"
+          ],
+          "clusteringKey": false,
+          "partitioningKey": false,
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "GUID": "4a55f74a-fdc0-4db7-9fab-b4a205581acc",
+          "unique": false,
+          "length": 10,
+          "comments": "Full English name of the month (e.g. January)."
+        },
+        {
+          "name": "quarter",
+          "hackoladeMeta": {},
+          "isActivated": true,
+          "autoincrement": {
+            "step_num": 1,
+            "GUID": "5b507de1-58fe-4d33-bdb4-fc09178db1df"
+          },
+          "tPrecision": 9,
+          "index": true,
+          "exclusiveMinimum": false,
+          "exclusiveMaximum": false,
+          "precision": 1,
+          "scale": 0,
+          "primaryKey": false,
+          "required": true,
+          "alternateKey": false,
+          "childType": "number",
+          "type": "numeric",
+          "compositeKey": [
+            "clusteringKey",
+            "partitioningKey",
+            "compositePrimaryKey",
+            "compositeUniqueKey"
+          ],
+          "clusteringKey": false,
+          "partitioningKey": false,
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "GUID": "acfb3c35-1471-41f2-9a93-65da82008f81",
+          "unique": false,
+          "comments": "Calendar quarter (1-4)."
+        },
+        {
+          "name": "year",
+          "hackoladeMeta": {},
+          "isActivated": true,
+          "autoincrement": {
+            "step_num": 1,
+            "GUID": "66b0e142-2ed9-4fa2-9a8c-9bda47b48400"
+          },
+          "tPrecision": 9,
+          "index": true,
+          "exclusiveMinimum": false,
+          "exclusiveMaximum": false,
+          "precision": 4,
+          "scale": 0,
+          "primaryKey": false,
+          "required": true,
+          "alternateKey": false,
+          "childType": "number",
+          "type": "numeric",
+          "compositeKey": [
+            "clusteringKey",
+            "partitioningKey",
+            "compositePrimaryKey",
+            "compositeUniqueKey"
+          ],
+          "clusteringKey": false,
+          "partitioningKey": false,
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "GUID": "d5d534a1-b9cb-4460-a0ec-0cda8e0aaea1",
+          "unique": false,
+          "comments": "Four-digit calendar year."
+        }
+      ],
+      "definitions": {
+        "type": "definitions",
+        "properties": [],
+        "GUID": "29b13a86-10ef-4e8c-99da-6018be3d4753"
+      },
+      "isActivated": true,
+      "additionalProperties": false,
+      "external": false,
+      "storageSerializationPolicy": "optimized",
+      "GUID": "0865c1f9-52a6-4d32-846d-2a80d1c73fa4",
+      "comments": "Date dimension. Pre-populated calendar spanning the full analytical period. Supports day, week, month, quarter, and year grouping with weekend and holiday indicators.",
+      "Indxs": [
+        {
+          "GUID": "717fd42e-8fad-4a53-9555-f009d7449894",
+          "indxName": "idx_dim_date_full_date",
+          "columns": [
+            {
+              "keyId": "bbf2447e-400d-4327-adaa-e85019181229"
+            }
+          ]
+        },
+        {
+          "GUID": "e3bd885b-187b-46a2-8083-7ba9d5a4dc9b",
+          "indxName": "idx_dim_date_year",
+          "columns": [
+            {
+              "keyId": "d5d534a1-b9cb-4460-a0ec-0cda8e0aaea1"
+            }
+          ]
+        },
+        {
+          "GUID": "3b595b0d-7cc6-4bf8-a732-2e8c2b9da78d",
+          "indxName": "idx_dim_date_year_quarter",
+          "columns": [
+            {
+              "keyId": "d5d534a1-b9cb-4460-a0ec-0cda8e0aaea1"
+            },
+            {
+              "keyId": "acfb3c35-1471-41f2-9a93-65da82008f81"
+            }
+          ]
+        },
+        {
+          "GUID": "074a2440-731f-4e3c-979e-bf0a92bee729",
+          "indxName": "idx_dim_date_year_month",
+          "columns": [
+            {
+              "keyId": "d5d534a1-b9cb-4460-a0ec-0cda8e0aaea1"
+            },
+            {
+              "keyId": "55eaf7e5-e355-4c28-9839-4d066d6e70c6"
+            }
+          ]
+        },
+        {
+          "GUID": "65d289d9-9b69-4683-9d7a-929cce1644c3",
+          "indxName": "idx_dim_date_year_week",
+          "columns": [
+            {
+              "keyId": "d5d534a1-b9cb-4460-a0ec-0cda8e0aaea1"
+            },
+            {
+              "keyId": "707699f8-0c38-43a9-9f9e-18f8406bde04"
+            }
+          ]
+        },
+        {
+          "GUID": "1ab24b29-146d-4464-8060-71b72bd6162b",
+          "indxName": "idx_dim_date_weekend",
+          "columns": [
+            {
+              "keyId": "2f49bc86-ca17-41eb-838c-b9f055b779b9"
+            }
+          ]
+        },
+        {
+          "GUID": "6fcbb439-07e8-427f-a5c8-01e7d7d51eb1",
+          "indxName": "idx_dim_date_holiday",
+          "columns": [
+            {
+              "keyId": "ec4d5f88-b0eb-4d89-a69b-126a9a454436"
+            }
+          ]
+        }
+      ],
+      "bucketId": "76cde489-7a1f-4f6a-b52f-5fe4f403bb54"
+    },
+    {
+      "collectionName": "dim_channel",
+      "type": "object",
+      "properties": [
+        {
+          "name": "channel_sk",
+          "hackoladeMeta": {},
+          "isActivated": true,
+          "autoincrement": {
+            "step_num": 1
+          },
+          "tPrecision": 9,
+          "primaryKey": true,
+          "required": true,
+          "alternateKey": false,
+          "childType": "varchar",
+          "type": "string",
+          "compositeKey": [
+            "clusteringKey",
+            "partitioningKey",
+            "compositePrimaryKey",
+            "compositeUniqueKey"
+          ],
+          "clusteringKey": false,
+          "partitioningKey": false,
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "GUID": "8219aa9d-ec76-4f52-a069-2c5cfefa8375",
+          "unique": false,
+          "length": 20,
+          "comments": "Natural surrogate. Uses the channel code value as the key (e.g. web, mobile, in_store, partner) given the low cardinality.",
+          "childRelationships": [
+            "edacf3de-c645-4e2f-9641-3f5d81a541fc"
+          ]
+        },
+        {
+          "name": "channel_name",
+          "hackoladeMeta": {},
+          "isActivated": true,
+          "autoincrement": {
+            "step_num": 1
+          },
+          "tPrecision": 9,
+          "primaryKey": false,
+          "required": true,
+          "alternateKey": false,
+          "childType": "varchar",
+          "type": "string",
+          "compositeKey": [
+            "clusteringKey",
+            "partitioningKey",
+            "compositePrimaryKey",
+            "compositeUniqueKey"
+          ],
+          "clusteringKey": false,
+          "partitioningKey": false,
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "GUID": "c7d5c9f3-2543-4da4-a527-51bd023431b1",
+          "unique": false,
+          "length": 50,
+          "comments": "Full descriptive name of the channel (e.g. In-Store)."
+        },
+        {
+          "name": "channel_group",
+          "hackoladeMeta": {},
+          "isActivated": true,
+          "autoincrement": {
+            "step_num": 1
+          },
+          "tPrecision": 9,
+          "primaryKey": false,
+          "required": true,
+          "alternateKey": false,
+          "childType": "varchar",
+          "type": "string",
+          "compositeKey": [
+            "clusteringKey",
+            "partitioningKey",
+            "compositePrimaryKey",
+            "compositeUniqueKey"
+          ],
+          "clusteringKey": false,
+          "partitioningKey": false,
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "GUID": "14454e9b-a185-4208-9009-b417dbfdffa5",
+          "unique": false,
+          "length": 20,
+          "comments": "Higher-level grouping for channel analysis. Values: Digital (Web, Mobile) or Physical (In-Store, Partner)."
+        }
+      ],
+      "definitions": {
+        "type": "definitions",
+        "properties": [],
+        "GUID": "88bb99e9-394a-4c89-97b1-59e9f989c609"
+      },
+      "isActivated": true,
+      "additionalProperties": false,
+      "external": false,
+      "storageSerializationPolicy": "optimized",
+      "GUID": "3ac10fd4-68c6-4504-be92-7e63d395bbe8",
+      "comments": "Channel dimension. Classifies the commercial channel and channel group for order-level analysis. Conformed across the warehouse.",
+      "Indxs": [
+        {
+          "GUID": "53205a35-681c-40ad-97c5-57379b30c0c9",
+          "indxName": "idx_dim_channel_group",
+          "columns": [
+            {
+              "keyId": "14454e9b-a185-4208-9009-b417dbfdffa5"
+            }
+          ]
+        }
+      ],
+      "bucketId": "76cde489-7a1f-4f6a-b52f-5fe4f403bb54"
+    }
+  ],
+  "buckets": [
+    {
+      "name": "RetailCo",
+      "type": "bucket",
+      "collectionIds": [
+        "94cbd164-cdc1-428b-8de6-82874c1d7692",
+        "0c869334-6e40-4a8c-b3bb-86a27ed56ca4",
+        "cf927b85-738b-4f1d-82c1-94eea5ee9ceb",
+        "b9b72106-aefe-4455-a1b3-c329c6d297c8",
+        "0865c1f9-52a6-4d32-846d-2a80d1c73fa4",
+        "3ac10fd4-68c6-4504-be92-7e63d395bbe8"
+      ],
+      "backgroundColor": {
+        "r": 129,
+        "g": 212,
+        "b": 250,
+        "a": 1
+      },
+      "show": true,
+      "isActivated": true,
+      "indexes": [],
+      "GUID": "76cde489-7a1f-4f6a-b52f-5fe4f403bb54"
+    }
+  ],
+  "views": [],
+  "relationships": [
+    {
+      "name": "fk_dim_customer_to_fact_order_line",
+      "relationshipType": "Foreign Key",
+      "parentField": [
+        [
+          "0c869334-6e40-4a8c-b3bb-86a27ed56ca4",
+          "fb299ec1-7a2a-4d92-b3db-d282085cfc81"
+        ]
+      ],
+      "parentCardinality": "1",
+      "childField": [
+        [
+          "94cbd164-cdc1-428b-8de6-82874c1d7692",
+          "341d0754-2121-4d7b-9b9d-2b5310a532a6"
+        ]
+      ],
+      "isActivated": true,
+      "childCardinality": "0..n",
+      "GUID": "4a190aa3-d613-4977-969e-28c504907515",
+      "parentCollection": "0c869334-6e40-4a8c-b3bb-86a27ed56ca4",
+      "childCollection": "94cbd164-cdc1-428b-8de6-82874c1d7692",
+      "hackoladeStyles": {
+        "GUID": "751edd88-ce5f-46c8-8a16-f5e1f486aa5f",
+        "autoPositioning": true,
+        "type": "Orthogonal",
+        "thickness": 2,
+        "color": "#79c4ff",
+        "dataType": "",
+        "shape": [
+          {
+            "x": 1965,
+            "y": 1612
+          },
+          {
+            "x": 2022.5,
+            "y": 1612
+          },
+          {
+            "x": 2022.5,
+            "y": 1528
+          },
+          {
+            "x": 2080,
+            "y": 1528
+          }
+        ],
+        "sides": [
+          "right",
+          "left"
+        ]
+      }
+    },
+    {
+      "name": "fk_dim_product_to_fact_order_line",
+      "relationshipType": "Foreign Key",
+      "parentField": [
+        [
+          "cf927b85-738b-4f1d-82c1-94eea5ee9ceb",
+          "90e3a92a-f19d-4fdc-a6cc-2d8d1a16c2e0"
+        ]
+      ],
+      "parentCardinality": "1",
+      "childField": [
+        [
+          "94cbd164-cdc1-428b-8de6-82874c1d7692",
+          "90d9ef6b-f7df-413f-b3ee-736cd836719e"
+        ]
+      ],
+      "isActivated": true,
+      "childCardinality": "0..n",
+      "GUID": "4741df37-ee6b-4ffe-817e-0fda934549a5",
+      "parentCollection": "cf927b85-738b-4f1d-82c1-94eea5ee9ceb",
+      "childCollection": "94cbd164-cdc1-428b-8de6-82874c1d7692",
+      "hackoladeStyles": {
+        "GUID": "0101f563-dd74-4ae2-a726-e51919c436d6",
+        "autoPositioning": false,
+        "type": "Orthogonal",
+        "thickness": 2,
+        "color": "#79c4ff",
+        "dataType": "",
+        "shape": [
+          {
+            "x": 1669,
+            "y": 1672.5999990463256
+          },
+          {
+            "x": 1548,
+            "y": 1672.5999990463256
+          }
+        ],
+        "sides": [
+          "left",
+          "right"
+        ]
+      }
+    },
+    {
+      "name": "fk_dim_promotion_to_fact_order_line",
+      "relationshipType": "Foreign Key",
+      "parentField": [
+        [
+          "b9b72106-aefe-4455-a1b3-c329c6d297c8",
+          "88067083-6e65-40b2-8d2f-1b4659c34e7b"
+        ]
+      ],
+      "parentCardinality": "0..1",
+      "childField": [
+        [
+          "94cbd164-cdc1-428b-8de6-82874c1d7692",
+          "6ce95d52-c289-4126-80f0-691c98b2a88a"
+        ]
+      ],
+      "isActivated": true,
+      "childCardinality": "0..n",
+      "GUID": "9391fa7c-debc-4677-81a6-fab64e461326",
+      "parentCollection": "b9b72106-aefe-4455-a1b3-c329c6d297c8",
+      "childCollection": "94cbd164-cdc1-428b-8de6-82874c1d7692",
+      "hackoladeStyles": {
+        "GUID": "fda6c1e6-dbf9-45d0-b9aa-72dafd6d6350",
+        "autoPositioning": true,
+        "type": "Orthogonal",
+        "thickness": 2,
+        "color": "#79c4ff",
+        "dataType": "",
+        "shape": [
+          {
+            "x": 1817,
+            "y": 1494
+          },
+          {
+            "x": 1817,
+            "y": 1418
+          }
+        ],
+        "sides": [
+          "top",
+          "bottom"
+        ]
+      }
+    },
+    {
+      "name": "fk_dim_date_to_fact_order_line",
+      "relationshipType": "Foreign Key",
+      "parentField": [
+        [
+          "0865c1f9-52a6-4d32-846d-2a80d1c73fa4",
+          "06155469-48a5-4ac9-89bf-3127b4159568"
+        ]
+      ],
+      "parentCardinality": "1",
+      "childField": [
+        [
+          "94cbd164-cdc1-428b-8de6-82874c1d7692",
+          "3c992279-727d-4c75-bd30-033999242996"
+        ]
+      ],
+      "isActivated": true,
+      "childCardinality": "0..n",
+      "GUID": "8d218cf0-0cb8-4b5e-93f5-cd970d418017",
+      "parentCollection": "0865c1f9-52a6-4d32-846d-2a80d1c73fa4",
+      "childCollection": "94cbd164-cdc1-428b-8de6-82874c1d7692",
+      "hackoladeStyles": {
+        "GUID": "62c10378-4aa6-4adb-8dea-1640dae625ea",
+        "autoPositioning": true,
+        "type": "Orthogonal",
+        "thickness": 2,
+        "color": "#79c4ff",
+        "dataType": "",
+        "shape": [
+          {
+            "x": 1965,
+            "y": 1730
+          },
+          {
+            "x": 2032,
+            "y": 1730
+          },
+          {
+            "x": 2032,
+            "y": 1852
+          },
+          {
+            "x": 2104,
+            "y": 1852
+          }
+        ],
+        "sides": [
+          "right",
+          "left"
+        ]
+      }
+    },
+    {
+      "name": "fk_dim_channel_to_fact_order_line",
+      "relationshipType": "Foreign Key",
+      "parentField": [
+        [
+          "3ac10fd4-68c6-4504-be92-7e63d395bbe8",
+          "8219aa9d-ec76-4f52-a069-2c5cfefa8375"
+        ]
+      ],
+      "parentCardinality": "1",
+      "childField": [
+        [
+          "94cbd164-cdc1-428b-8de6-82874c1d7692",
+          "a7f81036-3f20-4e85-beda-610420b5376c"
+        ]
+      ],
+      "isActivated": true,
+      "childCardinality": "0..n",
+      "GUID": "edacf3de-c645-4e2f-9641-3f5d81a541fc",
+      "parentCollection": "3ac10fd4-68c6-4504-be92-7e63d395bbe8",
+      "childCollection": "94cbd164-cdc1-428b-8de6-82874c1d7692",
+      "hackoladeStyles": {
+        "GUID": "a849215a-cb2d-4013-ae33-d9263084639c",
+        "autoPositioning": true,
+        "type": "Orthogonal",
+        "thickness": 2,
+        "color": "#79c4ff",
+        "dataType": "",
+        "shape": [
+          {
+            "x": 1817,
+            "y": 1848
+          },
+          {
+            "x": 1817,
+            "y": 1910
+          }
+        ],
+        "sides": [
+          "bottom",
+          "top"
+        ]
+      }
+    }
+  ],
+  "users": [],
+  "diagramViews": [],
+  "idToNameHashTable": {
+    "76cde489-7a1f-4f6a-b52f-5fe4f403bb54": "RetailCo",
+    "1a964894-b9e1-4c0d-a32b-602a086de31e": "fact_order_line_sk",
+    "abd2c2b3-2717-4a22-b5e9-0f7471b73204": "order_id",
+    "6f2bc350-ca24-421f-983d-f467dbbb55de": "line_item_id",
+    "341d0754-2121-4d7b-9b9d-2b5310a532a6": "customer_sk",
+    "90d9ef6b-f7df-413f-b3ee-736cd836719e": "product_sk",
+    "6ce95d52-c289-4126-80f0-691c98b2a88a": "promotion_sk",
+    "3c992279-727d-4c75-bd30-033999242996": "order_date_sk",
+    "a7f81036-3f20-4e85-beda-610420b5376c": "channel_sk",
+    "ddc463ea-1e4f-4180-87d7-54e5f4a5cbee": "quantity",
+    "ee97e019-354b-4307-a9c7-4808b6b9a402": "unit_price",
+    "d1c22b14-c11d-44af-952d-5e38c95d7dbf": "line_discount_pct",
+    "58825c84-1389-4239-9c64-2320ed3b26bf": "extended_price",
+    "8beab46f-39d2-4b17-89b2-7f6bdd6b35dd": "order_gross_value",
+    "2557c07c-65b6-4f78-a9d2-71178e7d254d": "order_discount_amt",
+    "1e2b9354-4fde-497d-8846-62366dcd3ee4": "order_net_revenue",
+    "b95026b7-f8bb-4518-8392-7dbe9d7803c9": "cost_amount",
+    "e0b7f8fd-cafa-4fdb-8dec-2d695848a761": "gross_margin",
+    "05fdc836-c182-464d-a585-7eee8ccb87be": "load_timestamp",
+    "94cbd164-cdc1-428b-8de6-82874c1d7692": "fact_order_line",
+    "fb299ec1-7a2a-4d92-b3db-d282085cfc81": "customer_sk",
+    "d44a4682-bde3-47b7-8a96-70fca9b54b92": "customer_id",
+    "f32bca96-96fa-48f7-ad33-743993e827bf": "email",
+    "d653f0b2-b90b-452d-b38f-02a1a6e787b1": "first_name",
+    "c208bead-ba7b-4b4b-b5eb-162210a70476": "last_name",
+    "8bff0bdf-95b3-44d1-a2ff-7db6baeb34a4": "acquisition_channel",
+    "40aff1d7-a495-4a54-beb9-15a4c3ad80e0": "current_segment",
+    "806760ec-f59d-4e1c-87ae-00b68df0c22d": "lifetime_value",
+    "c80f80d4-aac1-4d0e-9728-6a68b2829c8a": "is_active",
+    "9777a1f6-0a32-4807-b276-c0b268aef265": "eff_start_date",
+    "979d4e89-6c4f-4d02-a12e-68a0cf0b1c01": "eff_end_date",
+    "e344a909-9622-4458-8889-4e945b4ef4bc": "is_current",
+    "2aa84a67-906f-4c92-9c39-9625e6f2ef0f": "load_timestamp",
+    "0c869334-6e40-4a8c-b3bb-86a27ed56ca4": "dim_customer",
+    "90e3a92a-f19d-4fdc-a6cc-2d8d1a16c2e0": "product_sk",
+    "7dd531ea-572f-4579-bc7b-069b6d2c04a6": "product_id",
+    "37a8eb68-4c48-474b-9744-f6b29bad8e62": "sku",
+    "04ee3e32-4d33-44ec-92d4-15ccb4176906": "product_name",
+    "7a688f36-cf9a-4530-b9df-c76d742bb578": "list_price",
+    "972be7f5-3ee3-411b-9dc0-ba6168238125": "cost_price",
+    "e866ab1e-c42b-4b7b-8025-93fb9008f988": "is_active",
+    "dda22fc5-d431-42d6-ba7a-056622528f0c": "supplier_id",
+    "2e265931-cf33-47b7-9045-81bd30730e3e": "supplier_name",
+    "f440a5ce-92bb-43c4-93b2-42d7304d4446": "supplier_country",
+    "da483aed-cbe1-4596-87a3-62ec7890605e": "supplier_lead_days",
+    "216d1b39-a90b-4913-9da7-0a06629df07f": "category_l1_id",
+    "85b1afd2-e910-4034-b290-643688623451": "category_l1_name",
+    "5ff822c2-f1ca-49cb-a75b-0e96dfb0236c": "category_l2_id",
+    "2969b2b2-d33f-4a85-8ea7-6a81ff372ad4": "category_l2_name",
+    "7cc87614-f72f-4658-8136-400cbbe0df02": "category_l3_id",
+    "c6cb57f8-7254-4ac6-a0d6-379c02d43a4b": "category_l3_name",
+    "1d239b18-c914-4723-bb64-acda8a8a4103": "load_timestamp",
+    "cf927b85-738b-4f1d-82c1-94eea5ee9ceb": "dim_product",
+    "88067083-6e65-40b2-8d2f-1b4659c34e7b": "promotion_sk",
+    "d5f21d4f-ccdf-4716-ad68-f2b180bee570": "promotion_id",
+    "c8dacffc-ed09-41e5-8b45-e883e2d694b9": "promotion_name",
+    "956bbdd5-cb35-48f2-a9d8-98e4667ee32e": "discount_type",
+    "ffa6498c-eba2-4c4e-a44b-83f704f218f0": "discount_value",
+    "853bb782-69fa-4dcf-92ad-cda67cc0690a": "start_date",
+    "a1265108-411e-40bf-a3a0-b1288fc98cf5": "end_date",
+    "680e4674-23d0-4a1e-8032-48ae94729042": "load_timestamp",
+    "b9b72106-aefe-4455-a1b3-c329c6d297c8": "dim_promotion",
+    "06155469-48a5-4ac9-89bf-3127b4159568": "date_sk",
+    "bbf2447e-400d-4327-adaa-e85019181229": "full_date",
+    "3b0617c5-02e1-4c7a-b8ab-be653713ac17": "day_of_week",
+    "dc35f134-81f3-45d8-a48e-45d55dea7832": "day_name",
+    "2f49bc86-ca17-41eb-838c-b9f055b779b9": "is_weekend",
+    "ec4d5f88-b0eb-4d89-a69b-126a9a454436": "is_holiday",
+    "707699f8-0c38-43a9-9f9e-18f8406bde04": "week_of_year",
+    "55eaf7e5-e355-4c28-9839-4d066d6e70c6": "month_number",
+    "4a55f74a-fdc0-4db7-9fab-b4a205581acc": "month_name",
+    "acfb3c35-1471-41f2-9a93-65da82008f81": "quarter",
+    "d5d534a1-b9cb-4460-a0ec-0cda8e0aaea1": "year",
+    "0865c1f9-52a6-4d32-846d-2a80d1c73fa4": "dim_date",
+    "8219aa9d-ec76-4f52-a069-2c5cfefa8375": "channel_sk",
+    "c7d5c9f3-2543-4da4-a527-51bd023431b1": "channel_name",
+    "14454e9b-a185-4208-9009-b417dbfdffa5": "channel_group",
+    "3ac10fd4-68c6-4504-be92-7e63d395bbe8": "dim_channel",
+    "4a190aa3-d613-4977-969e-28c504907515": "fk_dim_customer_to_fact_order_line",
+    "4741df37-ee6b-4ffe-817e-0fda934549a5": "fk_dim_product_to_fact_order_line",
+    "9391fa7c-debc-4677-81a6-fab64e461326": "fk_dim_promotion_to_fact_order_line",
+    "8d218cf0-0cb8-4b5e-93f5-cd970d418017": "fk_dim_date_to_fact_order_line",
+    "edacf3de-c645-4e2f-9641-3f5d81a541fc": "fk_dim_channel_to_fact_order_line"
+  },
+  "definitions": {
+    "type": "definitions",
+    "properties": [],
+    "GUID": "ad203a51-e043-4b3b-a331-fda98fe7d44c"
+  },
+  "polyglotDefinitions": {
+    "type": "polyglotDefinitions",
+    "properties": [],
+    "GUID": "5c9552d1-2f0e-4737-b31b-9b07c5cc7b86"
+  },
+  "externalDefinitions": {
+    "type": "externalDefinitions",
+    "properties": [],
+    "GUID": "27311414-fde7-48ca-82a0-85ce3aa19be2"
+  },
+  "sources": [],
+  "decorativeSymbols": [],
+  "dbVendor": "Snowflake",
+  "appTarget": "Snowflake",
+  "creationTS": "2026-04-26T07:45:17.555Z",
+  "GUID": "48e11b7c-4659-42f7-ba9e-2cb4336e04fd",
+  "isLineageEnabled": false,
+  "description": "",
+  "comments": "============================================================\nRetailCo Analytics Platform  |  Data Model\nVersion 1.1  |  April 2025\nDomains: Customer, Order, Product\nLayers: Conceptual > Logical (3NF) > Physical (Snowflake Star Schema)\nDBML Specification: https://dbml.dbdiagram.io/home/\n============================================================\n\n============================================================\nLAYER 3 - PHYSICAL MODEL (Snowflake Star Schema)\nDenormalised star schema at order line item grain.\nSurrogate keys (VARCHAR(36) UUID), Snowflake-native types,\nSCD Type 2 on dim_customer, flattened category hierarchy,\ngovernance annotations on PII and restricted columns.\nIndex blocks on all FK columns and composite access patterns.\n============================================================",
+  "hackoladeMeta": {
+    "validationErrors": {
+      "modelName": false
+    }
+  },
+  "lastModifTS": "2026-04-26T07:47:25.750Z",
+  "persistenceSchemaVersion": "8",
+  "isCreatedByPlugin": true,
+  "pluginInformation": {
+    "pluginName": "Snowflake",
+    "pluginVersion": "0.2.51",
+    "pluginEngineVersion": "1.0.0"
+  },
+  "applicationInformation": {
+    "version": "8.10.3"
+  },
+  "settings": {
+    "centralPane": {
+      "dbLevel": {
+        "erd": [
+          {
+            "GUID": "94cbd164-cdc1-428b-8de6-82874c1d7692",
+            "x": 1669,
+            "y": 1494,
+            "width": 296,
+            "height": 354,
+            "color": {}
+          },
+          {
+            "GUID": "0c869334-6e40-4a8c-b3bb-86a27ed56ca4",
+            "x": 2080,
+            "y": 1396,
+            "width": 295,
+            "height": 264,
+            "color": {}
+          },
+          {
+            "GUID": "cf927b85-738b-4f1d-82c1-94eea5ee9ceb",
+            "x": 1258,
+            "y": 1494,
+            "width": 290,
+            "height": 354,
+            "color": {}
+          },
+          {
+            "GUID": "b9b72106-aefe-4455-a1b3-c329c6d297c8",
+            "x": 1676,
+            "y": 1244,
+            "width": 282,
+            "height": 174,
+            "color": {}
+          },
+          {
+            "GUID": "0865c1f9-52a6-4d32-846d-2a80d1c73fa4",
+            "x": 2104,
+            "y": 1738,
+            "width": 247,
+            "height": 228,
+            "color": {}
+          },
+          {
+            "GUID": "3ac10fd4-68c6-4504-be92-7e63d395bbe8",
+            "x": 1696,
+            "y": 1910,
+            "width": 242,
+            "height": 84,
+            "color": {}
+          }
+        ],
+        "erdDefinitions": {
+          "erd": [],
+          "rootPath": [],
+          "entities": [],
+          "decorativeSymbols": []
+        },
+        "buckets": [
+          {
+            "x": 1194,
+            "y": 1180,
+            "GUID": "76cde489-7a1f-4f6a-b52f-5fe4f403bb54"
+          }
+        ],
+        "collapsedNodes": [],
+        "activeRelationship": "",
+        "activeRelationshipFields": {
+          "childField": [],
+          "parentField": []
+        },
+        "selectedCollections": [],
+        "displayColorPicker": false,
+        "graphView": {
+          "erd": [],
+          "buckets": [],
+          "decorativeSymbols": [],
+          "forceLayout": true,
+          "defaultLinkLength": 300
+        },
+        "diagramViews": [],
+        "decorativeSymbols": [],
+        "nestedCollectionsLayout": "horizontal",
+        "options": [],
+        "relationshipUpdateDisabled": false
+      },
+      "collectionLevel": {},
+      "changed": false
+    },
+    "dtDiagram": {
+      "collapsedNodes": [],
+      "shouldDistributeCollections": false
+    }
+  }
+}

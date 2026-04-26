@@ -23,4 +23,6 @@ ID|Term|Definition
 0022|Surrogate Key|A system-generated unique identifier (UUID) used as the primary key in dimensional tables, replacing the natural business key to isolate the warehouse from source system key changes.
 0023|Degenerate Dimension|A dimension attribute stored directly on the fact table rather than in a separate dimension table. OrderID is a degenerate dimension on FACT_ORDER_LINE.
 0024|PII|Personally Identifiable Information. Attributes that can identify a natural person. Requires classification, access control, and masking in non-production environments.
-
+0025|Product|A sellable item in the RetailCo catalogue. Assigned to exactly one leaf-level category and one primary supplier.
+0026|Order Line Item|A single product entry within an order. The atomic grain of purchase data. 
+0027|Customer Segment History|History of segment assignments. Enables point-in-time cohort analysis at any historical date.
