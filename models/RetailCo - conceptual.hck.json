@@ -981,7 +981,7 @@
     {
       "GUID": "754bdb57-f10b-4844-b368-b3ef47806b8c",
       "name": "classwords_dictionary_minimal.csv",
-      "updatedAt": "2026-04-20T16:09:34.701Z",
+      "updatedAt": "2026-04-26T07:18:15.740Z",
       "hasHeaders": true,
       "format": "custom",
       "columnSeparator": ",",
@@ -1039,7 +1039,7 @@
     {
       "GUID": "afebaa67-3aaa-4417-817f-1a82da366a3b",
       "name": "RetailCo glossary.csv",
-      "updatedAt": "2026-04-20T16:09:34.701Z",
+      "updatedAt": "2026-04-26T07:18:15.740Z",
       "hasHeaders": true,
       "format": "custom",
       "columnSeparator": "|",
@@ -1081,7 +1081,7 @@
     {
       "GUID": "19bb88f7-74fc-4563-8d14-8af79e296655",
       "name": "Core-Business-Glossary.csv",
-      "updatedAt": "2026-04-20T16:09:34.701Z",
+      "updatedAt": "2026-04-26T07:18:15.740Z",
       "hasHeaders": true,
       "format": "custom",
       "columnSeparator": ",",
@@ -1190,7 +1190,7 @@
       "modelName": false
     }
   },
-  "lastModifTS": "2026-04-25T10:18:52.651Z",
+  "lastModifTS": "2026-04-26T08:20:45.454Z",
   "persistenceSchemaVersion": "8",
   "isCreatedByPlugin": true,
   "pluginInformation": {
