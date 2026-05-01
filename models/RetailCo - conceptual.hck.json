@@ -178,12 +178,7 @@
       "GUID": "dde43e89-8a41-4997-91c4-294ef36f2b7a",
       "comments": "A purchase transaction placed by a customer through one of the four commercial channels.",
       "bucketId": "ebd8aaf3-f89a-46fb-a38d-9bb111afb795",
-      "glossaryTerms": [
-        {
-          "GUID": "99a96120-5730-4833-9991-a49edc850df6",
-          "glossaryTermId": "227f000e-eedc-4baa-9e6d-868c7a07f57e"
-        }
-      ]
+      "glossaryTerms": []
     },
     {
       "collectionName": "Order Line Item",
@@ -1190,7 +1185,7 @@
       "modelName": false
     }
   },
-  "lastModifTS": "2026-04-26T08:20:45.454Z",
+  "lastModifTS": "2026-04-30T18:34:36.674Z",
   "persistenceSchemaVersion": "8",
   "isCreatedByPlugin": true,
   "pluginInformation": {
@@ -1199,8 +1194,28 @@
     "pluginEngineVersion": "1.0.0"
   },
   "applicationInformation": {
-    "version": "8.10.4"
+    "version": "8.11.0"
   },
+  "extendedDecorativeSymbols": [
+    {
+      "GUID": "8783ba5d-e7f9-42f2-9a4a-d9d84c9ef122",
+      "name": "Customer domain",
+      "type": "rectangle",
+      "bucketId": ""
+    },
+    {
+      "GUID": "269ef2ae-8442-4f81-b6c1-fc7d66adae4c",
+      "name": "Product domain",
+      "type": "rectangle",
+      "bucketId": ""
+    },
+    {
+      "GUID": "1016878a-ed8a-42e9-ad43-2b93d2a52395",
+      "name": "Order domain",
+      "type": "rectangle",
+      "bucketId": ""
+    }
+  ],
   "settings": {
     "centralPane": {
       "dbLevel": {
@@ -1322,71 +1337,148 @@
             {
               "GUID": "e57e1038-420b-4818-b597-9c45ac66739f",
               "size": 100,
-              "x": 3870,
-              "y": 3980.9587338627725
+              "x": 3829.9041774264165,
+              "y": 3989.18351798043
             },
             {
               "GUID": "95473d8c-ec1d-47cb-b626-c05e2aeaa355",
               "size": 100,
-              "x": 3598,
-              "y": 3924.6823251299234
+              "x": 3557.9041774264165,
+              "y": 3932.907109247581
             },
             {
               "GUID": "95cb7b56-d458-45df-bd89-c1c884a2a9b7",
               "size": 100,
-              "x": 3598,
-              "y": 4074.914819612959
+              "x": 3557.9041774264165,
+              "y": 4083.1396037306167
             },
             {
               "GUID": "dde43e89-8a41-4997-91c4-294ef36f2b7a",
               "size": 100,
-              "x": 3870,
-              "y": 3777.50567534301
+              "x": 3828.6977123649017,
+              "y": 3751.9494377382534
             },
             {
               "GUID": "729f1c38-9c79-425d-87f8-25fc41edfc50",
               "size": 100,
-              "x": 4096.277455852933,
-              "y": 3777.7574138383634
+              "x": 4208.196231030213,
+              "y": 3749.7882461105773
             },
             {
               "GUID": "4e39d154-3f55-45bb-9788-afd797af02ee",
               "size": 100,
-              "x": 3598,
-              "y": 3776.6541092387324
+              "x": 3556.6977123649017,
+              "y": 3751.097871633976
             },
             {
               "GUID": "570505e8-27e3-4bb1-81c2-75321a541a4a",
               "size": 100,
-              "x": 4095.76836981807,
-              "y": 4017.489681069546
+              "x": 4208.893610056865,
+              "y": 4023.301535064174
             },
             {
               "GUID": "4fc350e2-b5ac-47fb-b30d-5a572ce29f9c",
               "size": 100,
-              "x": 4092.901634461983,
-              "y": 4212.456608017387
+              "x": 4212.283057020644,
+              "y": 4221.396553171948
             },
             {
               "GUID": "e2f421c8-c895-4ac9-b6a3-80458028519a",
               "size": 100,
-              "x": 3870,
-              "y": 4194.629397941947
+              "x": 3983.1252402387954,
+              "y": 4200.441251936575
             }
           ],
           "buckets": [
             {
-              "x": 3534,
-              "y": 3712.6541092387324,
+              "x": 3492.6977123649017,
+              "y": 3685.7882461105773,
               "GUID": "ebd8aaf3-f89a-46fb-a38d-9bb111afb795"
             }
           ],
-          "decorativeSymbols": [],
+          "decorativeSymbols": [
+            {
+              "GUID": "8783ba5d-e7f9-42f2-9a4a-d9d84c9ef122",
+              "x": 3506.5901902852975,
+              "y": 3924.711708663055,
+              "height": 150,
+              "width": 300
+            },
+            {
+              "GUID": "269ef2ae-8442-4f81-b6c1-fc7d66adae4c",
+              "x": 3955.9989367070316,
+              "y": 3983.7476331218727,
+              "height": 150,
+              "width": 300
+            },
+            {
+              "GUID": "1016878a-ed8a-42e9-ad43-2b93d2a52395",
+              "x": 3507.193933823529,
+              "y": 3724.357939443327,
+              "height": 150,
+              "width": 300
+            }
+          ],
           "forceLayout": false,
           "defaultLinkLength": 267
         },
         "diagramViews": [],
-        "decorativeSymbols": [],
+        "decorativeSymbols": [
+          {
+            "GUID": "8783ba5d-e7f9-42f2-9a4a-d9d84c9ef122",
+            "x": 373.0958225735835,
+            "y": 322.1211066436099,
+            "height": 265.7393729175342,
+            "width": 437.6360110370683,
+            "layer": "aboveContainers",
+            "fontSize": 12,
+            "color": {
+              "hex": "#bdbdbd",
+              "rgba": {
+                "r": 189,
+                "g": 189,
+                "b": 189,
+                "a": 1
+              }
+            }
+          },
+          {
+            "GUID": "269ef2ae-8442-4f81-b6c1-fc7d66adae4c",
+            "x": 970.1927804743905,
+            "y": 950.3942888331517,
+            "height": 396.1188725490192,
+            "width": 419.44004108996546,
+            "layer": "aboveContainers",
+            "fontSize": 12,
+            "color": {
+              "hex": "#bdbdbd",
+              "rgba": {
+                "r": 189,
+                "g": 189,
+                "b": 189,
+                "a": 0.74
+              }
+            }
+          },
+          {
+            "GUID": "1016878a-ed8a-42e9-ad43-2b93d2a52395",
+            "x": 970.1927804743905,
+            "y": 950.3942888331517,
+            "height": 164.47758073817764,
+            "width": 868.2450439734707,
+            "layer": "aboveContainers",
+            "fontSize": 12,
+            "color": {
+              "hex": "#bdbdbd",
+              "rgba": {
+                "r": 189,
+                "g": 189,
+                "b": 189,
+                "a": 1
+              }
+            }
+          }
+        ],
         "nestedCollectionsLayout": "horizontal",
         "options": [],
         "relationshipUpdateDisabled": false

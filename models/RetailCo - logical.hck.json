@@ -96,7 +96,6 @@
           "isActivated": true,
           "primaryKey": false,
           "required": true,
-          "alternateKey": false,
           "childType": "varchar",
           "type": "string",
           "compositeKey": [
@@ -104,11 +103,25 @@
             "compositeUniqueKey"
           ],
           "compositePrimaryKey": false,
-          "compositeUniqueKey": false,
           "GUID": "b8acadb7-1f55-40c7-9d59-ffde72814bce",
           "unique": false,
           "length": 20,
-          "comments": "Channel of first registration. Values: Web, Store, Referral, Partner. Set once; immutable."
+          "comments": "Channel of first registration. Values: Web, Store, Referral, Partner. Set once; immutable.",
+          "enum": [
+            "web",
+            "mobile",
+            "in-store",
+            "partner"
+          ],
+          "error": {
+            "enum": false,
+            "enums": [
+              false,
+              false,
+              false,
+              false
+            ]
+          }
         },
         {
           "name": "Current Segment",
@@ -116,7 +129,6 @@
           "isActivated": true,
           "primaryKey": false,
           "required": true,
-          "alternateKey": false,
           "childType": "varchar",
           "type": "string",
           "compositeKey": [
@@ -124,11 +136,25 @@
             "compositeUniqueKey"
           ],
           "compositePrimaryKey": false,
-          "compositeUniqueKey": false,
           "GUID": "cadc83b8-26e2-4db7-b993-a469039ea780",
           "unique": false,
           "length": 20,
-          "comments": "Current segment assignment: Gold, Silver, Bronze, or New. Updated when LTV crosses a threshold."
+          "comments": "Current segment assignment: Gold, Silver, Bronze, or New. Updated when LTV crosses a threshold.",
+          "enum": [
+            "Gold",
+            "Silver",
+            "Bronze",
+            "New"
+          ],
+          "error": {
+            "enum": false,
+            "enums": [
+              false,
+              false,
+              false,
+              false
+            ]
+          }
         },
         {
           "name": "Lifetime Value",
@@ -290,7 +316,6 @@
           "isActivated": true,
           "primaryKey": false,
           "required": true,
-          "alternateKey": false,
           "childType": "varchar",
           "type": "string",
           "compositeKey": [
@@ -298,11 +323,23 @@
             "compositeUniqueKey"
           ],
           "compositePrimaryKey": false,
-          "compositeUniqueKey": false,
           "GUID": "470d8e59-55cd-4217-a56c-74adbbbb8126",
           "unique": false,
           "length": 20,
-          "comments": "Classification of address purpose. Values: Billing, Shipping, Both."
+          "comments": "Classification of address purpose. Values: Billing, Shipping, Both.",
+          "enum": [
+            "billing",
+            "shipping",
+            "both"
+          ],
+          "error": {
+            "enum": false,
+            "enums": [
+              false,
+              false,
+              false
+            ]
+          }
         },
         {
           "name": "Is Primary",
@@ -475,7 +512,6 @@
           "isActivated": true,
           "primaryKey": false,
           "required": true,
-          "alternateKey": false,
           "childType": "varchar",
           "type": "string",
           "compositeKey": [
@@ -483,11 +519,25 @@
             "compositeUniqueKey"
           ],
           "compositePrimaryKey": false,
-          "compositeUniqueKey": false,
           "GUID": "efffab01-de45-4b2c-be3f-1f622f1ff448",
           "unique": false,
           "length": 20,
-          "comments": "Segment value at this point in time. Values: Gold, Silver, Bronze, New."
+          "comments": "Segment value at this point in time. Values: Gold, Silver, Bronze, New.",
+          "enum": [
+            "Gold",
+            "Silver",
+            "Bronze",
+            "New"
+          ],
+          "error": {
+            "enum": false,
+            "enums": [
+              false,
+              false,
+              false,
+              false
+            ]
+          }
         },
         {
           "name": "Effective From",
@@ -628,7 +678,6 @@
           "isActivated": true,
           "primaryKey": false,
           "required": true,
-          "alternateKey": false,
           "childType": "varchar",
           "type": "string",
           "compositeKey": [
@@ -636,11 +685,17 @@
             "compositeUniqueKey"
           ],
           "compositePrimaryKey": false,
-          "compositeUniqueKey": false,
           "GUID": "af4d7dee-82dc-4325-a563-e9a51939e0b8",
           "unique": false,
           "length": 20,
-          "comments": "Commercial channel through which the order was placed. Values: Web, Mobile, In-Store, Partner. Immutable after order creation."
+          "comments": "Commercial channel through which the order was placed. Values: Web, Mobile, In-Store, Partner. Immutable after order creation.",
+          "enum": [
+            "web",
+            "mobile",
+            "in-store",
+            "partner"
+          ],
+          "error": {}
         },
         {
           "name": "Order Status",
@@ -648,7 +703,6 @@
           "isActivated": true,
           "primaryKey": false,
           "required": true,
-          "alternateKey": false,
           "childType": "varchar",
           "type": "string",
           "compositeKey": [
@@ -656,11 +710,18 @@
             "compositeUniqueKey"
           ],
           "compositePrimaryKey": false,
-          "compositeUniqueKey": false,
           "GUID": "e27bce15-f9cb-4d57-aa12-2b0c22b8d29d",
           "unique": false,
           "length": 20,
-          "comments": "Current lifecycle status. Values: Pending, Confirmed, Shipped, Delivered, Cancelled."
+          "comments": "Current lifecycle status. Values: Pending, Confirmed, Shipped, Delivered, Cancelled.",
+          "enum": [
+            "Pending",
+            "Confirmed",
+            "Shipped",
+            "Delivered",
+            "Cancelled"
+          ],
+          "error": {}
         },
         {
           "name": "Order Created At",
@@ -965,7 +1026,6 @@
           "isActivated": true,
           "primaryKey": false,
           "required": true,
-          "alternateKey": false,
           "childType": "varchar",
           "type": "string",
           "compositeKey": [
@@ -973,11 +1033,16 @@
             "compositeUniqueKey"
           ],
           "compositePrimaryKey": false,
-          "compositeUniqueKey": false,
           "GUID": "fa447b7f-c01a-4b7b-b0e0-e130ed57515f",
           "unique": false,
           "length": 20,
-          "comments": "Type of discount applied. Values: Percentage, Fixed, BOGO."
+          "comments": "Type of discount applied. Values: Percentage, Fixed, BOGO.",
+          "enum": [
+            "Percentage",
+            "Fixed",
+            "BOGO"
+          ],
+          "error": {}
         },
         {
           "name": "Discount Value",
@@ -1322,7 +1387,6 @@
           "isActivated": true,
           "primaryKey": false,
           "required": true,
-          "alternateKey": false,
           "childType": "varchar",
           "type": "string",
           "compositeKey": [
@@ -1330,11 +1394,14 @@
             "compositeUniqueKey"
           ],
           "compositePrimaryKey": false,
-          "compositeUniqueKey": false,
           "GUID": "1e539c86-76e3-4c92-b8ed-be91d664ca84",
           "unique": false,
           "length": 255,
-          "comments": "Descriptive name of the category as used by the merchandising team."
+          "comments": "Descriptive name of the category as used by the merchandising team.",
+          "error": {
+            "enum": false,
+            "enums": []
+          }
         },
         {
           "name": "Category Level",
@@ -1346,7 +1413,6 @@
           "primaryKey": false,
           "mode": "int",
           "required": true,
-          "alternateKey": false,
           "childType": "integer",
           "type": "numeric",
           "compositeKey": [
@@ -1354,10 +1420,18 @@
             "compositeUniqueKey"
           ],
           "compositePrimaryKey": false,
-          "compositeUniqueKey": false,
           "GUID": "8aabdade-35fe-4597-a560-f6014eeaebb8",
           "unique": false,
-          "comments": "Hierarchy level indicator. Values: 1 (Root), 2 (Mid), 3 (Leaf). Products may only be assigned to Level 3."
+          "comments": "Hierarchy level indicator. Values: 1 (Root), 2 (Mid), 3 (Leaf). Products may only be assigned to Level 3.",
+          "enum": [
+            ""
+          ],
+          "error": {
+            "enum": false,
+            "enums": [
+              false
+            ]
+          }
         }
       ],
       "definitions": {
@@ -1555,20 +1629,20 @@
         "dataType": "",
         "shape": [
           {
-            "x": 1308,
-            "y": 1286.850533807829
+            "x": 1311.5041069053525,
+            "y": 1320.2972294115539
           },
           {
-            "x": 1368.3291814946624,
-            "y": 1286.850533807829
+            "x": 1362.5041069053525,
+            "y": 1320.2972294115539
           },
           {
-            "x": 1368.3291814946624,
-            "y": 1322
+            "x": 1362.5041069053525,
+            "y": 1362.2972294115539
           },
           {
-            "x": 1410,
-            "y": 1322
+            "x": 1413.5041069053525,
+            "y": 1362.2972294115539
           }
         ],
         "sides": [
@@ -1609,20 +1683,20 @@
         "dataType": "",
         "shape": [
           {
-            "x": 1332,
-            "y": 1466.9145907473312
+            "x": 1335.5041069053525,
+            "y": 1507.2972294115539
           },
           {
-            "x": 1371.229537366548,
-            "y": 1466.9145907473312
+            "x": 1374.5041069053525,
+            "y": 1507.2972294115539
           },
           {
-            "x": 1371.229537366548,
-            "y": 1392
+            "x": 1374.5041069053525,
+            "y": 1432.2972294115539
           },
           {
-            "x": 1410,
-            "y": 1392
+            "x": 1413.5041069053525,
+            "y": 1432.2972294115539
           }
         ],
         "sides": [
@@ -1663,12 +1737,12 @@
         "dataType": "",
         "shape": [
           {
-            "x": 1556.5676156583622,
-            "y": 1170.5124555160141
+            "x": 1560.0717225637147,
+            "y": 1210.8096849275678
           },
           {
-            "x": 1556.5676156583622,
-            "y": 1252
+            "x": 1560.0717225637147,
+            "y": 1292.2972294115539
           }
         ],
         "sides": [
@@ -1709,12 +1783,12 @@
         "dataType": "",
         "shape": [
           {
-            "x": 1414,
-            "y": 1083.5124555160141
+            "x": 1417.5041069053525,
+            "y": 1123.8096849275678
           },
           {
-            "x": 1326,
-            "y": 1083.5124555160141
+            "x": 1329.5041069053525,
+            "y": 1123.8096849275678
           }
         ],
         "sides": [
@@ -1755,12 +1829,12 @@
         "dataType": "",
         "shape": [
           {
-            "x": 1804,
-            "y": 1083.5124555160141
+            "x": 1807.5041069053525,
+            "y": 1123.8096849275678
           },
           {
-            "x": 1701,
-            "y": 1083.5124555160141
+            "x": 1704.5041069053525,
+            "y": 1123.8096849275678
           }
         ],
         "sides": [
@@ -1801,12 +1875,12 @@
         "dataType": "",
         "shape": [
           {
-            "x": 1916.243772241992,
-            "y": 1152.5124555160141
+            "x": 1919.7478791473445,
+            "y": 1192.8096849275678
           },
           {
-            "x": 1916.243772241992,
-            "y": 1512
+            "x": 1919.7478791473445,
+            "y": 1552.2972294115539
           }
         ],
         "sides": [
@@ -1847,20 +1921,20 @@
         "dataType": "",
         "shape": [
           {
-            "x": 1930.5,
-            "y": 1686
+            "x": 1934.0041069053525,
+            "y": 1726.2972294115539
           },
           {
-            "x": 1930.5,
-            "y": 1726.3060498220636
+            "x": 1934.0041069053525,
+            "y": 1766.6032792336175
           },
           {
-            "x": 1931,
-            "y": 1726.3060498220636
+            "x": 1934.5041069053525,
+            "y": 1766.6032792336175
           },
           {
-            "x": 1931,
-            "y": 1766.6120996441273
+            "x": 1934.5041069053525,
+            "y": 1806.9093290556812
           }
         ],
         "sides": [
@@ -1901,12 +1975,12 @@
         "dataType": "",
         "shape": [
           {
-            "x": 1798,
-            "y": 1599
+            "x": 1801.5041069053525,
+            "y": 1639.2972294115539
           },
           {
-            "x": 1685,
-            "y": 1599
+            "x": 1688.5041069053525,
+            "y": 1639.2972294115539
           }
         ],
         "sides": [
@@ -1947,24 +2021,24 @@
         "dataType": "",
         "shape": [
           {
-            "x": 2026.7366548042692,
-            "y": 1766.6120996441273
+            "x": 2030.2407617096217,
+            "y": 1806.9093290556812
           },
           {
-            "x": 2026.7366548042692,
-            "y": 1741.6120996441273
+            "x": 2030.2407617096217,
+            "y": 1781.9093290556812
           },
           {
-            "x": 2090.626334519574,
-            "y": 1741.6120996441273
+            "x": 2094.130441424926,
+            "y": 1781.9093290556812
           },
           {
-            "x": 2090.626334519574,
-            "y": 1817.6120996441273
+            "x": 2094.130441424926,
+            "y": 1857.9093290556812
           },
           {
-            "x": 2066,
-            "y": 1817.6120996441273
+            "x": 2069.5041069053523,
+            "y": 1857.9093290556812
           }
         ],
         "sides": [
@@ -1975,7 +2049,50 @@
     }
   ],
   "users": [],
-  "diagramViews": [],
+  "diagramViews": [
+    {
+      "GUID": "e32e583e-4347-4d67-aa66-ffaac73347b9",
+      "name": "Customer domain",
+      "buckets": [
+        "0a624439-c611-4552-881f-bbe91599e070"
+      ],
+      "comments": "",
+      "description": "",
+      "entities": [
+        "1d555fc9-b4ba-480b-ad3e-ae47b49e061f",
+        "c59f1255-2e79-46d9-af64-41ba7e8abf05",
+        "e18cd45e-8b5d-4e3d-b6d6-08992f60467d"
+      ]
+    },
+    {
+      "GUID": "5e06dad5-b994-4a9e-8031-0e8dc74e272e",
+      "name": "Order domain",
+      "buckets": [
+        "0a624439-c611-4552-881f-bbe91599e070"
+      ],
+      "comments": "",
+      "description": "",
+      "entities": [
+        "406a5736-1ce1-478b-b0d5-be69e6034346",
+        "b81388ef-5932-4f3f-b679-a2439648b1f1",
+        "197af1b0-f1c0-450d-882e-866f77a41863"
+      ]
+    },
+    {
+      "GUID": "0dbcaee2-023a-4be8-b298-8675bd99bdb8",
+      "name": "Product domain",
+      "buckets": [
+        "0a624439-c611-4552-881f-bbe91599e070"
+      ],
+      "comments": "",
+      "description": "",
+      "entities": [
+        "7da4bb68-7414-4742-93a7-59390cc76db3",
+        "5c0d1993-fd56-4d34-9fa7-a42934712068",
+        "9f4f0e78-a112-4692-9536-82869aad2a4e"
+      ]
+    }
+  ],
   "idToNameHashTable": {
     "0a624439-c611-4552-881f-bbe91599e070": "RetailCo",
     "e0a67c1b-83f9-4e8b-8439-02c3ff5c3bc6": "Customer Id",
@@ -2055,7 +2172,10 @@
     "73570d23-0033-4be7-9c9a-9266796521e5": "fk_Product_to_Order Line Item",
     "2145e545-8459-43dd-a840-f495f9f36e2a": "fk_Category_to_Product",
     "3c5b5aa9-37ba-4d66-aca4-01803c767521": "fk_Supplier_to_Product",
-    "e6dea27d-c2c0-48e5-a9ad-4cb035591094": "fk_Category_to_Category"
+    "e6dea27d-c2c0-48e5-a9ad-4cb035591094": "fk_Category_to_Category",
+    "e32e583e-4347-4d67-aa66-ffaac73347b9": "Customer domain",
+    "5e06dad5-b994-4a9e-8031-0e8dc74e272e": "Order domain",
+    "0dbcaee2-023a-4be8-b298-8675bd99bdb8": "Product domain"
   },
   "definitions": {
     "type": "definitions",
@@ -2074,6 +2194,8 @@
   },
   "sources": [],
   "decorativeSymbols": [],
+  "businessGlossaries": [],
+  "businessGlossaryTerms": [],
   "dbVendor": "Polyglot",
   "appTarget": "Polyglot",
   "creationTS": "2026-04-26T07:29:55.636Z",
@@ -2086,7 +2208,7 @@
       "modelName": false
     }
   },
-  "lastModifTS": "2026-04-28T21:38:37.872Z",
+  "lastModifTS": "2026-04-30T18:54:10.983Z",
   "persistenceSchemaVersion": "8",
   "isCreatedByPlugin": true,
   "pluginInformation": {
@@ -2095,7 +2217,7 @@
     "pluginEngineVersion": "1.0.0"
   },
   "applicationInformation": {
-    "version": "8.10.4"
+    "version": "8.11.0"
   },
   "settings": {
     "centralPane": {
@@ -2103,8 +2225,8 @@
         "erd": [
           {
             "GUID": "1d555fc9-b4ba-480b-ad3e-ae47b49e061f",
-            "x": 1410,
-            "y": 1252,
+            "x": 1413.5041069053525,
+            "y": 1292.2972294115539,
             "width": 296,
             "height": 210,
             "color": {
@@ -2113,8 +2235,8 @@
           },
           {
             "GUID": "c59f1255-2e79-46d9-af64-41ba7e8abf05",
-            "x": 1064,
-            "y": 1193,
+            "x": 1067.5041069053525,
+            "y": 1233.2972294115539,
             "width": 244,
             "height": 174,
             "color": {
@@ -2123,8 +2245,8 @@
           },
           {
             "GUID": "e18cd45e-8b5d-4e3d-b6d6-08992f60467d",
-            "x": 1039,
-            "y": 1407,
+            "x": 1042.5041069053525,
+            "y": 1447.2972294115539,
             "width": 293,
             "height": 120,
             "color": {
@@ -2133,8 +2255,8 @@
           },
           {
             "GUID": "406a5736-1ce1-478b-b0d5-be69e6034346",
-            "x": 1414,
-            "y": 996.512455516014,
+            "x": 1417.5041069053525,
+            "y": 1036.8096849275678,
             "width": 287,
             "height": 174,
             "color": {
@@ -2143,8 +2265,8 @@
           },
           {
             "GUID": "b81388ef-5932-4f3f-b679-a2439648b1f1",
-            "x": 1804,
-            "y": 1014.512455516014,
+            "x": 1807.5041069053525,
+            "y": 1054.8096849275678,
             "width": 253,
             "height": 138,
             "color": {
@@ -2153,8 +2275,8 @@
           },
           {
             "GUID": "197af1b0-f1c0-450d-882e-866f77a41863",
-            "x": 1045,
-            "y": 1014.512455516014,
+            "x": 1048.5041069053525,
+            "y": 1054.8096849275678,
             "width": 281,
             "height": 138,
             "color": {
@@ -2163,8 +2285,8 @@
           },
           {
             "GUID": "7da4bb68-7414-4742-93a7-59390cc76db3",
-            "x": 1798,
-            "y": 1512,
+            "x": 1801.5041069053525,
+            "y": 1552.2972294115539,
             "width": 265,
             "height": 174,
             "color": {
@@ -2173,8 +2295,8 @@
           },
           {
             "GUID": "9f4f0e78-a112-4692-9536-82869aad2a4e",
-            "x": 1796,
-            "y": 1766.6120996441273,
+            "x": 1799.5041069053525,
+            "y": 1806.9093290556812,
             "width": 270,
             "height": 102,
             "color": {
@@ -2183,8 +2305,8 @@
           },
           {
             "GUID": "5c0d1993-fd56-4d34-9fa7-a42934712068",
-            "x": 1431,
-            "y": 1539,
+            "x": 1434.5041069053525,
+            "y": 1579.2972294115539,
             "width": 254,
             "height": 120,
             "color": {
@@ -2200,8 +2322,8 @@
         },
         "buckets": [
           {
-            "x": 975,
-            "y": 932.512455516014,
+            "x": 978.5041069053525,
+            "y": 972.8096849275678,
             "GUID": "0a624439-c611-4552-881f-bbe91599e070"
           }
         ],
@@ -2211,69 +2333,71 @@
           "childField": [],
           "parentField": []
         },
-        "selectedCollections": [],
+        "selectedCollections": [
+          "197af1b0-f1c0-450d-882e-866f77a41863"
+        ],
         "displayColorPicker": false,
         "graphView": {
           "erd": [
             {
               "GUID": "1d555fc9-b4ba-480b-ad3e-ae47b49e061f",
               "size": 100,
-              "x": 1368.4317151788139,
-              "y": 1447.5324837616
+              "x": 1340.1624003100094,
+              "y": 1478.4941143321953
             },
             {
               "GUID": "c59f1255-2e79-46d9-af64-41ba7e8abf05",
               "size": 100,
-              "x": 1093.4317151788139,
-              "y": 1412.0594768740589
+              "x": 1065.1624003100094,
+              "y": 1443.0211074446543
             },
             {
               "GUID": "e18cd45e-8b5d-4e3d-b6d6-08992f60467d",
               "size": 100,
-              "x": 1093.4317151788139,
-              "y": 1536.0463694274097
+              "x": 1065.1624003100094,
+              "y": 1567.007999998005
             },
             {
               "GUID": "406a5736-1ce1-478b-b0d5-be69e6034346",
               "size": 100,
-              "x": 1368.4317151788139,
-              "y": 1252.5324837616
+              "x": 1340.1624003100094,
+              "y": 1283.4941143321953
             },
             {
               "GUID": "b81388ef-5932-4f3f-b679-a2439648b1f1",
               "size": 100,
-              "x": 1604.4317151788139,
-              "y": 1252.5324837616
+              "x": 1775.010023849101,
+              "y": 1282.4341588448983
             },
             {
               "GUID": "197af1b0-f1c0-450d-882e-866f77a41863",
               "size": 100,
-              "x": 1093.4317151788139,
-              "y": 1252.5324837616
+              "x": 1065.1624003100094,
+              "y": 1283.4941143321953
             },
             {
               "GUID": "7da4bb68-7414-4742-93a7-59390cc76db3",
               "size": 100,
-              "x": 1604.4317151788139,
-              "y": 1447.5324837616
+              "x": 1775.010023849101,
+              "y": 1477.4341588448983
             },
             {
               "GUID": "9f4f0e78-a112-4692-9536-82869aad2a4e",
               "size": 100,
-              "x": 1604.4317151788139,
-              "y": 1620.5324837616
+              "x": 1775.010023849101,
+              "y": 1650.4341588448983
             },
             {
               "GUID": "5c0d1993-fd56-4d34-9fa7-a42934712068",
               "size": 100,
-              "x": 1368.4317151788139,
-              "y": 1620.5324837616
+              "x": 1539.010023849101,
+              "y": 1650.4341588448983
             }
           ],
           "buckets": [
             {
-              "x": 1029.4317151788139,
-              "y": 1188.5324837616,
+              "x": 1001.1624003100094,
+              "y": 1218.4341588448983,
               "GUID": "0a624439-c611-4552-881f-bbe91599e070"
             }
           ],
@@ -2281,7 +2405,484 @@
           "forceLayout": false,
           "defaultLinkLength": 267
         },
-        "diagramViews": [],
+        "diagramViews": [
+          {
+            "entities": [
+              {
+                "GUID": "1d555fc9-b4ba-480b-ad3e-ae47b49e061f",
+                "x": 1021,
+                "y": 1028,
+                "width": 317,
+                "height": 213,
+                "color": {
+                  "hex": "#2196f3"
+                }
+              },
+              {
+                "GUID": "c59f1255-2e79-46d9-af64-41ba7e8abf05",
+                "x": 1049,
+                "y": 1324,
+                "width": 262,
+                "height": 177,
+                "color": {
+                  "hex": "#2196f3"
+                }
+              },
+              {
+                "GUID": "e18cd45e-8b5d-4e3d-b6d6-08992f60467d",
+                "x": 1407,
+                "y": 1075,
+                "width": 293,
+                "height": 120,
+                "color": {
+                  "hex": "#2196f3"
+                }
+              }
+            ],
+            "buckets": [
+              {
+                "x": 957,
+                "y": 964,
+                "GUID": "0a624439-c611-4552-881f-bbe91599e070"
+              }
+            ],
+            "graphView": {
+              "erd": [
+                {
+                  "GUID": "1d555fc9-b4ba-480b-ad3e-ae47b49e061f",
+                  "size": 100,
+                  "x": 1368.4317151788139,
+                  "y": 1447.5324837616
+                },
+                {
+                  "GUID": "c59f1255-2e79-46d9-af64-41ba7e8abf05",
+                  "size": 100,
+                  "x": 1093.4317151788139,
+                  "y": 1412.0594768740589
+                },
+                {
+                  "GUID": "e18cd45e-8b5d-4e3d-b6d6-08992f60467d",
+                  "size": 100,
+                  "x": 1093.4317151788139,
+                  "y": 1536.0463694274097
+                }
+              ],
+              "buckets": [
+                {
+                  "x": 1029.4317151788139,
+                  "y": 1188.5324837616,
+                  "GUID": "0a624439-c611-4552-881f-bbe91599e070"
+                }
+              ],
+              "decorativeSymbols": [],
+              "forceLayout": true,
+              "defaultLinkLength": 300
+            },
+            "relationships": [
+              {
+                "autoPositioning": true,
+                "type": "Orthogonal",
+                "thickness": 2,
+                "color": "#79c4ff",
+                "dataType": "",
+                "GUID": "c0817e72-fc75-4712-aa98-216cbff11561",
+                "shape": [
+                  {
+                    "x": 1180,
+                    "y": 1324
+                  },
+                  {
+                    "x": 1180,
+                    "y": 1282.5
+                  },
+                  {
+                    "x": 1179.5,
+                    "y": 1282.5
+                  },
+                  {
+                    "x": 1179.5,
+                    "y": 1241
+                  }
+                ],
+                "sides": [
+                  "top",
+                  "bottom"
+                ]
+              },
+              {
+                "autoPositioning": true,
+                "type": "Orthogonal",
+                "thickness": 2,
+                "color": "#79c4ff",
+                "dataType": "",
+                "GUID": "704cf38f-bc21-417a-b423-e939ce1ce585",
+                "shape": [
+                  {
+                    "x": 1407,
+                    "y": 1135
+                  },
+                  {
+                    "x": 1372.5,
+                    "y": 1135
+                  },
+                  {
+                    "x": 1372.5,
+                    "y": 1134.5
+                  },
+                  {
+                    "x": 1338,
+                    "y": 1134.5
+                  }
+                ],
+                "sides": [
+                  "left",
+                  "right"
+                ]
+              }
+            ],
+            "GUID": "e32e583e-4347-4d67-aa66-ffaac73347b9",
+            "displayOptions": {
+              "dndHandles": false,
+              "hideRelationshipName": true
+            },
+            "options": [
+              {
+                "autoWidth": true,
+                "autoHeight": true,
+                "GUID": "1d555fc9-b4ba-480b-ad3e-ae47b49e061f"
+              },
+              {
+                "autoWidth": true,
+                "autoHeight": true,
+                "GUID": "c59f1255-2e79-46d9-af64-41ba7e8abf05"
+              }
+            ]
+          },
+          {
+            "entities": [
+              {
+                "GUID": "406a5736-1ce1-478b-b0d5-be69e6034346",
+                "x": 1064,
+                "y": 1064,
+                "width": 309,
+                "height": 177,
+                "color": {
+                  "hex": "#2196f3"
+                }
+              },
+              {
+                "GUID": "b81388ef-5932-4f3f-b679-a2439648b1f1",
+                "x": 1446.368686868687,
+                "y": 1082,
+                "width": 275,
+                "height": 141,
+                "color": {
+                  "hex": "#2196f3"
+                }
+              },
+              {
+                "GUID": "197af1b0-f1c0-450d-882e-866f77a41863",
+                "x": 1067.1969696969697,
+                "y": 1321.035353535354,
+                "width": 303,
+                "height": 141,
+                "color": {
+                  "hex": "#2196f3"
+                }
+              }
+            ],
+            "buckets": [
+              {
+                "x": 1000,
+                "y": 1000,
+                "GUID": "0a624439-c611-4552-881f-bbe91599e070"
+              }
+            ],
+            "graphView": {
+              "erd": [
+                {
+                  "GUID": "406a5736-1ce1-478b-b0d5-be69e6034346",
+                  "size": 100,
+                  "x": 1368.4317151788139,
+                  "y": 1252.5324837616
+                },
+                {
+                  "GUID": "b81388ef-5932-4f3f-b679-a2439648b1f1",
+                  "size": 100,
+                  "x": 1803.2793387179054,
+                  "y": 1251.472528274303
+                },
+                {
+                  "GUID": "197af1b0-f1c0-450d-882e-866f77a41863",
+                  "size": 100,
+                  "x": 1093.4317151788139,
+                  "y": 1252.5324837616
+                }
+              ],
+              "buckets": [
+                {
+                  "x": 1029.4317151788139,
+                  "y": 1188.5324837616,
+                  "GUID": "0a624439-c611-4552-881f-bbe91599e070"
+                }
+              ],
+              "decorativeSymbols": [],
+              "forceLayout": true,
+              "defaultLinkLength": 300
+            },
+            "relationships": [
+              {
+                "autoPositioning": true,
+                "type": "Orthogonal",
+                "thickness": 2,
+                "color": "#79c4ff",
+                "dataType": "",
+                "GUID": "6436e465-e183-4d47-9c1a-cf7aa4b6b432",
+                "shape": [
+                  {
+                    "x": 1218.5,
+                    "y": 1241
+                  },
+                  {
+                    "x": 1218.5,
+                    "y": 1281.0176767676771
+                  },
+                  {
+                    "x": 1218.6969696969697,
+                    "y": 1281.0176767676771
+                  },
+                  {
+                    "x": 1218.6969696969697,
+                    "y": 1321.035353535354
+                  }
+                ],
+                "sides": [
+                  "bottom",
+                  "top"
+                ]
+              },
+              {
+                "autoPositioning": true,
+                "type": "Orthogonal",
+                "thickness": 2,
+                "color": "#79c4ff",
+                "dataType": "",
+                "GUID": "d774ab32-172f-427f-9363-55676fa1aa19",
+                "shape": [
+                  {
+                    "x": 1446.368686868687,
+                    "y": 1152.5
+                  },
+                  {
+                    "x": 1373,
+                    "y": 1152.5
+                  }
+                ],
+                "sides": [
+                  "left",
+                  "right"
+                ]
+              }
+            ],
+            "GUID": "5e06dad5-b994-4a9e-8031-0e8dc74e272e",
+            "displayOptions": {
+              "dndHandles": false,
+              "hideRelationshipName": true
+            },
+            "options": [
+              {
+                "autoWidth": true,
+                "autoHeight": true,
+                "GUID": "406a5736-1ce1-478b-b0d5-be69e6034346"
+              },
+              {
+                "autoWidth": true,
+                "autoHeight": true,
+                "GUID": "b81388ef-5932-4f3f-b679-a2439648b1f1"
+              },
+              {
+                "autoWidth": true,
+                "autoHeight": true,
+                "GUID": "197af1b0-f1c0-450d-882e-866f77a41863"
+              }
+            ]
+          },
+          {
+            "entities": [
+              {
+                "GUID": "7da4bb68-7414-4742-93a7-59390cc76db3",
+                "x": 1303,
+                "y": 1064,
+                "width": 287,
+                "height": 177,
+                "color": {
+                  "hex": "#2196f3"
+                }
+              },
+              {
+                "GUID": "5c0d1993-fd56-4d34-9fa7-a42934712068",
+                "x": 954,
+                "y": 1091,
+                "width": 275,
+                "height": 123,
+                "color": {
+                  "hex": "#2196f3"
+                }
+              },
+              {
+                "GUID": "9f4f0e78-a112-4692-9536-82869aad2a4e",
+                "x": 1301,
+                "y": 1328,
+                "width": 292,
+                "height": 105,
+                "color": {
+                  "hex": "#2196f3"
+                }
+              }
+            ],
+            "buckets": [
+              {
+                "x": 890,
+                "y": 1000,
+                "GUID": "0a624439-c611-4552-881f-bbe91599e070"
+              }
+            ],
+            "graphView": {
+              "erd": [
+                {
+                  "GUID": "7da4bb68-7414-4742-93a7-59390cc76db3",
+                  "size": 100,
+                  "x": 1803.2793387179054,
+                  "y": 1446.472528274303
+                },
+                {
+                  "GUID": "5c0d1993-fd56-4d34-9fa7-a42934712068",
+                  "size": 100,
+                  "x": 1567.2793387179054,
+                  "y": 1619.472528274303
+                },
+                {
+                  "GUID": "9f4f0e78-a112-4692-9536-82869aad2a4e",
+                  "size": 100,
+                  "x": 1803.2793387179054,
+                  "y": 1619.472528274303
+                }
+              ],
+              "buckets": [
+                {
+                  "x": 1029.4317151788139,
+                  "y": 1188.5324837616,
+                  "GUID": "0a624439-c611-4552-881f-bbe91599e070"
+                }
+              ],
+              "decorativeSymbols": [],
+              "forceLayout": true,
+              "defaultLinkLength": 300
+            },
+            "relationships": [
+              {
+                "autoPositioning": false,
+                "type": "Orthogonal",
+                "thickness": 2,
+                "color": "#79c4ff",
+                "dataType": "",
+                "GUID": "2145e545-8459-43dd-a840-f495f9f36e2a",
+                "shape": [
+                  {
+                    "x": 1446.5,
+                    "y": 1241
+                  },
+                  {
+                    "x": 1446.5,
+                    "y": 1328
+                  }
+                ],
+                "sides": [
+                  "bottom",
+                  "top"
+                ]
+              },
+              {
+                "autoPositioning": true,
+                "type": "Orthogonal",
+                "thickness": 2,
+                "color": "#79c4ff",
+                "dataType": "",
+                "GUID": "3c5b5aa9-37ba-4d66-aca4-01803c767521",
+                "shape": [
+                  {
+                    "x": 1303,
+                    "y": 1152.5
+                  },
+                  {
+                    "x": 1229,
+                    "y": 1152.5
+                  }
+                ],
+                "sides": [
+                  "left",
+                  "right"
+                ]
+              },
+              {
+                "autoPositioning": false,
+                "type": "Orthogonal",
+                "thickness": 2,
+                "color": "#79c4ff",
+                "dataType": "",
+                "GUID": "e6dea27d-c2c0-48e5-a9ad-4cb035591094",
+                "shape": [
+                  {
+                    "x": 1541.3333333333333,
+                    "y": 1328
+                  },
+                  {
+                    "x": 1541.3333333333333,
+                    "y": 1303
+                  },
+                  {
+                    "x": 1618,
+                    "y": 1303
+                  },
+                  {
+                    "x": 1618,
+                    "y": 1380.5
+                  },
+                  {
+                    "x": 1593,
+                    "y": 1380.5
+                  }
+                ],
+                "sides": [
+                  "top",
+                  "right"
+                ]
+              }
+            ],
+            "GUID": "0dbcaee2-023a-4be8-b298-8675bd99bdb8",
+            "displayOptions": {
+              "dndHandles": false,
+              "hideRelationshipName": true
+            },
+            "options": [
+              {
+                "autoWidth": true,
+                "autoHeight": true,
+                "GUID": "7da4bb68-7414-4742-93a7-59390cc76db3"
+              },
+              {
+                "autoWidth": true,
+                "autoHeight": true,
+                "GUID": "9f4f0e78-a112-4692-9536-82869aad2a4e"
+              },
+              {
+                "autoWidth": true,
+                "autoHeight": true,
+                "GUID": "5c0d1993-fd56-4d34-9fa7-a42934712068"
+              }
+            ]
+          }
+        ],
         "decorativeSymbols": [],
         "nestedCollectionsLayout": "horizontal",
         "options": [],
