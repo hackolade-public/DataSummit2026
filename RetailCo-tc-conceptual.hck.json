@@ -42,7 +42,17 @@
       "additionalProperties": false,
       "GUID": "3fad6ee1-2f66-4980-99a9-34bc967fc4ee",
       "bucketId": "d02ddb35-ac2b-4951-a6e5-fb9268dab5ce",
-      "description": "A person or organisation registered with RetailCo. Unified identity across all channels."
+      "description": "A person or organisation registered with RetailCo. Unified identity across all channels.",
+      "glossaryTerms": [
+        {
+          "GUID": "1df4a750-5ed7-42f9-826f-65a67ecfce03",
+          "glossaryTermId": "bb642794-6fbf-4cec-aa5b-cefbf45672d1"
+        },
+        {
+          "GUID": "c7145003-9b6f-4ef7-93d3-d3e5c7b9d0cd",
+          "glossaryTermId": "20e51d16-fafb-47c8-b155-781a68e322d9"
+        }
+      ]
     },
     {
       "collectionName": "Customer Address",
@@ -180,7 +190,13 @@
       "additionalProperties": false,
       "GUID": "ecc8f9b7-f7e8-47f6-9d15-6225ba047fa9",
       "bucketId": "d02ddb35-ac2b-4951-a6e5-fb9268dab5ce",
-      "description": "A purchase transaction placed by a customer through one of the four commercial channels."
+      "description": "A purchase transaction placed by a customer through one of the four commercial channels.",
+      "glossaryTerms": [
+        {
+          "GUID": "5fdee421-cf56-45d6-a7b2-1d85b2bb013b",
+          "glossaryTermId": "c679be8d-8756-4865-9fd5-3bed9c9fc3e0"
+        }
+      ]
     },
     {
       "collectionName": "Order Line Item",
@@ -385,7 +401,13 @@
       "additionalProperties": false,
       "GUID": "852d56ce-5a49-4a14-b2eb-73f683d7898f",
       "bucketId": "d02ddb35-ac2b-4951-a6e5-fb9268dab5ce",
-      "description": "Hierarchical product classification with up to three levels: Root, Mid, Leaf."
+      "description": "Hierarchical product classification with up to three levels: Root, Mid, Leaf.",
+      "glossaryTerms": [
+        {
+          "GUID": "684bb20f-d621-4dcc-a5a9-cd6ee284451a",
+          "glossaryTermId": "c6d869d0-656d-4c95-a13c-7d8b03b84974"
+        }
+      ]
     },
     {
       "collectionName": "Supplier",
@@ -967,8 +989,246 @@
   },
   "sources": [],
   "decorativeSymbols": [],
-  "businessGlossaries": [],
-  "businessGlossaryTerms": [],
+  "businessGlossaries": [
+    {
+      "GUID": "6cf4562c-ff7b-438b-9029-f8b767ef4acb",
+      "name": "Core-Business-Glossary.csv",
+      "updatedAt": "2026-04-19T22:56:58Z",
+      "hasHeaders": true,
+      "format": "custom",
+      "columnSeparator": ",",
+      "kind": "relativePath",
+      "relativePath": "glossaries/Core-Business-Glossary.csv",
+      "mapping": [
+        {
+          "GUID": "41143327-fd71-4e80-b507-0811ed072944",
+          "columnIdentifier": "id",
+          "displayName": "Identifier",
+          "role": "identifier",
+          "isMultipleValue": false,
+          "position": 0,
+          "displayType": "text",
+          "isMapped": true
+        },
+        {
+          "GUID": "58e973de-dcaf-4f2e-9495-0fac0d17b3a3",
+          "columnIdentifier": "term",
+          "displayName": "Term",
+          "role": "name",
+          "isMultipleValue": false,
+          "position": 1,
+          "displayType": "text",
+          "isMapped": true
+        },
+        {
+          "GUID": "b92c23e7-a221-469b-9ac0-87b0670f027e",
+          "columnIdentifier": "description",
+          "displayName": "Description",
+          "role": "description",
+          "isMultipleValue": false,
+          "position": 2,
+          "displayType": "text",
+          "isMapped": true
+        },
+        {
+          "GUID": "352d96f4-6af8-4897-9b54-78867f0838c6",
+          "columnIdentifier": "domain",
+          "displayName": "domain",
+          "position": 3,
+          "displayType": "text",
+          "isMapped": false
+        },
+        {
+          "GUID": "66cc2812-298f-460a-94cc-2d15ed7b086e",
+          "columnIdentifier": "synonyms",
+          "displayName": "synonyms",
+          "position": 4,
+          "displayType": "text",
+          "isMapped": false
+        },
+        {
+          "GUID": "f1c83250-532d-4664-96ba-cff577db9a6c",
+          "columnIdentifier": "status",
+          "displayName": "status",
+          "position": 5,
+          "displayType": "text",
+          "isMapped": false
+        }
+      ]
+    },
+    {
+      "GUID": "b0d4ded5-5af3-4995-9287-1eed4aff2654",
+      "name": "Order-Management-Glossary.csv",
+      "updatedAt": "2026-04-19T22:56:58Z",
+      "hasHeaders": true,
+      "format": "custom",
+      "columnSeparator": ",",
+      "kind": "relativePath",
+      "relativePath": "glossaries/Order-Management-Glossary.csv",
+      "mapping": [
+        {
+          "GUID": "1bc331f4-2d82-4f80-b6bc-bf8d6f24ab13",
+          "columnIdentifier": "id",
+          "displayName": "Identifier",
+          "role": "identifier",
+          "isMultipleValue": false,
+          "position": 0,
+          "displayType": "text",
+          "isMapped": true
+        },
+        {
+          "GUID": "21037485-b902-47d9-b809-01b9ac05ae94",
+          "columnIdentifier": "term",
+          "displayName": "Term",
+          "role": "name",
+          "isMultipleValue": false,
+          "position": 1,
+          "displayType": "text",
+          "isMapped": true
+        },
+        {
+          "GUID": "e4016ed4-ce8d-47f0-9edb-dfb23403c2c2",
+          "columnIdentifier": "description",
+          "displayName": "Description",
+          "role": "description",
+          "isMultipleValue": false,
+          "position": 2,
+          "displayType": "text",
+          "isMapped": true
+        },
+        {
+          "GUID": "846a0eec-e286-472d-8eeb-e9ed455cb928",
+          "columnIdentifier": "domain",
+          "displayName": "domain",
+          "position": 3,
+          "displayType": "text",
+          "isMapped": false
+        },
+        {
+          "GUID": "524caea5-2e19-47f8-ac5b-a24f3216ea7a",
+          "columnIdentifier": "synonyms",
+          "displayName": "synonyms",
+          "position": 4,
+          "displayType": "text",
+          "isMapped": false
+        },
+        {
+          "GUID": "46bd66e7-0647-4a0f-8030-195731355540",
+          "columnIdentifier": "status",
+          "displayName": "status",
+          "position": 5,
+          "displayType": "text",
+          "isMapped": false
+        }
+      ]
+    },
+    {
+      "GUID": "ae190313-d4fa-4c78-9771-c7f20cc2b901",
+      "name": "RetailCo glossary.csv",
+      "updatedAt": "2026-04-26T07:48:38Z",
+      "hasHeaders": true,
+      "format": "custom",
+      "columnSeparator": "|",
+      "kind": "relativePath",
+      "relativePath": "glossaries/RetailCo glossary.csv",
+      "mapping": [
+        {
+          "GUID": "d33da51a-e932-4d08-8628-3a53a80c4219",
+          "columnIdentifier": "ID",
+          "displayName": "Identifier",
+          "role": "identifier",
+          "isMultipleValue": false,
+          "position": 0,
+          "displayType": "text",
+          "isMapped": true
+        },
+        {
+          "GUID": "e4a4c6b4-ed7f-4c78-9f0a-edf6a96d9b23",
+          "columnIdentifier": "Term",
+          "displayName": "Term",
+          "role": "name",
+          "isMultipleValue": false,
+          "position": 1,
+          "displayType": "text",
+          "isMapped": true
+        },
+        {
+          "GUID": "9ff2914a-8ddb-495b-8ada-e15c5d5bd309",
+          "columnIdentifier": "Definition",
+          "displayName": "Description",
+          "role": "description",
+          "isMultipleValue": false,
+          "position": 2,
+          "displayType": "text",
+          "isMapped": true
+        }
+      ]
+    }
+  ],
+  "businessGlossaryTerms": [
+    {
+      "GUID": "c6d869d0-656d-4c95-a13c-7d8b03b84974",
+      "glossaryId": "ae190313-d4fa-4c78-9771-c7f20cc2b901",
+      "name": "Category",
+      "properties": {
+        "d33da51a-e932-4d08-8628-3a53a80c4219": "0018",
+        "e4a4c6b4-ed7f-4c78-9f0a-edf6a96d9b23": "Category",
+        "9ff2914a-8ddb-495b-8ada-e15c5d5bd309": "A hierarchical classification for products with up to three levels: Root, Mid, and Leaf. Products are assigned only to Leaf categories."
+      },
+      "refIds": [
+        "852d56ce-5a49-4a14-b2eb-73f683d7898f"
+      ],
+      "updatedAt": "2026-04-26T07:48:38Z"
+    },
+    {
+      "GUID": "bb642794-6fbf-4cec-aa5b-cefbf45672d1",
+      "glossaryId": "ae190313-d4fa-4c78-9771-c7f20cc2b901",
+      "name": "Customer",
+      "properties": {
+        "d33da51a-e932-4d08-8628-3a53a80c4219": "0001",
+        "e4a4c6b4-ed7f-4c78-9f0a-edf6a96d9b23": "Customer",
+        "9ff2914a-8ddb-495b-8ada-e15c5d5bd309": "A person or organization registered with RetailCo or having completed at least one purchase. Identified by a unique system-assigned ID across all channels."
+      },
+      "refIds": [
+        "3fad6ee1-2f66-4980-99a9-34bc967fc4ee"
+      ],
+      "updatedAt": "2026-04-26T07:48:38Z"
+    },
+    {
+      "GUID": "20e51d16-fafb-47c8-b155-781a68e322d9",
+      "glossaryId": "6cf4562c-ff7b-438b-9029-f8b767ef4acb",
+      "name": "Customer",
+      "properties": {
+        "41143327-fd71-4e80-b507-0811ed072944": "a1111111-aaaa-4aaa-8aaa-aaaaaaaa0001",
+        "58e973de-dcaf-4f2e-9495-0fac0d17b3a3": "Customer",
+        "b92c23e7-a221-469b-9ac0-87b0670f027e": "An individual, household, or organization that engages with the company for the purpose of purchasing products, utilizing services, or establishing a mutually beneficial relationship. This interaction may involve placing orders, receiving deliverables, or engaging in ongoing service agreements, signifying a formal or informal commitment to the business's offerings.",
+        "352d96f4-6af8-4897-9b54-78867f0838c6": "Party",
+        "66cc2812-298f-460a-94cc-2d15ed7b086e": "Client;Buyer",
+        "f1c83250-532d-4664-96ba-cff577db9a6c": "Validated"
+      },
+      "refIds": [
+        "3fad6ee1-2f66-4980-99a9-34bc967fc4ee"
+      ],
+      "updatedAt": "2026-04-19T22:56:58Z"
+    },
+    {
+      "GUID": "c679be8d-8756-4865-9fd5-3bed9c9fc3e0",
+      "glossaryId": "b0d4ded5-5af3-4995-9287-1eed4aff2654",
+      "name": "Order",
+      "properties": {
+        "1bc331f4-2d82-4f80-b6bc-bf8d6f24ab13": "b2222222-bbbb-4bbb-8bbb-bbbbbbbb0001",
+        "21037485-b902-47d9-b809-01b9ac05ae94": "Order",
+        "e4016ed4-ce8d-47f0-9edb-dfb23403c2c2": "A documented commercial transaction whereby a customer formally requests the purchase of specified products or services from a supplier, establishing binding purchase commitments and initiating fulfillment processes.",
+        "846a0eec-e286-472d-8eeb-e9ed455cb928": "Order Lifecycle",
+        "524caea5-2e19-47f8-ac5b-a24f3216ea7a": "Sales Order;Purchase Order",
+        "46bd66e7-0647-4a0f-8030-195731355540": "Validated"
+      },
+      "refIds": [
+        "ecc8f9b7-f7e8-47f6-9d15-6225ba047fa9"
+      ],
+      "updatedAt": "2026-04-19T22:56:58Z"
+    }
+  ],
   "dbVendor": "Polyglot",
   "appTarget": "Polyglot",
   "creationTS": "2026-05-05T17:51:31.897Z",
@@ -976,7 +1236,7 @@
   "isLineageEnabled": false,
   "description": "",
   "comments": "============================================================\nRetailCo Analytics Platform  |  Data Model\nVersion 1.1  |  April 2025\nDomains: Customer, Order, Product\nLayers: Conceptual > Logical (3NF) > Physical (Snowflake Star Schema)\nDBML Specification: https://dbml.dbdiagram.io/home/\n============================================================\n\n\n============================================================\nLAYER 1 - CONCEPTUAL MODEL\nEntities and relationships only. No attributes beyond the\nDBML-required placeholder column. Entity and column names\nuse Proper Case with spaces. Relationships use DBML Ref\ndirection operators (< one-to-many, > many-to-one,\n- one-to-one). Self-referencing tables use two distinct\ncolumn names to comply with DBML rule preventing error 5002.\n============================================================",
-  "lastModifTS": "2026-05-05T18:26:40.700Z",
+  "lastModifTS": "2026-05-05T18:33:58.708Z",
   "persistenceSchemaVersion": "8",
   "isCreatedByPlugin": true,
   "pluginInformation": {
@@ -1108,62 +1368,62 @@
             {
               "GUID": "3fad6ee1-2f66-4980-99a9-34bc967fc4ee",
               "size": 100,
-              "x": 1832.182290584161,
-              "y": 1456.4485003504776
+              "x": 1822.9654407835885,
+              "y": 1445.6229372857756
             },
             {
               "GUID": "1ca5f2c8-a1c0-4b37-857d-e2d20f6aef8c",
               "size": 100,
-              "x": 1580.8922043936316,
-              "y": 1365.4245778214463
+              "x": 1570.015148280561,
+              "y": 1359.243160733399
             },
             {
               "GUID": "71a9c812-4687-475a-9cf1-e175596f2fc7",
               "size": 100,
-              "x": 1579.4301273496321,
-              "y": 1544.0326785795614
+              "x": 1576.7867831985902,
+              "y": 1550.234404636911
             },
             {
               "GUID": "ecc8f9b7-f7e8-47f6-9d15-6225ba047fa9",
               "size": 100,
-              "x": 1842.3576467308635,
-              "y": 1188.5355908856884
+              "x": 1854.975331021223,
+              "y": 1179.5600682079792
             },
             {
               "GUID": "bf57d367-a92d-4ae7-8f2e-5d8c48dea77c",
               "size": 100,
-              "x": 2052.3876100232324,
-              "y": 1355.1919437726717
+              "x": 2056.515377599069,
+              "y": 1356.7621291062314
             },
             {
               "GUID": "663e98f5-06a7-4565-85a6-bb3f009dbd75",
               "size": 100,
-              "x": 1592.6953856104324,
-              "y": 1092.1349030580682
+              "x": 1607.7541050017458,
+              "y": 1076.9732471934042
             },
             {
               "GUID": "5bbe928e-7367-45c8-931e-37b1f9e3509d",
               "size": 100,
-              "x": 2031.569223064859,
-              "y": 1622.6898568021602
+              "x": 2046.0295834598476,
+              "y": 1625.0806355754205
             },
             {
               "GUID": "852d56ce-5a49-4a14-b2eb-73f683d7898f",
               "size": 100,
-              "x": 1941.8582750147007,
-              "y": 1874.733062340898
+              "x": 1963.764984033826,
+              "y": 1879.698370135873
             },
             {
               "GUID": "03e8c15c-89e2-4443-ace8-e8630d3a9cde",
               "size": 100,
-              "x": 1792.67045882499,
-              "y": 1743.2166484539966
+              "x": 1810.883486899643,
+              "y": 1752.7705737444307
             }
           ],
           "buckets": [
             {
-              "x": 1511.6431390565347,
-              "y": 1020.7192530138173,
+              "x": 1500.720906963112,
+              "y": 1005.8748883741207,
               "GUID": "d02ddb35-ac2b-4951-a6e5-fb9268dab5ce"
             }
           ],
