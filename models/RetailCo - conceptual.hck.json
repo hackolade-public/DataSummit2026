@@ -1185,7 +1185,7 @@
       "modelName": false
     }
   },
-  "lastModifTS": "2026-05-01T02:30:06.185Z",
+  "lastModifTS": "2026-05-05T08:34:09.707Z",
   "persistenceSchemaVersion": "8",
   "isCreatedByPlugin": true,
   "pluginInformation": {
@@ -1196,26 +1196,6 @@
   "applicationInformation": {
     "version": "8.11.0"
   },
-  "extendedDecorativeSymbols": [
-    {
-      "GUID": "8783ba5d-e7f9-42f2-9a4a-d9d84c9ef122",
-      "name": "Customer domain",
-      "type": "rectangle",
-      "bucketId": ""
-    },
-    {
-      "GUID": "269ef2ae-8442-4f81-b6c1-fc7d66adae4c",
-      "name": "Product domain",
-      "type": "rectangle",
-      "bucketId": ""
-    },
-    {
-      "GUID": "1016878a-ed8a-42e9-ad43-2b93d2a52395",
-      "name": "Order domain",
-      "type": "rectangle",
-      "bucketId": ""
-    }
-  ],
   "settings": {
     "centralPane": {
       "dbLevel": {
@@ -1396,89 +1376,12 @@
               "GUID": "ebd8aaf3-f89a-46fb-a38d-9bb111afb795"
             }
           ],
-          "decorativeSymbols": [
-            {
-              "GUID": "8783ba5d-e7f9-42f2-9a4a-d9d84c9ef122",
-              "x": 3506.5901902852975,
-              "y": 3924.711708663055,
-              "height": 150,
-              "width": 300
-            },
-            {
-              "GUID": "269ef2ae-8442-4f81-b6c1-fc7d66adae4c",
-              "x": 3955.9989367070316,
-              "y": 3983.7476331218727,
-              "height": 150,
-              "width": 300
-            },
-            {
-              "GUID": "1016878a-ed8a-42e9-ad43-2b93d2a52395",
-              "x": 3507.193933823529,
-              "y": 3724.357939443327,
-              "height": 150,
-              "width": 300
-            }
-          ],
+          "decorativeSymbols": [],
           "forceLayout": false,
           "defaultLinkLength": 267
         },
         "diagramViews": [],
-        "decorativeSymbols": [
-          {
-            "GUID": "8783ba5d-e7f9-42f2-9a4a-d9d84c9ef122",
-            "x": 977.7952622894296,
-            "y": 1118.20236625747,
-            "height": 113.73937291753424,
-            "width": 642.6360110370681,
-            "layer": "aboveContainers",
-            "fontSize": 12,
-            "color": {
-              "hex": "#bdbdbd",
-              "rgba": {
-                "r": 189,
-                "g": 189,
-                "b": 189,
-                "a": 1
-              }
-            }
-          },
-          {
-            "GUID": "269ef2ae-8442-4f81-b6c1-fc7d66adae4c",
-            "x": 1411.27276094314,
-            "y": 1244.3942888331505,
-            "height": 192.11887254901922,
-            "width": 574.4400410899655,
-            "layer": "aboveContainers",
-            "fontSize": 12,
-            "color": {
-              "hex": "#bdbdbd",
-              "rgba": {
-                "r": 189,
-                "g": 189,
-                "b": 189,
-                "a": 0.74
-              }
-            }
-          },
-          {
-            "GUID": "1016878a-ed8a-42e9-ad43-2b93d2a52395",
-            "x": 982.3942069310198,
-            "y": 1007.0129825544219,
-            "height": 87.4344125765755,
-            "width": 1022.5040529430839,
-            "layer": "aboveContainers",
-            "fontSize": 12,
-            "color": {
-              "hex": "#bdbdbd",
-              "rgba": {
-                "r": 189,
-                "g": 189,
-                "b": 189,
-                "a": 1
-              }
-            }
-          }
-        ],
+        "decorativeSymbols": [],
         "nestedCollectionsLayout": "horizontal",
         "options": [],
         "relationshipUpdateDisabled": false
