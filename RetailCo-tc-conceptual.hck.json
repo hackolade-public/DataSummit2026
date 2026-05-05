@@ -1,0 +1,1188 @@
+{
+  "modelName": "New model",
+  "collections": [
+    {
+      "collectionName": "Customer",
+      "type": "object",
+      "properties": [
+        {
+          "name": "Id",
+          "hackoladeMeta": {},
+          "isActivated": true,
+          "index": true,
+          "exclusiveMinimum": false,
+          "exclusiveMaximum": false,
+          "primaryKey": true,
+          "mode": "int",
+          "required": true,
+          "alternateKey": false,
+          "childType": "integer",
+          "type": "numeric",
+          "compositeKey": [
+            "compositePrimaryKey",
+            "compositeUniqueKey"
+          ],
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "GUID": "89c13501-d743-4602-bb1d-fed3c6c04fa4",
+          "unique": false,
+          "childRelationships": [
+            "b23163ca-46fd-4981-a69d-d76c2b8c8856",
+            "0ac9c92a-93cc-4f8a-ac35-784b2a4b1b17",
+            "ff66fae0-0978-43eb-a784-699c86e6fbf5"
+          ]
+        }
+      ],
+      "definitions": {
+        "type": "definitions",
+        "properties": [],
+        "GUID": "9c5c0eb7-622b-437e-b648-ed53f51ee6c2"
+      },
+      "isActivated": true,
+      "additionalProperties": false,
+      "GUID": "3fad6ee1-2f66-4980-99a9-34bc967fc4ee",
+      "bucketId": "d02ddb35-ac2b-4951-a6e5-fb9268dab5ce",
+      "description": "A person or organisation registered with RetailCo. Unified identity across all channels."
+    },
+    {
+      "collectionName": "Customer Address",
+      "type": "object",
+      "properties": [
+        {
+          "name": "Id",
+          "hackoladeMeta": {},
+          "isActivated": true,
+          "index": true,
+          "exclusiveMinimum": false,
+          "exclusiveMaximum": false,
+          "primaryKey": true,
+          "mode": "int",
+          "required": true,
+          "alternateKey": false,
+          "childType": "integer",
+          "type": "numeric",
+          "compositeKey": [
+            "compositePrimaryKey",
+            "compositeUniqueKey"
+          ],
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "GUID": "db0626ce-beaa-4fe7-a283-87c4ea8f67ea",
+          "unique": false,
+          "relationshipType": "Foreign Key",
+          "foreignCollection": "3fad6ee1-2f66-4980-99a9-34bc967fc4ee",
+          "foreignField": [
+            "3fad6ee1-2f66-4980-99a9-34bc967fc4ee",
+            "89c13501-d743-4602-bb1d-fed3c6c04fa4"
+          ],
+          "parentRelationship": "b23163ca-46fd-4981-a69d-d76c2b8c8856"
+        }
+      ],
+      "definitions": {
+        "type": "definitions",
+        "properties": [],
+        "GUID": "05efd76f-24f6-41d4-978c-0ab9ca078e7c"
+      },
+      "isActivated": true,
+      "additionalProperties": false,
+      "GUID": "1ca5f2c8-a1c0-4b37-857d-e2d20f6aef8c",
+      "bucketId": "d02ddb35-ac2b-4951-a6e5-fb9268dab5ce",
+      "description": "One or more physical addresses belonging to a customer. Typed as Billing, Shipping, or Both."
+    },
+    {
+      "collectionName": "Customer Segment History",
+      "type": "object",
+      "properties": [
+        {
+          "name": "Id",
+          "hackoladeMeta": {},
+          "isActivated": true,
+          "index": true,
+          "exclusiveMinimum": false,
+          "exclusiveMaximum": false,
+          "primaryKey": true,
+          "mode": "int",
+          "required": true,
+          "alternateKey": false,
+          "childType": "integer",
+          "type": "numeric",
+          "compositeKey": [
+            "compositePrimaryKey",
+            "compositeUniqueKey"
+          ],
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "GUID": "754c05ea-4739-4432-8054-10601856e630",
+          "unique": false,
+          "relationshipType": "Foreign Key",
+          "foreignCollection": "3fad6ee1-2f66-4980-99a9-34bc967fc4ee",
+          "foreignField": [
+            "3fad6ee1-2f66-4980-99a9-34bc967fc4ee",
+            "89c13501-d743-4602-bb1d-fed3c6c04fa4"
+          ],
+          "parentRelationship": "0ac9c92a-93cc-4f8a-ac35-784b2a4b1b17"
+        }
+      ],
+      "definitions": {
+        "type": "definitions",
+        "properties": [],
+        "GUID": "c54a9267-7dcd-4f99-9a53-a29afa6b9878"
+      },
+      "isActivated": true,
+      "additionalProperties": false,
+      "GUID": "71a9c812-4687-475a-9cf1-e175596f2fc7",
+      "bucketId": "d02ddb35-ac2b-4951-a6e5-fb9268dab5ce",
+      "description": "Historical record of segment assignments for a customer, enabling cohort analysis at any past date."
+    },
+    {
+      "collectionName": "Order",
+      "type": "object",
+      "properties": [
+        {
+          "name": "Id",
+          "hackoladeMeta": {},
+          "isActivated": true,
+          "index": true,
+          "exclusiveMinimum": false,
+          "exclusiveMaximum": false,
+          "primaryKey": true,
+          "mode": "int",
+          "required": true,
+          "alternateKey": false,
+          "childType": "integer",
+          "type": "numeric",
+          "compositeKey": [
+            "compositePrimaryKey",
+            "compositeUniqueKey"
+          ],
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "GUID": "4eee838b-5b83-4330-a248-6bcfc9688ad7",
+          "unique": false,
+          "relationshipType": "Foreign Key",
+          "foreignCollection": "663e98f5-06a7-4565-85a6-bb3f009dbd75",
+          "foreignField": [
+            "663e98f5-06a7-4565-85a6-bb3f009dbd75",
+            "329cbefa-b276-47d2-942e-1c9bca03164b"
+          ],
+          "parentRelationship": "19dc8a63-86a4-4599-8f36-0c4bff924d43",
+          "childRelationships": [
+            "55fba101-81da-406b-a803-549772e34439"
+          ]
+        }
+      ],
+      "definitions": {
+        "type": "definitions",
+        "properties": [],
+        "GUID": "31b85d4b-dbe2-455d-be02-7703aebc7a60"
+      },
+      "isActivated": true,
+      "additionalProperties": false,
+      "GUID": "ecc8f9b7-f7e8-47f6-9d15-6225ba047fa9",
+      "bucketId": "d02ddb35-ac2b-4951-a6e5-fb9268dab5ce",
+      "description": "A purchase transaction placed by a customer through one of the four commercial channels."
+    },
+    {
+      "collectionName": "Order Line Item",
+      "type": "object",
+      "properties": [
+        {
+          "name": "Id",
+          "hackoladeMeta": {},
+          "isActivated": true,
+          "index": true,
+          "exclusiveMinimum": false,
+          "exclusiveMaximum": false,
+          "primaryKey": true,
+          "mode": "int",
+          "required": true,
+          "alternateKey": false,
+          "childType": "integer",
+          "type": "numeric",
+          "compositeKey": [
+            "compositePrimaryKey",
+            "compositeUniqueKey"
+          ],
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "GUID": "6ba695cb-abed-40ed-80af-7889456dbe71",
+          "unique": false,
+          "relationshipType": "Foreign Key",
+          "foreignCollection": "5bbe928e-7367-45c8-931e-37b1f9e3509d",
+          "foreignField": [
+            "5bbe928e-7367-45c8-931e-37b1f9e3509d",
+            "b4658785-ac7b-45d7-8c65-27ac2c843e5c"
+          ],
+          "parentRelationship": "1469cb36-9a6f-48be-81fb-accdb2faf816"
+        }
+      ],
+      "definitions": {
+        "type": "definitions",
+        "properties": [],
+        "GUID": "1a1822ac-30ad-4b8f-a010-a109627befb1"
+      },
+      "isActivated": true,
+      "additionalProperties": false,
+      "GUID": "bf57d367-a92d-4ae7-8f2e-5d8c48dea77c",
+      "bucketId": "d02ddb35-ac2b-4951-a6e5-fb9268dab5ce",
+      "description": "A single product entry within an order. The atomic grain of purchase activity."
+    },
+    {
+      "collectionName": "Promotion",
+      "type": "object",
+      "properties": [
+        {
+          "name": "Id",
+          "hackoladeMeta": {},
+          "isActivated": true,
+          "index": true,
+          "exclusiveMinimum": false,
+          "exclusiveMaximum": false,
+          "primaryKey": true,
+          "mode": "int",
+          "required": true,
+          "alternateKey": false,
+          "childType": "integer",
+          "type": "numeric",
+          "compositeKey": [
+            "compositePrimaryKey",
+            "compositeUniqueKey"
+          ],
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "GUID": "329cbefa-b276-47d2-942e-1c9bca03164b",
+          "unique": false,
+          "childRelationships": [
+            "19dc8a63-86a4-4599-8f36-0c4bff924d43"
+          ]
+        }
+      ],
+      "definitions": {
+        "type": "definitions",
+        "properties": [],
+        "GUID": "c44b9f46-c21e-4001-b124-33eeea032e04"
+      },
+      "isActivated": true,
+      "additionalProperties": false,
+      "GUID": "663e98f5-06a7-4565-85a6-bb3f009dbd75",
+      "bucketId": "d02ddb35-ac2b-4951-a6e5-fb9268dab5ce",
+      "description": "A discount campaign optionally applied to an order. Types: Percentage, Fixed, BOGO."
+    },
+    {
+      "collectionName": "Product",
+      "type": "object",
+      "properties": [
+        {
+          "name": "Id",
+          "hackoladeMeta": {},
+          "isActivated": true,
+          "index": true,
+          "exclusiveMinimum": false,
+          "exclusiveMaximum": false,
+          "primaryKey": true,
+          "mode": "int",
+          "required": true,
+          "alternateKey": false,
+          "childType": "integer",
+          "type": "numeric",
+          "compositeKey": [
+            "compositePrimaryKey",
+            "compositeUniqueKey"
+          ],
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "GUID": "b4658785-ac7b-45d7-8c65-27ac2c843e5c",
+          "unique": false,
+          "childRelationships": [
+            "1469cb36-9a6f-48be-81fb-accdb2faf816"
+          ],
+          "relationshipType": "Foreign Key",
+          "foreignCollection": "03e8c15c-89e2-4443-ace8-e8630d3a9cde",
+          "foreignField": [
+            "03e8c15c-89e2-4443-ace8-e8630d3a9cde",
+            "b6aa3ff9-5736-4feb-838a-d5c7a4c99e2f"
+          ],
+          "parentRelationship": "bfe0c8aa-2545-4c08-9021-160f4de4e197"
+        }
+      ],
+      "definitions": {
+        "type": "definitions",
+        "properties": [],
+        "GUID": "0512347d-1884-4065-8828-52657f2a5720"
+      },
+      "isActivated": true,
+      "additionalProperties": false,
+      "GUID": "5bbe928e-7367-45c8-931e-37b1f9e3509d",
+      "bucketId": "d02ddb35-ac2b-4951-a6e5-fb9268dab5ce",
+      "description": "A sellable item in the RetailCo catalogue, assigned to a leaf category and sourced from one primary supplier."
+    },
+    {
+      "collectionName": "Category",
+      "type": "object",
+      "properties": [
+        {
+          "name": "Id",
+          "hackoladeMeta": {},
+          "isActivated": true,
+          "index": true,
+          "exclusiveMinimum": false,
+          "exclusiveMaximum": false,
+          "primaryKey": true,
+          "mode": "int",
+          "required": true,
+          "alternateKey": false,
+          "childType": "integer",
+          "type": "numeric",
+          "compositeKey": [
+            "compositePrimaryKey",
+            "compositeUniqueKey"
+          ],
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "GUID": "f8f00722-7852-428b-bdd0-65ad4a34cef7",
+          "unique": false,
+          "childRelationships": [
+            "81d9d62a-0147-450a-9e7d-978b415cad4a",
+            "f47fd433-a6e5-4780-91bb-abee8a3cbb67"
+          ]
+        },
+        {
+          "name": "Parent Id",
+          "hackoladeMeta": {},
+          "isActivated": true,
+          "index": true,
+          "exclusiveMinimum": false,
+          "exclusiveMaximum": false,
+          "primaryKey": false,
+          "mode": "int",
+          "required": false,
+          "alternateKey": false,
+          "childType": "integer",
+          "type": "numeric",
+          "compositeKey": [
+            "compositePrimaryKey",
+            "compositeUniqueKey"
+          ],
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "GUID": "9433646c-4595-4bc7-b876-50b55ba4d3dc",
+          "unique": false,
+          "relationshipType": "Foreign Key",
+          "foreignCollection": "852d56ce-5a49-4a14-b2eb-73f683d7898f",
+          "foreignField": [
+            "852d56ce-5a49-4a14-b2eb-73f683d7898f",
+            "f8f00722-7852-428b-bdd0-65ad4a34cef7"
+          ],
+          "parentRelationship": "f47fd433-a6e5-4780-91bb-abee8a3cbb67"
+        }
+      ],
+      "definitions": {
+        "type": "definitions",
+        "properties": [],
+        "GUID": "77c253bb-c4df-4aeb-a2c7-490db7d72682"
+      },
+      "isActivated": true,
+      "additionalProperties": false,
+      "GUID": "852d56ce-5a49-4a14-b2eb-73f683d7898f",
+      "bucketId": "d02ddb35-ac2b-4951-a6e5-fb9268dab5ce",
+      "description": "Hierarchical product classification with up to three levels: Root, Mid, Leaf."
+    },
+    {
+      "collectionName": "Supplier",
+      "type": "object",
+      "properties": [
+        {
+          "name": "Id",
+          "hackoladeMeta": {},
+          "isActivated": true,
+          "index": true,
+          "exclusiveMinimum": false,
+          "exclusiveMaximum": false,
+          "primaryKey": true,
+          "mode": "int",
+          "required": true,
+          "alternateKey": false,
+          "childType": "integer",
+          "type": "numeric",
+          "compositeKey": [
+            "compositePrimaryKey",
+            "compositeUniqueKey"
+          ],
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "GUID": "b6aa3ff9-5736-4feb-838a-d5c7a4c99e2f",
+          "unique": false,
+          "childRelationships": [
+            "bfe0c8aa-2545-4c08-9021-160f4de4e197"
+          ]
+        }
+      ],
+      "definitions": {
+        "type": "definitions",
+        "properties": [],
+        "GUID": "b5effcfd-32e5-4faa-909a-5974ead641ce"
+      },
+      "isActivated": true,
+      "additionalProperties": false,
+      "GUID": "03e8c15c-89e2-4443-ace8-e8630d3a9cde",
+      "bucketId": "d02ddb35-ac2b-4951-a6e5-fb9268dab5ce",
+      "description": "A vendor that supplies products to RetailCo."
+    }
+  ],
+  "buckets": [
+    {
+      "name": "RetailCo",
+      "type": "bucket",
+      "collectionIds": [
+        "3fad6ee1-2f66-4980-99a9-34bc967fc4ee",
+        "1ca5f2c8-a1c0-4b37-857d-e2d20f6aef8c",
+        "71a9c812-4687-475a-9cf1-e175596f2fc7",
+        "ecc8f9b7-f7e8-47f6-9d15-6225ba047fa9",
+        "bf57d367-a92d-4ae7-8f2e-5d8c48dea77c",
+        "663e98f5-06a7-4565-85a6-bb3f009dbd75",
+        "5bbe928e-7367-45c8-931e-37b1f9e3509d",
+        "852d56ce-5a49-4a14-b2eb-73f683d7898f",
+        "03e8c15c-89e2-4443-ace8-e8630d3a9cde"
+      ],
+      "backgroundColor": {
+        "r": 129,
+        "g": 212,
+        "b": 250,
+        "a": 1
+      },
+      "show": true,
+      "isActivated": true,
+      "indexes": [],
+      "GUID": "d02ddb35-ac2b-4951-a6e5-fb9268dab5ce"
+    }
+  ],
+  "views": [],
+  "relationships": [
+    {
+      "name": "fk_Customer_to_Customer Address",
+      "relationshipType": "Foreign Key",
+      "parentField": [
+        [
+          "3fad6ee1-2f66-4980-99a9-34bc967fc4ee",
+          "89c13501-d743-4602-bb1d-fed3c6c04fa4"
+        ]
+      ],
+      "parentCardinality": "1",
+      "childField": [
+        [
+          "1ca5f2c8-a1c0-4b37-857d-e2d20f6aef8c",
+          "db0626ce-beaa-4fe7-a283-87c4ea8f67ea"
+        ]
+      ],
+      "isActivated": true,
+      "childCardinality": "0..n",
+      "GUID": "b23163ca-46fd-4981-a69d-d76c2b8c8856",
+      "level": "field",
+      "parentCollection": "3fad6ee1-2f66-4980-99a9-34bc967fc4ee",
+      "childCollection": "1ca5f2c8-a1c0-4b37-857d-e2d20f6aef8c",
+      "lineSize": 2,
+      "hackoladeStyles": {
+        "GUID": "5c7bfb1d-fedb-415e-a253-fcd3be1733aa",
+        "autoPositioning": true,
+        "type": "Orthogonal",
+        "thickness": 2,
+        "color": "#79c4ff",
+        "dataType": "",
+        "shape": [
+          {
+            "x": 1750,
+            "y": 1184.5
+          },
+          {
+            "x": 1601,
+            "y": 1184.5
+          }
+        ],
+        "sides": [
+          "left",
+          "right"
+        ]
+      }
+    },
+    {
+      "name": "fk_Customer_to_Customer Segment History",
+      "relationshipType": "Foreign Key",
+      "parentField": [
+        [
+          "3fad6ee1-2f66-4980-99a9-34bc967fc4ee",
+          "89c13501-d743-4602-bb1d-fed3c6c04fa4"
+        ]
+      ],
+      "parentCardinality": "1",
+      "childField": [
+        [
+          "71a9c812-4687-475a-9cf1-e175596f2fc7",
+          "754c05ea-4739-4432-8054-10601856e630"
+        ]
+      ],
+      "isActivated": true,
+      "childCardinality": "0..n",
+      "GUID": "0ac9c92a-93cc-4f8a-ac35-784b2a4b1b17",
+      "level": "field",
+      "parentCollection": "3fad6ee1-2f66-4980-99a9-34bc967fc4ee",
+      "childCollection": "71a9c812-4687-475a-9cf1-e175596f2fc7",
+      "lineSize": 2,
+      "hackoladeStyles": {
+        "GUID": "33eeec38-ada9-4b86-aee7-29f43d636cc0",
+        "autoPositioning": true,
+        "type": "Orthogonal",
+        "thickness": 2,
+        "color": "#79c4ff",
+        "dataType": "",
+        "shape": [
+          {
+            "x": 1357,
+            "y": 1184.5
+          },
+          {
+            "x": 1407,
+            "y": 1184.5
+          }
+        ],
+        "sides": [
+          "right",
+          "left"
+        ]
+      }
+    },
+    {
+      "name": "fk_Customer_to_Order",
+      "relationshipType": "Foreign Key",
+      "parentField": [
+        [
+          "3fad6ee1-2f66-4980-99a9-34bc967fc4ee",
+          "89c13501-d743-4602-bb1d-fed3c6c04fa4"
+        ]
+      ],
+      "parentCardinality": "1",
+      "childField": [
+        [
+          "ecc8f9b7-f7e8-47f6-9d15-6225ba047fa9",
+          "4eee838b-5b83-4330-a248-6bcfc9688ad7"
+        ]
+      ],
+      "isActivated": true,
+      "childCardinality": "0..n",
+      "GUID": "ff66fae0-0978-43eb-a784-699c86e6fbf5",
+      "level": "field",
+      "parentCollection": "3fad6ee1-2f66-4980-99a9-34bc967fc4ee",
+      "childCollection": "ecc8f9b7-f7e8-47f6-9d15-6225ba047fa9",
+      "lineSize": 2,
+      "hackoladeStyles": {
+        "GUID": "94940755-d87e-4dcc-9132-8d94623fa43e",
+        "autoPositioning": true,
+        "type": "Orthogonal",
+        "thickness": 2,
+        "color": "#79c4ff",
+        "dataType": "",
+        "shape": [
+          {
+            "x": 1493,
+            "y": 1111
+          },
+          {
+            "x": 1493,
+            "y": 1136
+          },
+          {
+            "x": 1504,
+            "y": 1136
+          },
+          {
+            "x": 1504,
+            "y": 1161
+          }
+        ],
+        "sides": [
+          "bottom",
+          "top"
+        ]
+      }
+    },
+    {
+      "name": "fk_Order_to_Order Line Item",
+      "relationshipType": "Foreign Key",
+      "parentField": [
+        [
+          "ecc8f9b7-f7e8-47f6-9d15-6225ba047fa9",
+          "4eee838b-5b83-4330-a248-6bcfc9688ad7"
+        ]
+      ],
+      "parentCardinality": "1",
+      "childField": [
+        [
+          "bf57d367-a92d-4ae7-8f2e-5d8c48dea77c",
+          "6ba695cb-abed-40ed-80af-7889456dbe71"
+        ]
+      ],
+      "isActivated": true,
+      "childCardinality": "0..n",
+      "GUID": "55fba101-81da-406b-a803-549772e34439",
+      "level": "field",
+      "parentCollection": "ecc8f9b7-f7e8-47f6-9d15-6225ba047fa9",
+      "childCollection": "bf57d367-a92d-4ae7-8f2e-5d8c48dea77c",
+      "lineSize": 2,
+      "hackoladeStyles": {
+        "GUID": "641bb1f4-16cd-46cb-88dd-14e107dd34cf",
+        "autoPositioning": true,
+        "type": "Orthogonal",
+        "thickness": 2,
+        "color": "#79c4ff",
+        "dataType": "",
+        "shape": [
+          {
+            "x": 1750,
+            "y": 1087.5
+          },
+          {
+            "x": 1579,
+            "y": 1087.5
+          }
+        ],
+        "sides": [
+          "left",
+          "right"
+        ]
+      }
+    },
+    {
+      "name": "fk_Promotion_to_Order",
+      "relationshipType": "Foreign Key",
+      "parentField": [
+        [
+          "663e98f5-06a7-4565-85a6-bb3f009dbd75",
+          "329cbefa-b276-47d2-942e-1c9bca03164b"
+        ]
+      ],
+      "parentCardinality": "1",
+      "childField": [
+        [
+          "ecc8f9b7-f7e8-47f6-9d15-6225ba047fa9",
+          "4eee838b-5b83-4330-a248-6bcfc9688ad7"
+        ]
+      ],
+      "isActivated": true,
+      "childCardinality": "0..n",
+      "GUID": "19dc8a63-86a4-4599-8f36-0c4bff924d43",
+      "level": "field",
+      "parentCollection": "663e98f5-06a7-4565-85a6-bb3f009dbd75",
+      "childCollection": "ecc8f9b7-f7e8-47f6-9d15-6225ba047fa9",
+      "lineSize": 2,
+      "hackoladeStyles": {
+        "GUID": "09684874-b8d8-4ee1-950b-d895551029cb",
+        "autoPositioning": true,
+        "type": "Orthogonal",
+        "thickness": 2,
+        "color": "#79c4ff",
+        "dataType": "",
+        "shape": [
+          {
+            "x": 1407,
+            "y": 1087.5
+          },
+          {
+            "x": 1263,
+            "y": 1087.5
+          }
+        ],
+        "sides": [
+          "left",
+          "right"
+        ]
+      }
+    },
+    {
+      "name": "fk_Product_to_Order Line Item",
+      "relationshipType": "Foreign Key",
+      "parentField": [
+        [
+          "5bbe928e-7367-45c8-931e-37b1f9e3509d",
+          "b4658785-ac7b-45d7-8c65-27ac2c843e5c"
+        ]
+      ],
+      "parentCardinality": "1",
+      "childField": [
+        [
+          "bf57d367-a92d-4ae7-8f2e-5d8c48dea77c",
+          "6ba695cb-abed-40ed-80af-7889456dbe71"
+        ]
+      ],
+      "isActivated": true,
+      "childCardinality": "0..n",
+      "GUID": "1469cb36-9a6f-48be-81fb-accdb2faf816",
+      "level": "field",
+      "parentCollection": "5bbe928e-7367-45c8-931e-37b1f9e3509d",
+      "childCollection": "bf57d367-a92d-4ae7-8f2e-5d8c48dea77c",
+      "lineSize": 2,
+      "hackoladeStyles": {
+        "GUID": "c863d7e6-8c14-4bc9-baf3-9d495e0e2ded",
+        "autoPositioning": true,
+        "type": "Orthogonal",
+        "thickness": 2,
+        "color": "#79c4ff",
+        "dataType": "",
+        "shape": [
+          {
+            "x": 1864.5,
+            "y": 1111
+          },
+          {
+            "x": 1864.5,
+            "y": 1184.5
+          },
+          {
+            "x": 1841.5,
+            "y": 1184.5
+          },
+          {
+            "x": 1841.5,
+            "y": 1258
+          }
+        ],
+        "sides": [
+          "bottom",
+          "top"
+        ]
+      }
+    },
+    {
+      "name": "fk_Category_to_Product",
+      "relationshipType": "Foreign Key",
+      "parentField": [
+        [
+          "852d56ce-5a49-4a14-b2eb-73f683d7898f",
+          "f8f00722-7852-428b-bdd0-65ad4a34cef7"
+        ]
+      ],
+      "parentCardinality": "1",
+      "childField": [
+        [
+          "5bbe928e-7367-45c8-931e-37b1f9e3509d",
+          "b4658785-ac7b-45d7-8c65-27ac2c843e5c"
+        ]
+      ],
+      "isActivated": true,
+      "childCardinality": "0..n",
+      "GUID": "81d9d62a-0147-450a-9e7d-978b415cad4a",
+      "level": "field",
+      "parentCollection": "852d56ce-5a49-4a14-b2eb-73f683d7898f",
+      "childCollection": "5bbe928e-7367-45c8-931e-37b1f9e3509d",
+      "lineSize": 2,
+      "hackoladeStyles": {
+        "GUID": "675e4ac5-1323-4305-a6b6-094cba380206",
+        "autoPositioning": true,
+        "type": "Orthogonal",
+        "thickness": 2,
+        "color": "#79c4ff",
+        "dataType": "",
+        "shape": [
+          {
+            "x": 1750,
+            "y": 1289.3333333333333
+          },
+          {
+            "x": 1501.5,
+            "y": 1289.3333333333333
+          },
+          {
+            "x": 1501.5,
+            "y": 1301.3333333333333
+          },
+          {
+            "x": 1253,
+            "y": 1301.3333333333333
+          }
+        ],
+        "sides": [
+          "left",
+          "right"
+        ]
+      }
+    },
+    {
+      "name": "fk_Category_to_Category",
+      "relationshipType": "Foreign Key",
+      "parentField": [
+        [
+          "852d56ce-5a49-4a14-b2eb-73f683d7898f",
+          "f8f00722-7852-428b-bdd0-65ad4a34cef7"
+        ]
+      ],
+      "parentCardinality": "0..1",
+      "childField": [
+        [
+          "852d56ce-5a49-4a14-b2eb-73f683d7898f",
+          "9433646c-4595-4bc7-b876-50b55ba4d3dc"
+        ]
+      ],
+      "isActivated": true,
+      "childCardinality": "0..n",
+      "GUID": "f47fd433-a6e5-4780-91bb-abee8a3cbb67",
+      "level": "field",
+      "parentCollection": "852d56ce-5a49-4a14-b2eb-73f683d7898f",
+      "childCollection": "852d56ce-5a49-4a14-b2eb-73f683d7898f",
+      "lineSize": 2,
+      "hackoladeStyles": {
+        "GUID": "e27748a9-d93e-405d-aa18-dd14a6d1f962",
+        "autoPositioning": true,
+        "type": "Orthogonal",
+        "thickness": 2,
+        "color": "#79c4ff",
+        "dataType": "",
+        "shape": [
+          {
+            "x": 1158.5,
+            "y": 1258
+          },
+          {
+            "x": 1158.5,
+            "y": 1233
+          },
+          {
+            "x": 1278,
+            "y": 1233
+          },
+          {
+            "x": 1278,
+            "y": 1279.6666666666667
+          },
+          {
+            "x": 1253,
+            "y": 1279.6666666666667
+          }
+        ],
+        "sides": [
+          "top",
+          "right"
+        ]
+      }
+    },
+    {
+      "name": "fk_Supplier_to_Product",
+      "relationshipType": "Foreign Key",
+      "parentField": [
+        [
+          "03e8c15c-89e2-4443-ace8-e8630d3a9cde",
+          "b6aa3ff9-5736-4feb-838a-d5c7a4c99e2f"
+        ]
+      ],
+      "parentCardinality": "1",
+      "childField": [
+        [
+          "5bbe928e-7367-45c8-931e-37b1f9e3509d",
+          "b4658785-ac7b-45d7-8c65-27ac2c843e5c"
+        ]
+      ],
+      "isActivated": true,
+      "childCardinality": "0..n",
+      "GUID": "bfe0c8aa-2545-4c08-9021-160f4de4e197",
+      "level": "field",
+      "parentCollection": "03e8c15c-89e2-4443-ace8-e8630d3a9cde",
+      "childCollection": "5bbe928e-7367-45c8-931e-37b1f9e3509d",
+      "lineSize": 2,
+      "hackoladeStyles": {
+        "GUID": "f47f343f-b239-406a-9822-014c66a9b94d",
+        "autoPositioning": true,
+        "type": "Orthogonal",
+        "thickness": 2,
+        "color": "#79c4ff",
+        "dataType": "",
+        "shape": [
+          {
+            "x": 1750,
+            "y": 1273.6666666666667
+          },
+          {
+            "x": 1671,
+            "y": 1273.6666666666667
+          },
+          {
+            "x": 1671,
+            "y": 1281.5
+          },
+          {
+            "x": 1592,
+            "y": 1281.5
+          }
+        ],
+        "sides": [
+          "left",
+          "right"
+        ]
+      }
+    }
+  ],
+  "users": [],
+  "diagramViews": [],
+  "idToNameHashTable": {
+    "d02ddb35-ac2b-4951-a6e5-fb9268dab5ce": "RetailCo",
+    "89c13501-d743-4602-bb1d-fed3c6c04fa4": "Id",
+    "3fad6ee1-2f66-4980-99a9-34bc967fc4ee": "Customer",
+    "db0626ce-beaa-4fe7-a283-87c4ea8f67ea": "Id",
+    "1ca5f2c8-a1c0-4b37-857d-e2d20f6aef8c": "Customer Address",
+    "754c05ea-4739-4432-8054-10601856e630": "Id",
+    "71a9c812-4687-475a-9cf1-e175596f2fc7": "Customer Segment History",
+    "4eee838b-5b83-4330-a248-6bcfc9688ad7": "Id",
+    "ecc8f9b7-f7e8-47f6-9d15-6225ba047fa9": "Order",
+    "6ba695cb-abed-40ed-80af-7889456dbe71": "Id",
+    "bf57d367-a92d-4ae7-8f2e-5d8c48dea77c": "Order Line Item",
+    "329cbefa-b276-47d2-942e-1c9bca03164b": "Id",
+    "663e98f5-06a7-4565-85a6-bb3f009dbd75": "Promotion",
+    "b4658785-ac7b-45d7-8c65-27ac2c843e5c": "Id",
+    "5bbe928e-7367-45c8-931e-37b1f9e3509d": "Product",
+    "f8f00722-7852-428b-bdd0-65ad4a34cef7": "Id",
+    "9433646c-4595-4bc7-b876-50b55ba4d3dc": "Parent Id",
+    "852d56ce-5a49-4a14-b2eb-73f683d7898f": "Category",
+    "b6aa3ff9-5736-4feb-838a-d5c7a4c99e2f": "Id",
+    "03e8c15c-89e2-4443-ace8-e8630d3a9cde": "Supplier",
+    "b23163ca-46fd-4981-a69d-d76c2b8c8856": "fk_Customer_to_Customer Address",
+    "0ac9c92a-93cc-4f8a-ac35-784b2a4b1b17": "fk_Customer_to_Customer Segment History",
+    "ff66fae0-0978-43eb-a784-699c86e6fbf5": "fk_Customer_to_Order",
+    "55fba101-81da-406b-a803-549772e34439": "fk_Order_to_Order Line Item",
+    "19dc8a63-86a4-4599-8f36-0c4bff924d43": "fk_Promotion_to_Order",
+    "1469cb36-9a6f-48be-81fb-accdb2faf816": "fk_Product_to_Order Line Item",
+    "81d9d62a-0147-450a-9e7d-978b415cad4a": "fk_Category_to_Product",
+    "f47fd433-a6e5-4780-91bb-abee8a3cbb67": "fk_Category_to_Category",
+    "bfe0c8aa-2545-4c08-9021-160f4de4e197": "fk_Supplier_to_Product"
+  },
+  "definitions": {
+    "type": "definitions",
+    "properties": [],
+    "GUID": "62ebb27d-2530-47f0-b699-21efae0a6bdc"
+  },
+  "polyglotDefinitions": {
+    "type": "polyglotDefinitions",
+    "properties": [],
+    "GUID": "a5e8a8cc-1c98-4142-b868-0628ee3fa80a"
+  },
+  "externalDefinitions": {
+    "type": "externalDefinitions",
+    "properties": [],
+    "GUID": "bcd10438-3d98-4145-aca5-689029c29365"
+  },
+  "sources": [],
+  "decorativeSymbols": [],
+  "businessGlossaries": [],
+  "businessGlossaryTerms": [],
+  "dbVendor": "Polyglot",
+  "appTarget": "Polyglot",
+  "creationTS": "2026-05-05T17:51:31.897Z",
+  "GUID": "879faf59-c237-42c3-a50e-0313f3729667",
+  "isLineageEnabled": false,
+  "description": "",
+  "comments": "============================================================\nRetailCo Analytics Platform  |  Data Model\nVersion 1.1  |  April 2025\nDomains: Customer, Order, Product\nLayers: Conceptual > Logical (3NF) > Physical (Snowflake Star Schema)\nDBML Specification: https://dbml.dbdiagram.io/home/\n============================================================\n\n\n============================================================\nLAYER 1 - CONCEPTUAL MODEL\nEntities and relationships only. No attributes beyond the\nDBML-required placeholder column. Entity and column names\nuse Proper Case with spaces. Relationships use DBML Ref\ndirection operators (< one-to-many, > many-to-one,\n- one-to-one). Self-referencing tables use two distinct\ncolumn names to comply with DBML rule preventing error 5002.\n============================================================",
+  "lastModifTS": "2026-05-05T18:26:40.700Z",
+  "persistenceSchemaVersion": "8",
+  "isCreatedByPlugin": true,
+  "pluginInformation": {
+    "pluginName": "Polyglot",
+    "pluginVersion": "0.0.1",
+    "pluginEngineVersion": "1.0.0"
+  },
+  "applicationInformation": {
+    "version": "8.11.0"
+  },
+  "settings": {
+    "centralPane": {
+      "dbLevel": {
+        "erd": [
+          {
+            "GUID": "3fad6ee1-2f66-4980-99a9-34bc967fc4ee",
+            "x": 1407,
+            "y": 1161,
+            "width": 194,
+            "height": 47,
+            "color": {
+              "hex": "#2196F3"
+            }
+          },
+          {
+            "GUID": "1ca5f2c8-a1c0-4b37-857d-e2d20f6aef8c",
+            "x": 1750,
+            "y": 1161,
+            "width": 244,
+            "height": 47,
+            "color": {
+              "hex": "#2196F3"
+            }
+          },
+          {
+            "GUID": "71a9c812-4687-475a-9cf1-e175596f2fc7",
+            "x": 1064,
+            "y": 1161,
+            "width": 293,
+            "height": 47,
+            "color": {
+              "hex": "#2196F3"
+            }
+          },
+          {
+            "GUID": "ecc8f9b7-f7e8-47f6-9d15-6225ba047fa9",
+            "x": 1407,
+            "y": 1064,
+            "width": 172,
+            "height": 47,
+            "color": {
+              "hex": "#2196F3"
+            }
+          },
+          {
+            "GUID": "bf57d367-a92d-4ae7-8f2e-5d8c48dea77c",
+            "x": 1750,
+            "y": 1064,
+            "width": 229,
+            "height": 47,
+            "color": {
+              "hex": "#2196F3"
+            }
+          },
+          {
+            "GUID": "663e98f5-06a7-4565-85a6-bb3f009dbd75",
+            "x": 1064,
+            "y": 1064,
+            "width": 199,
+            "height": 47,
+            "color": {
+              "hex": "#2196F3"
+            }
+          },
+          {
+            "GUID": "5bbe928e-7367-45c8-931e-37b1f9e3509d",
+            "x": 1750,
+            "y": 1258,
+            "width": 183,
+            "height": 47,
+            "color": {
+              "hex": "#2196F3"
+            }
+          },
+          {
+            "GUID": "852d56ce-5a49-4a14-b2eb-73f683d7898f",
+            "x": 1064,
+            "y": 1258,
+            "width": 189,
+            "height": 65,
+            "color": {
+              "hex": "#2196F3"
+            }
+          },
+          {
+            "GUID": "03e8c15c-89e2-4443-ace8-e8630d3a9cde",
+            "x": 1407,
+            "y": 1258,
+            "width": 185,
+            "height": 47,
+            "color": {
+              "hex": "#2196F3"
+            }
+          }
+        ],
+        "erdDefinitions": {
+          "erd": [],
+          "rootPath": [],
+          "entities": [],
+          "decorativeSymbols": []
+        },
+        "buckets": [
+          {
+            "x": 1000,
+            "y": 1000,
+            "GUID": "d02ddb35-ac2b-4951-a6e5-fb9268dab5ce"
+          }
+        ],
+        "collapsedNodes": [],
+        "activeRelationship": "",
+        "activeRelationshipFields": {
+          "childField": [],
+          "parentField": []
+        },
+        "selectedCollections": [],
+        "displayColorPicker": false,
+        "graphView": {
+          "erd": [
+            {
+              "GUID": "3fad6ee1-2f66-4980-99a9-34bc967fc4ee",
+              "size": 100,
+              "x": 1832.182290584161,
+              "y": 1456.4485003504776
+            },
+            {
+              "GUID": "1ca5f2c8-a1c0-4b37-857d-e2d20f6aef8c",
+              "size": 100,
+              "x": 1580.8922043936316,
+              "y": 1365.4245778214463
+            },
+            {
+              "GUID": "71a9c812-4687-475a-9cf1-e175596f2fc7",
+              "size": 100,
+              "x": 1579.4301273496321,
+              "y": 1544.0326785795614
+            },
+            {
+              "GUID": "ecc8f9b7-f7e8-47f6-9d15-6225ba047fa9",
+              "size": 100,
+              "x": 1842.3576467308635,
+              "y": 1188.5355908856884
+            },
+            {
+              "GUID": "bf57d367-a92d-4ae7-8f2e-5d8c48dea77c",
+              "size": 100,
+              "x": 2052.3876100232324,
+              "y": 1355.1919437726717
+            },
+            {
+              "GUID": "663e98f5-06a7-4565-85a6-bb3f009dbd75",
+              "size": 100,
+              "x": 1592.6953856104324,
+              "y": 1092.1349030580682
+            },
+            {
+              "GUID": "5bbe928e-7367-45c8-931e-37b1f9e3509d",
+              "size": 100,
+              "x": 2031.569223064859,
+              "y": 1622.6898568021602
+            },
+            {
+              "GUID": "852d56ce-5a49-4a14-b2eb-73f683d7898f",
+              "size": 100,
+              "x": 1941.8582750147007,
+              "y": 1874.733062340898
+            },
+            {
+              "GUID": "03e8c15c-89e2-4443-ace8-e8630d3a9cde",
+              "size": 100,
+              "x": 1792.67045882499,
+              "y": 1743.2166484539966
+            }
+          ],
+          "buckets": [
+            {
+              "x": 1511.6431390565347,
+              "y": 1020.7192530138173,
+              "GUID": "d02ddb35-ac2b-4951-a6e5-fb9268dab5ce"
+            }
+          ],
+          "decorativeSymbols": [],
+          "forceLayout": true,
+          "defaultLinkLength": 267
+        },
+        "diagramViews": [],
+        "decorativeSymbols": [],
+        "nestedCollectionsLayout": "horizontal",
+        "options": [],
+        "relationshipUpdateDisabled": false
+      },
+      "collectionLevel": {},
+      "changed": false
+    },
+    "dtDiagram": {
+      "collapsedNodes": [],
+      "shouldDistributeCollections": false
+    }
+  }
+}
